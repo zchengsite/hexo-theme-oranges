@@ -1,0 +1,20 @@
+
+favicon:
+  enable: true
+  icon: /images/favicon.ico
+  touch_icon: /images/favicon.ico
+
+# Google Analytics
+gtag:
+  enable: true
+  gtagkey: UA-126364107-1
+
+# gitalk comments
+gitalk:
+  enable: false
+  clientID: 57fd80ca85f9d3276439
+  clientSecret: 7411553827815e5766ebe0bce5e4fb2e36e3217f
+  repo: blog
+  owner: czorange123
+  admin: czorange123
+  distractionFreeMode: false

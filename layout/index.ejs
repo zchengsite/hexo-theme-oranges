@@ -1,0 +1,6 @@
+<%- partial('_partial/header') %>
+<body>
+  <% site.posts.sort("date", "desc").each(function(post){ %>
+  <%- partial("_partial/post_entry", {post: post}) %>
+  <% }) %>
+</body>

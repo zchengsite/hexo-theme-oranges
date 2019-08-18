@@ -1,0 +1,29 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="oranges, 1451426471@qq.com" />
+  <title><% if(is_home()) { %> <%= config.title %> <% } else { %><%= page.title %><% } %></title
+
+  <% if (theme.favicon.enable){ %>
+    <link rel="apple-touch-icon" href="<%- theme.favicon.touch_icon %>">
+    <link rel="icon" href="<%- theme.favicon.icon %>">
+  <% } %>
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- gitalk comments -->
+  <% if(theme.gitalk.enable) { %>
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <% } %>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <% if(theme.gtag.enable) { %>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%- theme.gtag.gtagkey %>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '<%- theme.gtag.gtagkey %>');
+    </script>
+  <% } %>
+</head>
