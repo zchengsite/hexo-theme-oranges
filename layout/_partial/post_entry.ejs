@@ -1,4 +1,24 @@
-<div>
-  <span><%- post.date.format("YYYY-MM-DD") %></span>
-  <a href="<%- config.root %><%- post.path %>"><%- post.title %></a>
-</div>
+<%
+  const getPostYear = psg => psg.date.year();
+  let prevYear = getPostYear(page.posts.data[0]) + 1, nowYear = null;
+%>
+
+<% for(let psg of page.posts.data) { %>
+  <%
+    nowYear = getPostYear(psg);
+    if(nowYear !== prevYear) {
+      prevYear = nowYear;
+  %>
+    <div class="home-page-title">
+      <h2>
+        <span class="time-y"><%- nowYear %></span>
+      </h2>
+    </div>
+  <% } %>
+  <div class="home-page-content">
+    <span class="time-m-d"><%- psg.date.format("MM-DD") %></span>
+    <a href="<%- url_for(psg.path) %>">
+      <span><%- psg.title %></span>
+    </a>
+  </div>
+<% } %>

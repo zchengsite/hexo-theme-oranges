@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  /*background: url('/images/background/email-pattern.png');*/
+}
+
+#app {
+  height: 100%;
+  width: 990px;
+  z-index: 10;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.container {
+  padding: 200px 20px 100px 20px;
+}
+
+.time-y, .time-m-d {
+  color: #666;
+  font-weight: 700;
+  font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+.time-m-d {
+  margin: 0 30px;
+}
+
+.home-page-content {
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  color: #666;
+}
+
+a:hover {
+  color: black;
+}

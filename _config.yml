@@ -15,6 +15,6 @@ gitalk:
   clientID: 57fd80ca85f9d3276439
   clientSecret: 7411553827815e5766ebe0bce5e4fb2e36e3217f
   repo: blog
-  owner: czorange123
-  admin: czorange123
+  owner: zchengsite
+  admin: zchengsite
   distractionFreeMode: false

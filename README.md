@@ -1,2 +1,4 @@
 # hexo-theme-oranges
-hexo-theme
+A very simple hexo-theme
+
+developing
