@@ -1,3 +1,35 @@
 <div class="container">
-  <%- partial('_partial/post_entry') %>
+  <div class="header">
+    <div class="portrait">
+      <img src="images/34339465.jpg" alt="">
+    </div>
+    <div class="navbar">
+      <ul>
+        <li><a href="/">主页</a></li>
+        <li><a href="tags">文章</a></li>
+        <li><a href="tags">标签</a></li>
+        <li><a href="tags">朋友</a></li>
+        <li><a href="tags">关于</a></li>
+        <li><a href="tags">抓到我</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="post-list">
+    <% for(let psg of page.posts.data){ %>
+      <div class="home-page-content" title="<%- psg.title %>">
+        <span class="time-m-d"><%- psg.date.format("YYYY-MM-DD") %></span>
+        <a href="<%- url_for(page.posts.data[0].path) %>">
+          <span><%- psg.title %></span>
+        </a>
+      </div>
+    <% } %>
+  </div>
+  <nav class="page-navigation">
+    <% if(page.prev !== 0){ %>
+      <a href="<%- url_for(page.prev_link)%>">上一页</a>
+    <% } %>
+    <% if(page.next !== 0){ %>
+      <a href="<%- url_for(page.next_link)%>">下一页</a>
+    <% } %>
+  </nav>
 </div>

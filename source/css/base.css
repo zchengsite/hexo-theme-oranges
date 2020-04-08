@@ -14,7 +14,7 @@
 
 .container {
   height: 100%;
-  padding: 300px 20px 300px 20px;
+  padding-top: 200px;
 }
 
 .time-y, .time-m-d {
@@ -29,6 +29,9 @@
 
 .home-page-content {
   margin-bottom: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 a {
@@ -43,7 +46,7 @@ a:hover {
 .header {
   overflow: hidden;
   height: 70px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 .portrait {
   float: left;
@@ -73,4 +76,8 @@ a:hover {
 .navbar ul li {
   display: inline;
   margin-left: 30px;
+}
+
+.post-list {
+  padding: 0 30px;
 }
