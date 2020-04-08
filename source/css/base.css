@@ -1,12 +1,11 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  /*background: url('/images/background/email-pattern.png');*/
 }
 
 #app {
   height: 100%;
-  width: 990px;
+  width: 770px;
   z-index: 10;
   position: relative;
   margin: 0 auto;
@@ -14,7 +13,8 @@ body {
 }
 
 .container {
-  padding: 200px 20px 100px 20px;
+  height: 100%;
+  padding: 300px 20px 300px 20px;
 }
 
 .time-y, .time-m-d {
@@ -39,4 +39,38 @@ a {
 
 a:hover {
   color: black;
+}
+.header {
+  overflow: hidden;
+  height: 70px;
+  margin-bottom: 50px;
+}
+.portrait {
+  float: left;
+}
+.portrait img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.content {
+  clear: both;
+  padding: 0 20px;
+}
+
+.content-title {
+  margin-bottom: 30px;
+}
+
+.navbar {
+  float: right;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-left: 30px;
 }
