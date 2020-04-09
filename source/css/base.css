@@ -4,23 +4,25 @@
 }
 
 #app {
-  height: 100%;
   width: 770px;
   z-index: 10;
   position: relative;
   margin: 0 auto;
-  overflow: hidden;
+}
+
+.header {
+  padding: 50px 0;
 }
 
 .container {
-  height: 100%;
-  padding-top: 200px;
+  min-height: calc(100vh - 407px);
+  padding: 20px 0;
 }
 
 .time-y, .time-m-d {
   color: #666;
-  font-weight: 600;
-  font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
+  /*font-weight: 600;*/
+  /*font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;*/
 }
 
 .time-m-d {
@@ -34,10 +36,6 @@
   text-overflow: ellipsis;
 }
 
-.post-item a {
-  font-weight: 600;
-}
-
 a {
   text-decoration: none;
   background-color: transparent;
@@ -47,17 +45,15 @@ a {
 a:hover {
   color: black;
 }
-.header {
-  overflow: hidden;
-  height: 70px;
-  margin-bottom: 80px;
+
+.avatar {
+  text-align: center;
+  padding-bottom: 50px;
 }
-.portrait {
-  float: left;
-}
-.portrait img {
-  height: 70px;
-  width: 70px;
+
+.avatar img {
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
 }
 
@@ -71,10 +67,9 @@ a:hover {
 }
 
 .navbar {
-  float: right;
-  height: 70px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .navbar ul li {
@@ -87,7 +82,7 @@ a:hover {
 }
 
 .post-list {
-  padding: 0 30px;
+  /*min-height: calc(100vh - 200px)*/
 }
 
 .post-navigation {
@@ -104,4 +99,25 @@ a:hover {
 
 .post-navigation .page-num {
   padding: 0 10px;
+}
+
+.footer {
+  padding: 20px 0;
+}
+
+.social {
+  padding-bottom: 10px;
+}
+
+.social ul {
+  text-align: center;
+}
+
+.social ul li {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.copyright {
+  text-align: center;
 }
