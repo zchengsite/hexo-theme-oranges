@@ -1,39 +1,31 @@
-<%
-  const getPostYear = psg => psg.date.year();
-  let prevYear = getPostYear(page.posts.data[0]) + 1, nowYear = null;
-%>
-
+<div class="container">
   <%
-    nowYear = getPostYear(page.posts.data[0]);
-    if(nowYear !== prevYear) {
+    const getPostYear = psg => psg.date.year();
+    let prevYear = getPostYear(site.posts.data[0]), nowYear = null;
+  %>
+  <div class="collection-title">
+    <h2>
+      <span><%- prevYear %></span>
+    </h2>
+  </div>
+  <% for(let psg of site.posts.data){ %>
+  <%
+    console.log(psg.date.year())
+    nowYear = getPostYear(psg);
+    if(nowYear !== prevYear){
       prevYear = nowYear;
   %>
-    <div class="header">
-      <div class="portrait">
-        <img src="images/34339465.jpg" alt="">
-      </div>
-      <div class="navbar">
-        <ul>
-          <li><a href="/">主页</a></li>
-          <li><a href="/archives">归档</a></li>
-          <li><a href="tags">标签</a></li>
-          <li><a href="tags">朋友</a></li>
-          <li><a href="tags">关于</a></li>
-          <li><a href="tags">抓到我</a></li>
-        </ul>
-      </div>
+    <div class="collection-title">
+      <h2>
+        <span><%- nowYear %></span>
+      </h2>
     </div>
-    <div class="content">
-      <div class="content-title">
-        <h2>
-          <span class="time-y"><%- nowYear %></span>
-        </h2>
-      </div>
   <% } %>
-    <div class="home-page-content">
-      <span class="time-m-d"><%- page.posts.data[0].date.format("MM-DD") %></span>
-      <a href="<%- url_for(page.posts.data[0].path) %>">
-        <span><%- page.posts.data[0].title %></span>
+    <div class="post-item" title="<%- psg.title %>">
+      <span class="time-m-d"><%- psg.date.format("MM-DD") %></span>
+      <a href="<%- url_for(psg.path) %>">
+        <span><%- psg.title %></span>
       </a>
     </div>
-  </div>
+  <% } %>
+</div>
