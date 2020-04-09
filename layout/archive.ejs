@@ -1,6 +1,6 @@
 <div class="container">
   <%
-    const getPostYear = psg => psg.date.year();
+    const getPostYear = item => item.date.year();
     let prevYear = getPostYear(site.posts.data[0]), nowYear = null;
   %>
   <div class="collection-title">
@@ -8,10 +8,9 @@
       <span><%- prevYear %></span>
     </h2>
   </div>
-  <% for(let psg of site.posts.data){ %>
+  <% site.posts.sort('date', -1).each(function(item){ %>
   <%
-    console.log(psg.date.year())
-    nowYear = getPostYear(psg);
+    nowYear = getPostYear(item);
     if(nowYear !== prevYear){
       prevYear = nowYear;
   %>
@@ -21,11 +20,12 @@
       </h2>
     </div>
   <% } %>
-    <div class="post-item" title="<%- psg.title %>">
-      <span class="time-m-d"><%- psg.date.format("MM-DD") %></span>
-      <a href="<%- url_for(psg.path) %>">
-        <span><%- psg.title %></span>
+    <div class="post-item" title="<%- item.title %>">
+      <span class="time-m-d"><%- item.date.format("MM-DD") %></span>
+      <a href="<%- url_for(item.path) %>">
+        <span><%- item.title %></span>
       </a>
     </div>
-  <% } %>
+  <% }) %>
 </div>
+
