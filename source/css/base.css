@@ -21,8 +21,6 @@
 
 .time-y, .time-m-d {
   color: #666;
-  /*font-weight: 600;*/
-  /*font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;*/
 }
 
 .time-m-d {
@@ -79,10 +77,6 @@ a:hover {
 
 .navbar ul li a {
   font-weight: 600;
-}
-
-.post-list {
-  /*min-height: calc(100vh - 200px)*/
 }
 
 .post-navigation {

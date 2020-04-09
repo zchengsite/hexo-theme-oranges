@@ -1,17 +1,3 @@
-<div class="header">
-  <div class="avatar">
-    <img src="/images/34339465.jpg" alt="">
-  </div>
-  <div class="navbar">
-    <ul>
-      <li><a href="/">主页</a></li>
-      <li><a href="/archives">归档</a></li>
-      <li><a href="tags">标签</a></li>
-      <li><a href="tags">朋友</a></li>
-      <li><a href="tags">关于我</a></li>
-    </ul>
-  </div>
-</div>
 <div class="container">
   <div class="post-list">
     <% for(let psg of page.posts.data){ %>
@@ -32,18 +18,4 @@
       <a href="<%- url_for(page.next_link)%>"><i class="iconfont icon-next"></i></a>
     <% } %>
   </nav>
-</div>
-
-<div class="footer">
-  <div class="social">
-    <ul>
-      <li><a href="">github</a></li>
-      <li><a href=""><a href="">知乎</a></li>
-      <li><a href="">CSDN</a></li>
-      <li><a href="">微信</a></li>
-    </ul>
-  </div>
-  <div class="copyright">
-    <a href="https://github.com/zchengsite/hexo-theme-oranges">Theme - BMW | Orange's blog</a>
-  </div>
 </div>
