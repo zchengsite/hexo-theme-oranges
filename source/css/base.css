@@ -19,7 +19,7 @@
 
 .time-y, .time-m-d {
   color: #666;
-  font-weight: 700;
+  font-weight: 600;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
@@ -27,11 +27,15 @@
   margin: 0 30px;
 }
 
-.home-page-content {
+.post-item {
   margin-bottom: 20px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.post-item a {
+  font-weight: 600;
 }
 
 a {
@@ -78,6 +82,26 @@ a:hover {
   margin-left: 30px;
 }
 
+.navbar ul li a {
+  font-weight: 600;
+}
+
 .post-list {
   padding: 0 30px;
+}
+
+.post-navigation {
+  padding: 20px 0;
+  text-align: right;
+  color: #666;
+}
+
+.post-navigation a {
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.post-navigation .page-num {
+  padding: 0 10px;
 }

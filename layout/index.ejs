@@ -1,7 +1,7 @@
 <div class="container">
   <div class="header">
     <div class="portrait">
-      <img src="images/34339465.jpg" alt="">
+      <img src="/images/34339465.jpg" alt="">
     </div>
     <div class="navbar">
       <ul>
@@ -16,20 +16,21 @@
   </div>
   <div class="post-list">
     <% for(let psg of page.posts.data){ %>
-      <div class="home-page-content" title="<%- psg.title %>">
+      <div class="post-item" title="<%- psg.title %>">
         <span class="time-m-d"><%- psg.date.format("YYYY-MM-DD") %></span>
-        <a href="<%- url_for(page.posts.data[0].path) %>">
+        <a href="<%- url_for(psg.path) %>">
           <span><%- psg.title %></span>
         </a>
       </div>
     <% } %>
   </div>
-  <nav class="page-navigation">
+  <nav class="post-navigation">
     <% if(page.prev !== 0){ %>
-      <a href="<%- url_for(page.prev_link)%>">上一页</a>
+      <a href="<%- url_for(page.prev_link)%>"><i class="iconfont icon-prev"></i></a>
     <% } %>
+    <span class="page-num"><%- page.current%> / <%- page.total -%></span>
     <% if(page.next !== 0){ %>
-      <a href="<%- url_for(page.next_link)%>">下一页</a>
+      <a href="<%- url_for(page.next_link)%>"><i class="iconfont icon-next"></i></a>
     <% } %>
   </nav>
 </div>
