@@ -57,9 +57,30 @@
 
 <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
 <% if (!page.type) { %>
-<div class="container post-index">
+<div class="container post-details">
+  <div class="post-title">
+    <%- page.title %>
+  </div>
 
+  <div class="post-attach">
+    <span class="post-pubtime"><%- page.date.format("YYYY-MM-DD") %></span>
+    <span class="post-tags">
+      <% if(page.tags && page.tags.length > 0){ %>
+        <i class="iconfont icon-06tags"></i>
+        <% for(let item of page.tags.data){ %>
+        <span class="span--tag">
+          <a href="<%= url_for(item.path)%>">
+            #<%- item.name %>
+          </a>
+        </span>
+        <% } %>
+      <% } %>
+    </span>
+  </div>
 
+  <div class="markdown-body">
+    <%- page.more %>
+  </div>
   <nav class="post-navigation">
     <% if(page.next){ %>
       <div class="nav-pre">

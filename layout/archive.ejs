@@ -1,38 +1,37 @@
 <!-- ejs文件，建议切换编辑器plain text 为 html查看更佳 -->
 <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
 
-<div class="container">
+<div class="container archives">
   <%
     const getPostYear = item => item.date.year();
     let prevYear = getPostYear(site.posts.data[0]), nowYear = null;
   %>
+  <div class="post-list">
+    <div class="content-title">
+      <h2>
+        <span><%- prevYear %></span>
+      </h2>
+    </div>
 
-  <div class="content-title">
-    <h2>
-      <span><%- prevYear %></span>
-    </h2>
-  </div>
-
-  <% site.posts.sort('date', -1).each(function(item){ %>
-  <%
-    nowYear = getPostYear(item);
-    if(nowYear !== prevYear) {
-      prevYear = nowYear;
-  %>
+    <% site.posts.sort('date', -1).each(function(item){ %>
+    <%
+      nowYear = getPostYear(item);
+      if(nowYear !== prevYear) {
+        prevYear = nowYear;
+    %>
     <div class="content-title">
       <h2>
         <span><%- nowYear %></span>
       </h2>
     </div>
-  <% } %>
-    <div class="post-list">
-      <div class="post-item" title="<%- item.title %>">
-        <span class="time-m-d"><%- item.date.format("MM-DD") %></span>
-        <a href="<%- url_for(item.path) %>">
-          <span><%- item.title %></span>
-        </a>
-      </div>
+    <% } %>
+    <div class="post-item" title="<%- item.title %>">
+      <span class="time-m-d"><%- item.date.format("MM-DD") %></span>
+      <a href="<%- url_for(item.path) %>">
+        <span><%- item.title %></span>
+      </a>
     </div>
-  <% }) %>
+    <% }) %>
+  </div>
 </div>
 
