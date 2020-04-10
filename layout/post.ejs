@@ -1,6 +1,81 @@
-<%- partial('_partial/header') %>
-<body>
-  <%- page.title %>
-  <hr>
-  <%- page.content %>
-</body>
+<!-- ejs文件，建议切换编辑器plain text为html查看更佳 -->
+<!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+<!-- 标签页 url形式：https://yoursite/tags/ -->
+<% if (page.type === "tags"){ %>
+<div class="container tag-index">
+  <div>
+    <%- list_tags({ class: "tag" }) %>
+  </div>
+</div>
+<% } %>
+
+<!-- 分类页 url形式：https://yoursite/categories/ -->
+<% if (page.type === "categories"){ %>
+<div class="container category-index">
+  <div>
+    <h3>
+      共计 <%- site.categories.length %> 个分类
+    </h3>
+    <%- list_categories({orderby: "length", order: -1}) %>
+  </div>
+</div>
+<% } %>
+
+<!-- 朋友页 url形式：https://yoursite/friends/ -->
+<% if (page.type === "friends"){ %>
+<div class="container friend-index">
+  <div class="friend-navigation">
+    <% for(let friend of theme.friends){ %>
+    <a href="<%- friend.site %>" target="_blank">
+      <div class="card">
+        <p class="card-header">
+          @ <%- friend.nickname %>
+        </p>
+        <p class="card-meta">
+          <%- friend.meta %>
+        </p>
+      </div>
+    </a>
+    <% } %>
+  </div>
+  <div class="markdown-body">
+    <%- page.content %>
+  </div>
+</div>
+<% } %>
+
+<!-- 关于页 url形式：https://yoursite/about/ -->
+<% if(page.type === "about"){ %>
+  <div class="container about-index">
+    <div class="markdown-body">
+      <%- page.content %>
+    </div>
+  </div>
+<% } %>
+
+<!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+<% if (!page.type) { %>
+<div class="container post-index">
+
+
+  <nav class="post-navigation">
+    <% if(page.next){ %>
+      <div class="nav-pre">
+        <i class="iconfont icon-prev"></i>
+        上一篇:
+        <a href="<%= url_for(page.next.path)%>" target="_self"><%- page.next.title %></a>
+      </div>
+    <% } %>
+    <% if(page.prev){ %>
+      <div class="nav-next">
+        下一篇:
+        <a href="<%= url_for(page.prev.path)%>" target="_self"><%- page.prev.title %></a>
+        <i class="iconfont icon-next"></i>
+      </div>
+    <% } %>
+  </nav>
+
+</div>
+<% } %>

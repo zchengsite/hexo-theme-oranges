@@ -1,0 +1,20 @@
+<!-- ejs文件，建议切换编辑器plain text 为 html查看更佳 -->
+<!-- 标签详情页，展示某个标签下的文章列表，url形式：https://yoursite/tags/某个标签/ -->
+
+<div class="container">
+  <div class="content-title">
+    <h2>
+      <span><%- page.tag %></span>
+    </h2>
+  </div>
+  <% page.posts.sort('date', -1).each(function(item){ %>
+    <div class="post-list">
+      <div class="post-item" title="<%- item.title %>">
+        <span class="time-m-d"><%- item.date.format("YYYY-MM-DD") %></span>
+        <a href="<%- url_for(item.path) %>">
+          <span><%- item.title %></span>
+        </a>
+      </div>
+    </div>
+  <% }) %>
+</div>

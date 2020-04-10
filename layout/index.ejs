@@ -1,13 +1,13 @@
 <div class="container">
   <div class="post-list">
-    <% for(let psg of page.posts.data){ %>
-      <div class="post-item" title="<%- psg.title %>">
-        <span class="time-m-d"><%- psg.date.format("YYYY-MM-DD") %></span>
-        <a href="<%- url_for(psg.path) %>">
-          <span><%- psg.title %></span>
+    <% page.posts.sort('date', -1).each(function(item) { %>
+      <div class="post-item" title="<%- item.title %>">
+        <span class="time-m-d"><%- item.date.format("YYYY-MM-DD") %></span>
+        <a href="<%- url_for(item.path) %>">
+          <span><%- item.title %></span>
         </a>
       </div>
-    <% } %>
+    <% }) %>
   </div>
   <nav class="post-navigation">
     <% if(page.prev !== 0){ %>

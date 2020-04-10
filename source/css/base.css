@@ -21,6 +21,7 @@
 
 .time-y, .time-m-d {
   color: #666;
+  font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 .time-m-d {
@@ -62,6 +63,7 @@ a:hover {
 
 .content-title {
   margin-bottom: 30px;
+  font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 .navbar {
@@ -97,6 +99,8 @@ a:hover {
 
 .footer {
   padding: 20px 0;
+  font-size: 14px;
+  color: #aaa;
 }
 
 .social {
@@ -114,4 +118,23 @@ a:hover {
 
 .copyright {
   text-align: center;
+}
+
+
+.tag-list li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.tag-list-count {
+  padding: 0 10px;
+  color: #aaa;
+}
+
+.tag-list-count::before {
+  content: "(";
+}
+
+.tag-list-count::after {
+  content: ")";
 }
