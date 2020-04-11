@@ -4,10 +4,15 @@
 }
 
 #app {
-  width: 770px;
-  z-index: 10;
   position: relative;
   margin: 0 auto;
+}
+
+.flex-container {
+  min-height: calc(100vh - 275px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header {
@@ -15,8 +20,9 @@
 }
 
 .container {
-  min-height: calc(100vh - 363px);
   padding: 0 30px;
+  width: 700px;
+  margin: 0 auto;
 }
 
 .time-y, .time-m-d {
@@ -43,6 +49,7 @@ a {
   text-decoration: none;
   background-color: transparent;
   color: #666;
+  transition: color 0.3s;
 }
 
 a:hover {
@@ -92,9 +99,8 @@ a:hover {
   color: #666;
 }
 
-.post-navigation a {
+.post-navigation i {
   color: #000;
-  font-size: 20px;
   font-weight: 600;
 }
 
@@ -128,7 +134,7 @@ a:hover {
 
 .tag-list li {
   display: inline-block;
-  padding-right: 10px;
+  padding: 10px;
 }
 
 .tag-list-count {
@@ -142,6 +148,10 @@ a:hover {
 
 .tag-list-count::after {
   content: " )";
+}
+
+.post-details {
+  width: 800px;
 }
 
 .post-details .post-title {
