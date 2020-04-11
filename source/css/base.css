@@ -3,13 +3,17 @@
   padding: 0;
 }
 
+html, body {
+  font-size: 10px;
+}
+
 #app {
   position: relative;
   margin: 0 auto;
 }
 
 .flex-container {
-  min-height: calc(100vh - 275px);
+  min-height: calc(100vh - 290px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -20,8 +24,8 @@
 }
 
 .container {
-  padding: 0 30px;
-  width: 700px;
+  width: 90%;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -39,6 +43,7 @@
 }
 
 .post-item {
+  font-size: 1.6rem;
   margin-bottom: 20px;
   overflow: hidden;
   white-space: nowrap;
@@ -58,7 +63,7 @@ a:hover {
 
 .avatar {
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 .avatar img {
@@ -67,12 +72,20 @@ a:hover {
   border-radius: 50%;
 }
 
+.avatar .nickname {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #666;
+  padding-top: 10px;
+}
+
 .content {
   clear: both;
   padding: 0 20px;
 }
 
 .content-title {
+  font-size: 1.6rem;
   color: #666;
   margin-bottom: 20px;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
@@ -86,14 +99,13 @@ a:hover {
 
 .navbar ul li {
   display: inline;
-  margin-left: 30px;
-}
-
-.navbar ul li a {
-  font-weight: 600;
+  margin: 0 15px;
+  font-size: 1.6rem;
+  font-weight: bold;
 }
 
 .post-navigation {
+  font-size: 1.5rem;
   padding: 20px 0;
   text-align: right;
   color: #666;
@@ -110,7 +122,7 @@ a:hover {
 
 .footer {
   padding: 30px 0 10px;
-  font-size: 14px;
+  font-size: 1.5rem;
   color: #aaa;
 }
 
@@ -133,6 +145,7 @@ a:hover {
 
 
 .tag-list li {
+  font-size: 1.6rem;
   display: inline-block;
   padding: 10px;
 }
@@ -151,19 +164,20 @@ a:hover {
 }
 
 .post-details {
-  width: 800px;
+  width: 90%;
+  max-width: 800px;
 }
 
 .post-details .post-title {
   text-align: center;
-  font-size: 25px;
+  font-size: 2.2rem;
   font-weight: 600;
   color: #666;
   padding-bottom: 10px;
 }
 
 .post-details .post-attach {
-  font-size: 14px;
+  font-size: 1.4rem;
   text-align: center;
   padding-bottom: 30px;
   color: #666;
@@ -171,4 +185,13 @@ a:hover {
 
 .post-attach .post-pubtime, .post-attach .post-tags {
   padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .time-m-d {
+    margin-right: 15px;
+  }
+  .tag-details .time-m-d, .archives .time-m-d {
+    margin: 0 15px;
+  }
 }
