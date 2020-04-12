@@ -1,15 +1,15 @@
 <div class="header">
   <div class="avatar">
-    <a href="/"><img src="/images/34339465.jpg" alt=""></a>
-    <a href="/"><div class="nickname">Oranges</div></a>
+    <a href="/"><img src="<%- theme.avatar.author_photo %>" alt=""></a>
+    <a href="/"><div class="nickname"><%- theme.avatar.author_nickname %></div></a>
   </div>
   <div class="navbar">
     <ul>
-      <li><a href="/">主页</a></li>
-      <li><a href="/archives">归档</a></li>
-      <li><a href="/tags/">标签</a></li>
-      <li><a href="/friends/">朋友</a></li>
-      <li><a href="/about/">关于我</a></li>
+      <% for(let item of theme.navbar){ %>
+        <li>
+          <a href="<%- item.path %>"><%- item.name %></a>
+        </li>
+      <% } %>
     </ul>
   </div>
 </div>

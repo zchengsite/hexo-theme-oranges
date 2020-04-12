@@ -1,15 +1,18 @@
 <div class="footer">
   <div class="social">
     <ul>
-      <li><a href=""><i class="iconfont icon-github"></i></a></li>
-      <li><a href=""><i class="iconfont icon-envelope"></i></a></li>
-      <li><a href=""><i class="iconfont icon-facebooksquare"></i></a></li>
-      <li><a href=""><i class="iconfont icon-twitter"></i></a></li>
-      <li><a href=""><i class="iconfont icon-wechat"></i></a></li>
-      <li><a href=""><i class="iconfont icon-weibo"></i></a></li>
+      <% for(let item of theme.footer.social){ %>
+        <li>
+          <a title="<%- item.name %>" href="<%- item.path %>">
+            <i class="iconfont icon-<%- item.icon %>"></i>
+          </a>
+        </li>
+      <% } %>
     </ul>
   </div>
-  <div class="copyright">
-    <a href="https://github.com/zchengsite/hexo-theme-oranges">Theme - oranges | Orange's blog</a>
-  </div>
+  <% for(let item of theme.footer.more){ %>
+    <div class="copyright">
+      <a href="<%- item.path %>"><%- item.name %></a>
+    </div>
+  <% } %>
 </div>

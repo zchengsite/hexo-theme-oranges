@@ -19,17 +19,82 @@ gitalk:
   admin: zchengsite
   distractionFreeMode: false
 
+# 用户头像与昵称
+avatar:
+  author_photo: /images/34339465.jpg
+  author_nickname: Oranges
+
+# 导航信息
+navbar:
+  -
+    name: 主页
+    path: /
+  -
+    name: 归档
+    path: /archives/
+  -
+    name: 标签
+    path: /tags/
+  -
+    name: 朋友
+    path: /friends/
+  -
+    name: 关于我
+    path: /about/
+
+
 # 友链详细信息：支持多个友链
 friends:
+  # nickname: 昵称
+  # site: 地址
+  # meta: 描述
   -
-    nickname: Ayu # 昵称
-    site: https://yuang.site # 站点地址
-    meta: # 站点描述
+    nickname: Ayu
+    site: https://yuang.site
+    meta:
   -
-    nickname: Lxwu # 昵称
-    site: https://lxwu.me # 站点地址
-    meta: # 站点描述
+    nickname: Lxwu
+    site: https://lxwu.me
+    meta:
   -
     nickname: Mhyu
     site: https://mhyu.top
     meta:
+
+# 页脚信息
+footer:
+  # social: 社交方式
+  # more: 更多页脚信息
+  social:
+    # name: 名称
+    # icon: 图标，目前仅支持IconFont部分图标
+    # path: 地址
+    -
+      name: github
+      icon: github
+      path: https://github.com/zchengsite/hexo-theme-oranges
+    -
+      name: email
+      icon: envelope
+      path: Mailto:ghsau@163.com
+    -
+      name: facebook
+      icon: facebooksquare
+      path:
+    -
+      name: twitter
+      icon: twitter
+      path:
+    -
+      name: 微信
+      icon: wechat
+      path:
+    -
+      name: 微博
+      icon: weibo
+      path:
+
+  more:
+    -
+      name: Theme - oranges | Orange's blog
+      path: https://github.com/zchengsite/hexo-theme-oranges

@@ -13,9 +13,9 @@ html, body {
 }
 
 a {
+  color: #666;
   text-decoration: none;
   background-color: transparent;
-  color: #666;
   transition: color 0.3s;
 }
 
