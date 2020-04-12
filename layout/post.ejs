@@ -66,7 +66,7 @@
     <span class="post-pubtime"><%- page.date.format("YYYY-MM-DD") %></span>
     <span class="post-tags">
       <% if(page.tags && page.tags.length > 0){ %>
-        <i class="iconfont icon-06tags"></i>
+        <i class="iconfont icon-tags"></i>
         <% for(let item of page.tags.data){ %>
         <span class="span--tag">
           <a href="<%= url_for(item.path)%>">
