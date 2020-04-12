@@ -6,7 +6,7 @@ favicon:
 
 # Google Analytics
 gtag:
-  enable: true
+  enable: false
   gtagkey: UA-126364107-1
 
 # gitalk comments
