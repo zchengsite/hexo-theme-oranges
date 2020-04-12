@@ -7,11 +7,11 @@
     let prevYear = getPostYear(site.posts.data[0]), nowYear = null;
   %>
   <div class="post-list">
-    <div class="content-title">
+<!--     <div class="content-title">
       <h2>
         <span><%- prevYear %></span>
       </h2>
-    </div>
+    </div> -->
 
     <% site.posts.sort('date', -1).each(function(item){ %>
     <%
@@ -26,10 +26,12 @@
     </div>
     <% } %>
     <div class="post-item" title="<%- item.title %>">
-      <span class="time-m-d"><%- item.date.format("MM-DD") %></span>
-      <a href="<%- url_for(item.path) %>">
-        <span><%- item.title %></span>
-      </a>
+      <div class="time-m-d"><%- item.date.format("MM-DD") %></div>
+      <div class="title">
+        <a href="<%- url_for(item.path) %>">
+          <span><%- item.title %></span>
+        </a>
+      </div>
     </div>
     <% }) %>
   </div>

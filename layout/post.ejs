@@ -26,18 +26,17 @@
 <!-- 朋友页 url形式：https://yoursite/friends/ -->
 <% if (page.type === "friends"){ %>
 <div class="container friend-index">
-  <div class="friend-navigation">
+  <div class="friend-list">
     <% for(let friend of theme.friends){ %>
-    <a href="<%- friend.site %>" target="_blank">
-      <div class="card">
-        <p class="card-header">
-          @ <%- friend.nickname %>
-        </p>
+      <div class="friend-list-item">
+        <span class="nickname">@ <%- friend.nickname %></span>
+        <a href="<%- friend.site %>" target="_blank">
+          <span class="site-path"><%- friend.site %></span>
+        </a>
         <p class="card-meta">
           <%- friend.meta %>
         </p>
       </div>
-    </a>
     <% } %>
   </div>
   <div class="markdown-body">

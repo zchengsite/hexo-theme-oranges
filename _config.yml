@@ -18,3 +18,18 @@ gitalk:
   owner: zchengsite
   admin: zchengsite
   distractionFreeMode: false
+
+# 友链详细信息：支持多个友链
+friends:
+  -
+    nickname: Ayu # 昵称
+    site: https://yuang.site # 站点地址
+    meta: # 站点描述
+  -
+    nickname: Lxwu # 昵称
+    site: https://lxwu.me # 站点地址
+    meta: # 站点描述
+  -
+    nickname: Mhyu
+    site: https://mhyu.top
+    meta:

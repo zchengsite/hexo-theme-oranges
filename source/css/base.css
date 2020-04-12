@@ -12,6 +12,17 @@ html, body {
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+  background-color: transparent;
+  color: #666;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: black;
+}
+
 .flex-container {
   min-height: calc(100vh - 290px);
   display: flex;
@@ -29,36 +40,31 @@ html, body {
   margin: 0 auto;
 }
 
-.time-y, .time-m-d {
+.post-item {
+  display: flex;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.post-item .time-m-d {
+  flex-shrink: 0;
+  margin-right: 30px;
   color: #666;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
-.time-m-d {
-  margin-right: 30px;
+.post-item .title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .tag-details .time-m-d, .archives .time-m-d {
   margin: 0 30px;
-}
-
-.post-item {
-  font-size: 1.6rem;
-  margin-bottom: 20px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-a {
-  text-decoration: none;
-  background-color: transparent;
-  color: #666;
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: black;
 }
 
 .avatar {
@@ -161,6 +167,19 @@ a:hover {
 
 .tag-list-count::after {
   content: " )";
+}
+
+.friend-list {
+  padding-left: 30px;
+}
+
+.friend-list-item {
+  font-size: 1.6rem;
+  padding: 10px;
+}
+
+.friend-list-item .nickname {
+  padding-right: 10px;
 }
 
 .post-details {
