@@ -57,29 +57,27 @@
 <% if (!page.type) { %>
 <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
 <div class="container post-details">
-  <div class="post-title">
-    <%- page.title %>
-  </div>
-
-  <div class="post-attach">
-    <span class="post-pubtime"><%- page.date.format("YYYY-MM-DD") %></span>
-    <span class="post-tags">
-      <% if(page.tags && page.tags.length > 0){ %>
-        <i class="iconfont icon-tags"></i>
-        <% for(let item of page.tags.data){ %>
-        <span class="span--tag">
-          <a href="<%= url_for(item.path)%>">
-            #<%- item.name %>
-          </a>
-        </span>
+  <div class="post-content">
+    <div class="post-title"><%- page.title %></div>
+    <div class="post-attach">
+      <span class="post-pubtime"><%- page.date.format("YYYY-MM-DD") %></span>
+      <span class="post-tags">
+        <% if(page.tags && page.tags.length > 0){ %>
+          <i class="iconfont icon-tags"></i>
+          <% for(let item of page.tags.data){ %>
+          <span class="span--tag">
+            <a href="<%= url_for(item.path)%>">
+              #<%- item.name %>
+            </a>
+          </span>
+          <% } %>
         <% } %>
-      <% } %>
-    </span>
+      </span>
+    </div>
+    <div class="markdown-body">
+      <%- page.more %>
+    </div>
   </div>
-
-  <div class="markdown-body">
-    <%- page.more %>
-  </div>
-
+  <%- partial("_partial/catalog") %>
 </div>
 <% } %>
