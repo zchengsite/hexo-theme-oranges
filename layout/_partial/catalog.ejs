@@ -1,4 +1,37 @@
-<div class="post-catalog">
+<div class="post-catalog" id="catalog">
   <div class="title">目录</div>
   <%- toc(page.content, { "list_number": false }) %>
 </div>
+
+<script>
+  var catalog = null;
+  var catalogTopHeight = null;
+  var parent = null;
+  var parentTopHeight = null;
+  function handleScoll() {
+    catalog = document.getElementById("catalog");
+    parent = document.getElementById("post-details");
+    catalogTopHeight = catalog.offsetTop;
+    parentTopHeight = parent.offsetTop;
+  }
+
+  window.onscroll = function() {
+    changePos();
+  }
+
+  function changePos() {
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+    console.log(scrollTop, catalogTopHeight)
+    if (scrollTop > catalogTopHeight) {
+      catalog.style = "position: fixed; top: 0;"
+    } else {
+      catalog.style = "position: absolute; top: calc(290px + 88px + 30px)"
+    }
+  }
+
+  window.onload = function(){
+    handleScoll();
+  }
+
+
+</script>

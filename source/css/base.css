@@ -35,10 +35,25 @@ a:hover {
 }
 
 .container {
-  position: relative;
-  width: 90%;
-  max-width: 700px;
+  width: 50%;
   margin: 0 auto;
+}
+
+.index .post-list,
+.friend-index .friend-list,
+.archives .post-list,
+.tag-index .tag-list,
+.about-index .markdown-body {
+  padding: 0 50px;
+}
+
+@media (max-width: 888px) {
+  .container {
+    width: 90%;
+  }
+  .post-catalog {
+    display: none;
+  }
 }
 
 .post-item {
@@ -170,10 +185,6 @@ a:hover {
   content: " )";
 }
 
-.friend-list {
-  padding-left: 30px;
-}
-
 .friend-list-item {
   font-size: 1.6rem;
   padding: 10px;
@@ -181,11 +192,6 @@ a:hover {
 
 .friend-list-item .nickname {
   padding-right: 10px;
-}
-
-.post-details {
-  width: 90%;
-  max-width: 800px;
 }
 
 .post-details .post-title {
@@ -218,9 +224,10 @@ a:hover {
 
 .post-catalog {
   position: absolute;
-  top: 88px;
-  right: -250px;
-  width: 200px;
+  top: calc(290px + 88px + 30px);
+  right: 0;
+  min-width: 200px;
+  width: 20%;
   font-size: 1.4rem;
   border-left: 1px solid rgba(88,88,88,0.1);
   padding-left: 10px;
