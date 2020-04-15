@@ -2,6 +2,7 @@
 A simple hexo-theme of minimalism
 
 ### 安装
+在博客项目根目录下执行
 ```bash
 git clone https://github.com/zchengsite/hexo-theme-oranges.git /themes/oranges
 ```
