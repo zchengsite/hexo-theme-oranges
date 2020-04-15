@@ -51,6 +51,13 @@ a:hover {
   .container {
     width: 90%;
   }
+  .index .post-list,
+  .friend-index .friend-list,
+  .archives .post-list,
+  .tag-index .tag-list,
+  .about-index .markdown-body {
+    padding: 0;
+  }
   .post-catalog {
     display: none;
   }
