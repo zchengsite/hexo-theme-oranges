@@ -133,6 +133,12 @@ a:hover {
   font-weight: bold;
 }
 
+@media (max-width: 888px) {
+  .navbar ul li {
+    margin: 0 10px;
+  }
+}
+
 .post-navigation {
   font-size: 1.5rem;
   padding: 20px 0;
