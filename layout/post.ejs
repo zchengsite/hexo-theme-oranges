@@ -15,9 +15,6 @@
 <!-- 分类页 url形式：https://yoursite/categories/ -->
 <div class="container category-index">
   <div>
-    <h3>
-      共计 <%- site.categories.length %> 个分类
-    </h3>
     <%- list_categories({orderby: "length", order: -1}) %>
   </div>
 </div>

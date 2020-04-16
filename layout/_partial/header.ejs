@@ -2,7 +2,35 @@
   <meta charset="utf-8">
   <meta name="author" content="oranges, 1451426471@qq.com" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title><% if(is_home()) { %> <%= config.title %> <% } else { %><%= page.title %><% } %></title
+  <% if(is_home() && page.current > 1){ %>
+    <meta name="robots" content="noindex" />
+  <% } %>
+  <%
+  var title = page.title;
+
+  if (is_archive()){
+    title = '归档';
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = '分类: ' + page.category;
+  } else if (is_tag()){
+    title = '标签: ' + page.tag;
+  } else if (title === "about") {
+    title = "关于"
+  } else if (title === "tags") {
+    title = "标签"
+  } else if (title === "categories") {
+    title = "分类"
+  } else if (title === "friends") {
+    title = "朋友"
+  }
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
 
   <% if (theme.favicon.enable){ %>
     <link rel="apple-touch-icon" href="<%- theme.favicon.touch_icon %>">

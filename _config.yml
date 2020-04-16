@@ -35,6 +35,10 @@ navbar:
     enable: true
     path: /archives/
   -
+    name: 分类
+    enable: true
+    path: /categories
+  -
     name: 标签
     enable: true
     path: /tags/
