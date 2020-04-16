@@ -6,11 +6,13 @@ A simple hexo-theme of minimalism
 ```bash
 git clone https://github.com/zchengsite/hexo-theme-oranges.git themes/oranges
 ```
+
 ### 启用
 在hexo博客项目根目录下找到`_config.yml`文件，修改其中`theme`字段为主题名`oranges`
 ```
 theme: oranges
 ```
+
 ### 配置
 
 #### 启用`标签`页
@@ -37,6 +39,8 @@ navbar:
     path: /tags/
 ```
 
+---
+
 #### 启用`朋友`页
 在hexo博客项目根目录下执行，在`source`文件夹下生成`friends`文件夹
 ```bash
@@ -60,6 +64,8 @@ navbar:
     enable: true
     path: /friends/
 ```
+
+---
 
 #### 启用`关于我`页
 在hexo博客项目根目录下执行，在`source`文件夹下生成`about`文件夹
@@ -85,6 +91,8 @@ navbar:
     path: /about/
 ```
 
+---
+
 #### 启用`分类`页
 在hexo博客项目根目录下执行，在`source`文件夹下生成`categories`文件夹
 ```bash
@@ -108,6 +116,8 @@ navbar:
     enable: true
     path: /categories/
 ```
+
+---
 
 #### 启用`文章目录`功能
 主题配置文件`_config.yml`下`catalog`修改`enable`为`true`，如不想展示，设置为`false`即可
