@@ -4,6 +4,9 @@ favicon:
   icon: /images/favicon.ico
   touch_icon: /images/favicon.ico
 
+# RSS文件位置
+rss:
+
 # Google Analytics
 gtag:
   enable: false

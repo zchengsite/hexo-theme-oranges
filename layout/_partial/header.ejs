@@ -37,6 +37,10 @@
     <link rel="icon" href="<%- theme.favicon.icon %>">
   <% } %>
 
+  <% if (theme.rss){ %>
+    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+
   <!-- Raleway-Font -->
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
