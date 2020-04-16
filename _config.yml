@@ -28,18 +28,23 @@ avatar:
 navbar:
   -
     name: 主页
+    enable: true
     path: /
   -
     name: 归档
+    enable: true
     path: /archives/
   -
     name: 标签
+    enable: true
     path: /tags/
   -
     name: 朋友
+    enable: true
     path: /friends/
   -
     name: 关于我
+    enable: true
     path: /about/
 
 # 文章目录

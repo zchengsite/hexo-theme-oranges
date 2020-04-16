@@ -5,11 +5,17 @@
   </div>
   <div class="navbar">
     <ul>
-      <% for(let item of theme.navbar){ %>
+      <% for(let item of theme.navbar) {
+        if (item.enable) {
+      %>
+
         <li>
           <a href="<%- item.path %>"><%- item.name %></a>
         </li>
-      <% } %>
+      <%
+        }
+      }
+      %>
     </ul>
   </div>
 </div>
