@@ -42,6 +42,9 @@ navbar:
     name: 关于我
     path: /about/
 
+# 文章目录
+catalog:
+  enable: true
 
 # 友链详细信息：支持多个友链
 friends:
