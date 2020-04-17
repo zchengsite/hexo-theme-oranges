@@ -40,7 +40,7 @@ navbar:
   -
     name: 分类
     enable: true
-    path: /categories
+    path: /categories/
   -
     name: 标签
     enable: true

@@ -5,17 +5,28 @@
   </div>
   <div class="navbar">
     <ul>
-      <% for(let item of theme.navbar) {
-        if (item.enable) {
+      <%
+        for(let item of theme.navbar) {
+          if (item.enable) {
       %>
-
-        <li>
+        <li class="nav-item" data-path="<%- item.path %>">
           <a href="<%- item.path %>"><%- item.name %></a>
         </li>
       <%
+          }
         }
-      }
       %>
     </ul>
   </div>
 </div>
+
+<script>
+  let navs = document.querySelectorAll('.nav-item');
+  let pagePath = window.location.pathname;
+  for(let nav of navs) {
+    let navPath = nav.getAttribute("data-path");
+    if(navPath && navPath === pagePath) {
+      nav.className = "nav-item active";
+    }
+  }
+</script>

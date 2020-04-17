@@ -135,6 +135,19 @@ a:hover {
   font-weight: bold;
 }
 
+.navbar ul li a {
+  padding-bottom: 2px;
+}
+
+.navbar ul li a:hover {
+  border-bottom: 2px solid black;
+}
+
+.navbar ul li.active a {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
 @media (max-width: 888px) {
   .navbar ul li {
     margin: 0 10px;
@@ -202,7 +215,7 @@ a:hover {
 
 .category-list li {
   font-size: 1.6rem;
-  /*display: inline-block;*/
+  list-style: none;
   padding: 10px;
 }
 

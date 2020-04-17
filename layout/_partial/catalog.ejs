@@ -1,4 +1,4 @@
-<% if (theme.catalog.enable) { %>
+<% if (theme.catalog.enable && toc(page.content)) { %>
 <div class="post-catalog" id="catalog">
   <div class="title">目录</div>
   <%- toc(page.content, { "list_number": false }) %>
@@ -7,22 +7,19 @@
 <script>
   var catalog = null;
   var catalogTopHeight = null;
-  var parent = null;
-  var parentTopHeight = null;
   function handleScoll() {
     catalog = document.getElementById("catalog");
-    parent = document.getElementById("post-details");
     catalogTopHeight = catalog.offsetTop;
-    parentTopHeight = parent.offsetTop;
+    changePos()
   }
 
-  window.onscroll = function() {
-    changePos();
-  }
+  // window.onscroll = function() {
+  //   console.log("123")
+  //   changePos();
+  // }
 
   function changePos() {
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-    console.log(scrollTop, catalogTopHeight)
     if (scrollTop > catalogTopHeight - 20) {
       catalog.style = "position: fixed; top: 20px;"
     } else {
@@ -30,8 +27,11 @@
     }
   }
 
-  window.onload = function(){
+  window.onload = function() {
     handleScoll();
+    window.onscroll = function() {
+      changePos();
+    }
   }
 
 
