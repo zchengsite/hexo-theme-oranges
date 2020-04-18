@@ -10,16 +10,16 @@ rss:
 # Google Analytics
 gtag:
   enable: false
-  gtagkey: UA-126364107-1
+  gtagkey: 
 
 # gitalk comments
 gitalk:
   enable: false
-  clientID: 57fd80ca85f9d3276439
-  clientSecret: 7411553827815e5766ebe0bce5e4fb2e36e3217f
-  repo: blog
-  owner: zchengsite
-  admin: zchengsite
+  clientID: 
+  clientSecret: 
+  repo: 
+  owner: 
+  admin: 
   distractionFreeMode: false
 
 # 用户头像与昵称
