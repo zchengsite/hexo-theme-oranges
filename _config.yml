@@ -64,16 +64,8 @@ friends:
   # site: 地址
   # meta: 描述
   -
-    nickname: Ayu
-    site: https://yuang.site
-    meta:
-  -
-    nickname: Lxwu
-    site: https://lxwu.me
-    meta:
-  -
-    nickname: Mhyu
-    site: https://mhyu.top
+    nickname: Google
+    site: https://www.google.com/
     meta:
 
 # 页脚信息
@@ -87,11 +79,11 @@ footer:
     -
       name: github
       icon: github
-      path: https://github.com/zchengsite
+      path: https://github.com/zchengsite/hexo-theme-oranges
     -
       name: email
       icon: envelope
-      path: Mailto:ghsau@163.com
+      path: mscsdfsaw***@163.com
     -
       name: facebook
       icon: facebooksquare
@@ -111,5 +103,8 @@ footer:
 
   more:
     -
-      name: theme by Oranges
+      name: Copyright © Oranges 2020
+      path: https://github.com/zchengsite/hexo-theme-oranges
+    -
+      name: Theme by Oranges | Powered by Hexo
       path: https://github.com/zchengsite/hexo-theme-oranges
