@@ -131,3 +131,7 @@ catalog:
 如遇问题请提交Issue反馈，看到会第一时间解答
 
 如果觉得主题还不错，请点击Star支持下
+
+### License
+
+MIT
