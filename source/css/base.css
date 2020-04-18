@@ -276,6 +276,10 @@ a:hover {
   padding: 10px 0 0 10px;
 }
 
+.post-catalog .toc-child {
+  padding-left: 10px;
+}
+
 .post-catalog ol li {
   list-style-type: none;
   overflow: hidden;
