@@ -171,13 +171,13 @@ a:hover {
 }
 
 .footer {
-  padding: 30px 0 10px;
-  font-size: 1.5rem;
+  padding-top: 30px;
+  font-size: 1.2rem;
   color: #aaa;
 }
 
 .social {
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 .social ul {
@@ -189,7 +189,8 @@ a:hover {
   padding: 0 5px;
 }
 
-.copyright {
+.footer-more {
+  padding-bottom: 5px;
   text-align: center;
 }
 
