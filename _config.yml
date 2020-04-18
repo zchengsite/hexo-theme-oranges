@@ -37,10 +37,10 @@ navbar:
     name: 归档
     enable: true
     path: /archives/
-  -
-    name: 分类
-    enable: true
-    path: /categories/
+  # -
+  #   name: 分类
+  #   enable: true
+  #   path: /categories/
   -
     name: 标签
     enable: true
@@ -87,29 +87,32 @@ footer:
     -
       name: github
       icon: github
-      path: https://github.com/zchengsite/hexo-theme-oranges
-    -
-      name: email
-      icon: envelope
-      path: Mailto:ghsau@163.com
-    -
-      name: facebook
-      icon: facebooksquare
-      path:
-    -
-      name: twitter
-      icon: twitter
-      path:
-    -
-      name: 微信
-      icon: wechat
-      path:
-    -
-      name: 微博
-      icon: weibo
-      path:
+      path: https://github.com/zchengsite
+    # -
+    #   name: email
+    #   icon: envelope
+    #   path: Mailto:ghsau@163.com
+    # -
+    #   name: facebook
+    #   icon: facebooksquare
+    #   path:
+    # -
+    #   name: twitter
+    #   icon: twitter
+    #   path:
+    # -
+    #   name: 微信
+    #   icon: wechat
+    #   path:
+    # -
+    #   name: 微博
+    #   icon: weibo
+    #   path:
 
   more:
     -
-      name: Theme - oranges | Orange's blog
+      name: theme by Oranges
       path: https://github.com/zchengsite/hexo-theme-oranges
+    -
+      name: 鄂ICP备18028045号
+      path: http://www.beian.miit.gov.cn
