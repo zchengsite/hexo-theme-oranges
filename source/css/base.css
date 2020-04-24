@@ -281,7 +281,7 @@ a:hover {
   padding-left: 10px;
 }
 
-.post-catalog ol li {
+.post-catalog li {
   list-style-type: none;
   overflow: hidden;
   white-space: nowrap;
