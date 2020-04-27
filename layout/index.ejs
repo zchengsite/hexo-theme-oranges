@@ -5,7 +5,11 @@
         <div class="time-m-d"><%- item.date.format("YYYY-MM-DD") %></div>
         <div class="title">
           <a href="<%- url_for(item.path) %>">
+            <% if(item.title !== "") { %>
             <span><%- item.title %></span>
+            <% } else { %>
+              <span>no-title</span>
+            <% } %>
           </a>
         </div>
       </div>
