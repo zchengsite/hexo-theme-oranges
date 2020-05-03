@@ -478,6 +478,44 @@
   line-height: 1.25;
 }
 
+.markdown-body h1 .headerlink,
+.markdown-body h2 .headerlink,
+.markdown-body h3 .headerlink,
+.markdown-body h4 .headerlink,
+.markdown-body h5 .headerlink,
+.markdown-body h6 .headerlink {
+  position: relative;
+  text-decoration: none;
+}
+
+.markdown-body h1 .headerlink::before,
+.markdown-body h2 .headerlink::before,
+.markdown-body h3 .headerlink::before,
+.markdown-body h4 .headerlink::before,
+.markdown-body h5 .headerlink::before,
+.markdown-body h6 .headerlink::before {
+  content: "#";
+  position: absolute;
+  right: 0;
+  width: 15px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s, width 0.3s;
+}
+
+.markdown-body h1:hover .headerlink::before,
+.markdown-body h2:hover .headerlink::before,
+.markdown-body h3:hover .headerlink::before,
+.markdown-body h4:hover .headerlink::before,
+.markdown-body h5:hover .headerlink::before,
+.markdown-body h6:hover .headerlink::before {
+  content: "#";
+  position: absolute;
+  right: 0;
+  width: 18px;
+  opacity: 1;
+}
+
 .markdown-body h1 .octicon-link,
 .markdown-body h2 .octicon-link,
 .markdown-body h3 .octicon-link,
