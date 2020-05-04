@@ -269,6 +269,7 @@ a:hover {
 }
 
 .post-catalog .title {
+  opacity: 0.8;
   font-size: 1.6rem;
   font-weight: bold;
 }
@@ -287,6 +288,19 @@ a:hover {
   white-space: nowrap;
   text-overflow: ellipsis;
   line-height: 2;
+}
+
+.toc-link {
+  padding: 3px 0 3px 5px;
+  opacity: 0.8;
+  border-left: 2px solid transparent;
+  transition: border 0.3s, opacity 0.3s;
+}
+
+.toc-link.active {
+  color: black;
+  opacity: 1;
+  border-left: 2px solid black;
 }
 
 .back-to-top {
