@@ -288,3 +288,14 @@ a:hover {
   text-overflow: ellipsis;
   line-height: 2;
 }
+
+.back-to-top {
+  position: fixed;
+  right: 2.2rem;
+  bottom: 3.2rem;
+  font-weight: bold;
+}
+
+.back-to-top.hidden {
+  display: none;
+}

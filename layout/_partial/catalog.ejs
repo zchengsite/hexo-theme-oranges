@@ -10,13 +10,7 @@
   function handleScoll() {
     catalog = document.getElementById("catalog");
     catalogTopHeight = catalog.offsetTop;
-    changePos()
   }
-
-  // window.onscroll = function() {
-  //   console.log("123")
-  //   changePos();
-  // }
 
   function changePos() {
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
@@ -27,13 +21,8 @@
     }
   }
 
-  window.onload = function() {
-    handleScoll();
-    window.onscroll = function() {
-      changePos();
-    }
-  }
-
+  handleScoll();
+  document.addEventListener("scroll", changePos, false);
 
 </script>
 

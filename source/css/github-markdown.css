@@ -497,7 +497,6 @@
   content: "#";
   position: absolute;
   right: 0;
-  width: 15px;
   font-weight: bold;
   opacity: 0;
   transition: opacity 0.3s, width 0.3s;
@@ -512,7 +511,6 @@
   content: "#";
   position: absolute;
   right: 0;
-  width: 18px;
   opacity: 1;
 }
 
