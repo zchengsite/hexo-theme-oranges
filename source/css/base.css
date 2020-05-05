@@ -12,6 +12,21 @@ html, body {
   margin: 0 auto;
 }
 
+/*自定义页面整体滚动条*/
+/*控制整个滚动条*/
+::-webkit-scrollbar {
+    background-color: #fafafa;
+    width: 10px;
+    height: 10px;
+    background-clip: padding-box;
+}
+
+/*滚动条中滑块部分*/
+::-webkit-scrollbar-thumb {
+    background-color: #808080;
+    border-radius: 5px;
+}
+
 a {
   color: #666;
   text-decoration: none;
