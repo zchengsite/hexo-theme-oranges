@@ -1,33 +1,51 @@
+# 相关配置说明
+  # favicon: 网站图标
+  # avatar: 主题用户头像与昵称
+  # rss: rss订阅
+  # gtag: Google 分析
+  # comments: 文章评论系统
+    # gitalk
+    # disqus
+  # navbar: 主题页面导航栏
+  # catalog: 文章目录
+  # friends: 友链
+  # footer: 页脚信息
 
+# enable: 是否开启相应功能，可选true & false
+
+# 网站图标
 favicon:
   enable: true
   icon: /images/favicon.ico
   touch_icon: /images/favicon.ico
-
-# RSS文件位置
-rss:
-
-# Google Analytics
-gtag:
-  enable: false
-  gtagkey: 
-
-# gitalk comments
-gitalk:
-  enable: false
-  clientID: 
-  clientSecret: 
-  repo: 
-  owner: 
-  admin: 
-  distractionFreeMode: false
 
 # 用户头像与昵称
 avatar:
   author_photo: /images/34339465.jpg
   author_nickname: Oranges
 
-# 导航信息
+# rss订阅
+rss:
+  enable: false
+
+# Google Analytics
+gtag:
+  enable: false
+  gtagkey:
+
+# 文章评论系统
+comments:
+  enable: true
+  # 目前仅支持disqus评论
+  # disqus 需科学上网方可使用
+  disqus:
+    # https://disqus.com/
+    # 注册账号，获取shortname.disqus.com，shortname为你定义的唯一name
+    # 举个例子：我注册配置完毕后的网址为zcheng.disqus.com，将zcheng填入即可
+    enable: true
+    shortname: zcheng
+
+# 主题页面导航栏
 navbar:
   -
     name: 主页

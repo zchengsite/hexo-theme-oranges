@@ -12,7 +12,6 @@ html, body {
   margin: 0 auto;
 }
 
-/*自定义页面整体滚动条*/
 /*控制整个滚动条*/
 ::-webkit-scrollbar {
     background-color: #fafafa;
@@ -316,6 +315,10 @@ a:hover {
   color: black;
   opacity: 1;
   border-left: 2px solid black;
+}
+
+.comments-container {
+  padding-top: 30px;
 }
 
 .back-to-top {
