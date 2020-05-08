@@ -24,14 +24,12 @@ avatar:
   author_photo: /images/34339465.jpg
   author_nickname: Oranges
 
-# rss订阅
-rss:
-  enable: false
-
-# Google Analytics
+# Google 分析
+# https://analytics.google.com
+# 注册Google分析账号，在设置/跟踪信息/跟踪代码/找到跟踪ID，一般格式为UA-xxxxxxx-x
 gtag:
   enable: false
-  gtagkey:
+  gtagkey: UA-xxxxxxx-x
 
 # 文章评论系统
 comments:
@@ -82,8 +80,12 @@ friends:
   # site: 地址
   # meta: 描述
   -
-    nickname: Google
-    site: https://www.google.com/
+    nickname: Zcheng
+    site: https://zcheng.site/
+    meta:
+  -
+    nickname: Hexo
+    site: https://hexo.io/
     meta:
 
 # 页脚信息
@@ -118,6 +120,12 @@ footer:
       name: 微博
       icon: weibo
       path:
+    -
+      # rss需安装 hexo-generator-feed 插件
+      # 具体参照https://github.com/hexojs/hexo-generator-feed
+      name: rss
+      icon: rss
+      path: atom.xml
 
   more:
     -
