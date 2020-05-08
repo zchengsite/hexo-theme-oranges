@@ -11,7 +11,7 @@
   # friends: 友链
   # footer: 页脚信息
 
-# enable: 是否开启相应功能，可选true & false
+# enable: 是否开启相应功能，可选true || false
 
 # 网站图标
 favicon:
@@ -26,7 +26,8 @@ avatar:
 
 # Google 分析
 # https://analytics.google.com
-# 注册Google分析账号，在设置/跟踪信息/跟踪代码/找到跟踪ID，一般格式为UA-xxxxxxx-x
+# 注册Google分析账号，在管理/创建媒体资源/选择网站/填写相关信息后得到跟踪Id，一般格式为UA-xxxxxxx-x
+# 如之前已有注册账号，在管理/跟踪信息/跟踪代码/找到跟踪ID，一般格式为UA-xxxxxxx-x
 gtag:
   enable: false
   gtagkey: UA-xxxxxxx-x
@@ -39,9 +40,9 @@ comments:
   disqus:
     # https://disqus.com/
     # 注册账号，获取shortname.disqus.com，shortname为你定义的唯一name
-    # 举个例子：我注册配置完毕后的网址为zcheng.disqus.com，将zcheng填入即可
-    enable: true
-    shortname: zcheng
+    # 例：我注册配置完毕后的网址为zxcxxxx.disqus.com，zxcxxxx即为shortname
+    enable: false
+    shortname: zxcxxxx
 
 # 主题页面导航栏
 navbar:
