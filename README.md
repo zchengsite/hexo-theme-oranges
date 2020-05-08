@@ -126,6 +126,49 @@ catalog:
   enable: true
 ```
 
+#### 启用`rss`功能
+1.安装`hexo-generator-feed`[官方插件](https://github.com/hexojs/hexo-generator-feed)
+```shell
+npm install hexo-generator-feed --save
+```
+2.在博客项目配置文件`_config.yml`(非主题配置文件)增加:
+```
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
+```
+3.开启rss按钮
+在主题配置文件`_config.yml`增加页脚项:
+```
+footer:
+  social:
+    -
+      name: rss
+      icon: rss
+      path: atom.xml
+```
+### 启用评论功能
+主题配置文件`_config.yml`下`comments`修改`enable`为`true`
+目前暂时仅支持disqus评论系统，如需使用，修改`disqus`配置下`enable`为`true`
+并前往disqus注册账号获取shortname，填入以下相应配置即可
+```
+comments:
+  enable: true
+  disqus:
+    enable: true
+    shortname: your shortname
+```
+其他评论系统正在添加中...
+
 ### 优化与更新
 主题目前功能并不多，后续根据需求考虑更新迭代。
 - [x] 自定义导航，可灵活配置自己想要的导航✔
