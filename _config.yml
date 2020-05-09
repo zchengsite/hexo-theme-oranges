@@ -35,7 +35,26 @@ gtag:
 # 文章评论系统
 comments:
   enable: true
-  # 目前仅支持disqus评论
+  # 目前仅支持gitalk, valine, disqus评论，选择喜欢的一种开启即可
+
+  gitalk:
+    # https://github.com/gitalk/gitalk#usage查看官方教程
+    enable: false
+    clientID:
+    clientSecret:
+    repo:
+    owner:
+    admin:
+    id: location.pathname
+    distractionFreeMode: false
+
+  valine:
+    # https://valine.js.org/quickstart.html#%E8%8E%B7%E5%8F%96APP-ID-%E5%92%8C-APP-Key
+    # 进入以上网址查看官方教程
+    enable: false
+    appId:
+    appKey:
+
   # disqus 需科学上网方可使用
   disqus:
     # https://disqus.com/

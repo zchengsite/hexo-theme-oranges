@@ -1,6 +1,6 @@
 <head>
   <meta charset="utf-8">
-  <meta name="author" content="oranges, 1451426471@qq.com" />
+  <meta name="author" content="zchengsite, 1451426471@qq.com" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <% if(is_home() && page.current > 1){ %>
     <meta name="robots" content="noindex" />
@@ -58,5 +58,16 @@
 
       gtag('config', '<%- theme.gtag.gtagkey %>');
     </script>
+  <% } %>
+
+  <!-- gitalk comments -->
+  <% if(theme.comments.enable && theme.comments.gitalk.enable) { %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <% } %>
+
+  <!-- valine comments -->
+  <% if(theme.comments.enable && theme.comments.valine.enable) { %>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <% } %>
 </head>
