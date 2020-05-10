@@ -157,18 +157,18 @@ footer:
       path: atom.xml
 ```
 ### 启用评论功能
-1.确保主题配置文件`_config.yml`下`comments`->`enable`为`true`
+1.确保主题配置文件`_config.yml`下`comments`->`enable: true`
 
 2.目前支持以下几种评论插件
   - valine
   - gitalk
   - disqus(需科学上网)
 
-3.如需使用，修改相应评论下`enable`为`true`
+3.如需使用，修改相应评论下`enable: true`
 
 4.查看评论插件官方教程获取相应的字段填入即可使用
 
-以`valine`为例
+以`valine`为例，注册`valine`并获取`appId`&`appKey`填入即可使用
 ```
 comments:
   enable: true
@@ -180,7 +180,6 @@ comments:
     placeholder: welcome!
     avatar: retro
 ```
-其他评论系统正在添加中...
 
 ### 优化与更新
 主题目前功能并不多，后续根据需求考虑更新迭代。
