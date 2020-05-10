@@ -262,6 +262,25 @@ a:hover {
   color: #666;
 }
 
+.post-content {
+  padding-bottom: 1rem;
+}
+
+.prev-or-next {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin: 3rem 0;
+  border-top: 1px solid rgba(88,88,88,0.1);
+}
+
+.prev-or-next .post-attach {
+  padding-bottom: 0;
+  opacity: 0.9;
+  font-size: 1.2rem;
+}
+
 .post-attach .post-pubtime, .post-attach .post-tags {
   padding: 0 10px;
 }
@@ -319,10 +338,6 @@ a:hover {
   color: black;
   opacity: 1;
   border-left: 2px solid black;
-}
-
-.comments-container {
-  padding-top: 30px;
 }
 
 .back-to-top {
