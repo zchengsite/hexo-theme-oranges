@@ -54,6 +54,8 @@ comments:
     enable: false
     appId:
     appKey:
+    placeholder: welcome!
+    avatar: retro
 
   # disqus 需科学上网方可使用
   disqus:
