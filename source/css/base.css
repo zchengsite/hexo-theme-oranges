@@ -220,23 +220,49 @@ a:hover {
   padding: 10px;
 }
 
+.tag-list li .tag-list-link {
+  position: relative;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.tag-list li .tag-list-link:hover {
+  color: #fff;
+}
+
+.tag-list li .tag-list-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -2px;
+  right: -2px;
+  transition: transform 0.1s linear;
+  background: #24292e;
+  transform: scaleX(0);
+  transform-origin: right;
+  z-index: -1;
+}
+
+.tag-list li .tag-list-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 .tag-list-count, .category-list-count {
-  padding: 0 10px;
+  padding: 0 5px;
   color: #aaa;
+  font-size: 1.2rem;
+  vertical-align: top;
 }
 
-.tag-list-count::before, .category-list-count::before {
-  content: "( ";
-}
-
-.tag-list-count::after, .category-list-count::after {
-  content: " )";
-}
-
-.category-list li {
+.category-list .category-list-item {
   font-size: 1.6rem;
-  list-style: none;
-  padding: 10px;
+  padding: 5px 0;
+}
+
+.category-list .category-list-item .category-list-child {
+  padding-left: 30px;
 }
 
 .friend-list-item {
