@@ -160,9 +160,9 @@ footer:
 1.确保主题配置文件`_config.yml`下`comments`->`enable: true`
 
 2.目前支持以下几种评论插件
-  - valine
-  - gitalk
-  - disqus(需科学上网)
+  - [valine](https://valine.js.org/quickstart.html)
+  - [gitalk](https://github.com/gitalk/gitalk#usage)
+  - [disqus](https://disqus.com)(需科学上网)
 
 3.如需使用，修改相应评论下`enable: true`
 
