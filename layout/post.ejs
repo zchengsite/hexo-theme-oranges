@@ -74,39 +74,41 @@
     <div class="markdown-body">
       <%- page.more %>
     </div>
-    <div class="prev-or-next">
-      <div class="post-foot-next">
-        <% if(page.next) { %>
-          <a href="<%- url_for(page.next.path) %>" target="_self">
-            <i class="iconfont icon-chevronleft"></i>
-            <span>PREV</span>
-          </a>
-        <% } %>
-      </div>
-      <div class="post-attach">
-        <span class="post-pubtime"><%- page.date.format("YYYY-MM-DD") %></span>
-        <span class="post-tags">
-          <% if(page.tags && page.tags.length > 0){ %>
-            <i class="iconfont icon-tags"></i>
-            <% for(let item of page.tags.data){ %>
-            <span class="span--tag">
-              <a href="<%= url_for(item.path)%>">
-                #<%- item.name %>
-              </a>
-            </span>
-            <% } %>
+    <% if(theme.prevnext.enable) { %>
+      <div class="prev-or-next">
+        <div class="post-foot-next">
+          <% if(page.next) { %>
+            <a href="<%- url_for(page.next.path) %>" target="_self">
+              <i class="iconfont icon-chevronleft"></i>
+              <span>PREV</span>
+            </a>
           <% } %>
-        </span>
+        </div>
+        <div class="post-attach">
+          <span class="post-pubtime"><%- page.date.format("YYYY-MM-DD") %></span>
+          <span class="post-tags">
+            <% if(page.tags && page.tags.length > 0){ %>
+              <i class="iconfont icon-tags"></i>
+              <% for(let item of page.tags.data){ %>
+              <span class="span--tag">
+                <a href="<%= url_for(item.path)%>">
+                  #<%- item.name %>
+                </a>
+              </span>
+              <% } %>
+            <% } %>
+          </span>
+        </div>
+        <div class="post-foot-prev">
+          <% if(page.prev) { %>
+            <a href="<%- url_for(page.prev.path) %>" target="_self">
+              <span>NEXT</span>
+              <i class="iconfont icon-chevronright"></i>
+            </a>
+          <% } %>
+        </div>
       </div>
-      <div class="post-foot-prev">
-        <% if(page.prev) { %>
-          <a href="<%- url_for(page.prev.path) %>" target="_self">
-            <span>NEXT</span>
-            <i class="iconfont icon-chevronright"></i>
-          </a>
-        <% } %>
-      </div>
-    </div>
+    <% } %>
   </div>
   <%- partial("_partial/catalog") %>
   <% if(theme.comments.enable) { %>

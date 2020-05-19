@@ -8,6 +8,7 @@
     # disqus
   # navbar: 主题页面导航栏
   # catalog: 文章目录
+  # prevnext: 文章末尾的上一页与下一页
   # friends: 友链
   # footer: 页脚信息
 
@@ -95,6 +96,10 @@ navbar:
 
 # 文章目录
 catalog:
+  enable: true
+
+# 文章末尾的上一页与下一页
+prevnext:
   enable: true
 
 # 友链详细信息：支持多个友链
