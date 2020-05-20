@@ -1,17 +1,22 @@
 # hexo-theme-oranges
 A simple hexo-theme of minimalism
 
-### 安装
+### Installation
 在hexo博客项目根目录下执行，会将`oranges`主题clone至`themes`文件夹下
 ```bash
 git clone https://github.com/zchengsite/hexo-theme-oranges.git themes/oranges
 ```
 
-### 启用
+<details>
+  <summary><b>Usage</b> (click to show)</summary>
+
 在hexo博客项目根目录下找到`_config.yml`文件，修改其中`theme`字段为主题名`oranges`
+
 ```
 theme: oranges
 ```
+
+</details>
 
 ### 配置
 
@@ -179,6 +184,13 @@ comments:
     appKey: xxxxxxxxx
     placeholder: welcome!
     avatar: retro
+```
+
+### PREV & NEXT
+```
+# 文章末尾的上一页与下一页
+prevnext:
+  enable: true
 ```
 
 ### 优化与更新
