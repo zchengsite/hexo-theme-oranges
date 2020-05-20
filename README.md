@@ -1,14 +1,15 @@
 # hexo-theme-oranges
 A simple hexo-theme of minimalism
 
-### Installation
+## Installation
+
 在hexo博客项目根目录下执行，会将`oranges`主题clone至`themes`文件夹下
+
 ```bash
 git clone https://github.com/zchengsite/hexo-theme-oranges.git themes/oranges
 ```
 
-<details>
-  <summary><b>Usage</b> (click to show)</summary>
+## Usage
 
 在hexo博客项目根目录下找到`_config.yml`文件，修改其中`theme`字段为主题名`oranges`
 
@@ -16,16 +17,19 @@ git clone https://github.com/zchengsite/hexo-theme-oranges.git themes/oranges
 theme: oranges
 ```
 
-</details>
+## configuration
 
-### 配置
+<details>
+  <summary><b>Tags page</b> (click to show)</summary>
 
-#### 启用`标签`页
 在hexo博客项目根目录下执行，在`source`文件夹下生成`tags`文件夹
+
 ```bash
 hexo new page tags
 ```
+
 接着修改`tags`文件夹下`index`为以下内容
+
 ```
 ---
 title: tags
@@ -35,7 +39,9 @@ categories:
 tags:
 ---
 ```
+
 并在主题配置文件`_config.yml`修改对应`enable`为`true`，如不想展示，设置为`false`即可
+
 ```
 navbar:
   -
@@ -44,14 +50,19 @@ navbar:
     path: /tags/
 ```
 
----
+</details>
 
-#### 启用`朋友`页
+<details>
+  <summary><b>Friends page</b> (click to show)</summary>
+
 在hexo博客项目根目录下执行，在`source`文件夹下生成`friends`文件夹
+
 ```bash
 hexo new page friends
 ```
+
 接着修改`friends`文件夹下`index`为以下内容
+
 ```
 ---
 title: tags
@@ -61,7 +72,9 @@ categories:
 tags:
 ---
 ```
+
 并在主题配置文件`_config.yml`修改对应`enable`为`true`，如不想展示，设置为`false`即可
+
 ```
 navbar:
   -
@@ -69,15 +82,19 @@ navbar:
     enable: true
     path: /friends/
 ```
+</details>
 
----
+<details>
+  <summary><b>About me page</b> (click to show)</summary>
 
-#### 启用`关于我`页
 在hexo博客项目根目录下执行，在`source`文件夹下生成`about`文件夹
+
 ```bash
 hexo new page about
 ```
+
 接着修改`about`文件夹下`index`为以下内容
+
 ```
 ---
 title: tags
@@ -87,7 +104,9 @@ categories:
 tags:
 ---
 ```
+
 并在主题配置文件`_config.yml`修改对应`enable`为`true`，如不想展示，设置为`false`即可
+
 ```
 navbar:
   -
@@ -96,14 +115,19 @@ navbar:
     path: /about/
 ```
 
----
+</details>
 
-#### 启用`分类`页
+<details>
+  <summary><b>Categories page</b> (click to show)</summary>
+
 在hexo博客项目根目录下执行，在`source`文件夹下生成`categories`文件夹
+
 ```bash
 hexo new page categories
 ```
+
 接着修改`categories`文件夹下`index`为以下内容
+
 ```
 ---
 title: tags
@@ -113,7 +137,9 @@ categories:
 tags:
 ---
 ```
+
 并在主题配置文件`_config.yml`修改对应`enable`为`true`，如不想展示，设置为`false`即可
+
 ```
 navbar:
   -
@@ -122,21 +148,31 @@ navbar:
     path: /categories/
 ```
 
----
+</details>
 
-#### 启用`文章目录`功能
+<details>
+  <summary><b>Catalog(目录)</b> (click to show)</summary>
+
 主题配置文件`_config.yml`下`catalog`修改`enable`为`true`，如不想展示，设置为`false`即可
+
 ```
 catalog:
   enable: true
 ```
 
-#### 启用`rss`功能
+</details>
+
+<details>
+  <summary><b>RSS</b> (click to show)</summary>
+
 1.安装`hexo-generator-feed`[官方插件](https://github.com/hexojs/hexo-generator-feed)
+
 ```shell
 npm install hexo-generator-feed --save
 ```
+
 2.在博客项目配置文件`_config.yml`(非主题配置文件)增加:
+
 ```
 feed:
   type: atom
@@ -151,8 +187,10 @@ feed:
   autodiscovery: true
   template:
 ```
+
 3.开启rss按钮
 在主题配置文件`_config.yml`增加页脚项:
+
 ```
 footer:
   social:
@@ -161,7 +199,12 @@ footer:
       icon: rss
       path: atom.xml
 ```
-### 启用评论功能
+
+</details>
+
+<details>
+  <summary><b>Comment(评论系统)</b> (click to show)</summary>
+
 1.确保主题配置文件`_config.yml`下`comments`->`enable: true`
 
 2.目前支持以下几种评论插件
@@ -186,12 +229,33 @@ comments:
     avatar: retro
 ```
 
-### PREV & NEXT
+</details>
+
+<details>
+  <summary><b>Google Analytics</b> (click to show)</summary>
+
+[Google Analytics](https://analytics.google.com)
+注册Google分析账号，在管理/创建媒体资源/选择网站/填写相关信息后得到跟踪Id，一般格式为UA-xxxxxxx-x
+如之前已有注册账号，在管理/跟踪信息/跟踪代码/找到跟踪ID，一般格式为UA-xxxxxxx-x
+
 ```
-# 文章末尾的上一页与下一页
+gtag:
+  enable: true
+  gtagkey: UA-xxxxxxx-x
+```
+
+</details>
+
+<details>
+  <summary><b>PREV & NEXT</b> (click to show)</summary>
+
+文章末尾的上一篇与下一篇功能。
+```
 prevnext:
   enable: true
 ```
+
+</details>
 
 ### 优化与更新
 主题目前功能并不多，后续根据需求考虑更新迭代。
