@@ -40,16 +40,19 @@
   <!-- Raleway-Font -->
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
-  <!-- css -->
-  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <!-- hexo site css -->
   <%- css(['/css/base.css', '/iconfont/iconfont.css', '/css/github-markdown.css', '/css/highlight.css']) %>
 
-  <!-- script -->
+  <!-- jquery3.3.1 -->
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- fancybox -->
+  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  <%- js(['/js/fancybox.js']) %>
+
   <% if(theme.gtag.enable) { %>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=<%- theme.gtag.gtagkey %>"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -60,14 +63,14 @@
     </script>
   <% } %>
 
-  <!-- gitalk comments -->
   <% if(theme.comments.enable && theme.comments.gitalk.enable) { %>
+    <!-- gitalk comments -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
   <% } %>
 
-  <!-- valine comments -->
   <% if(theme.comments.enable && theme.comments.valine.enable) { %>
+    <!-- valine comments -->
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <% } %>
 </head>
