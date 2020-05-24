@@ -1,20 +1,19 @@
 // catalog js
-var catalog = null;
-var catalogTopHeight = null;
-function handleScoll() {
-  catalog = document.getElementById("catalog");
-  catalogTopHeight = catalog.offsetTop;
-}
+let catalog = document.getElementById("catalog");
+let catalogTopHeight = catalog.offsetTop;
+let tocElement = document.getElementsByClassName("toc")[0]
 
+// 是否固定目录
 function changePos() {
   let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
   if (scrollTop > catalogTopHeight - 20) {
-    catalog.style = "position: fixed; top: 20px;"
+    catalog.style = "position: fixed; top: 20px; bottom: 20px;"
   } else {
     catalog.style = "position: absolute; top: calc(290px + 88px + 30px)"
   }
 }
 
+// 是否激活目录
 function isActiveCat() {
   // 可宽限高度值
   let offsetHeight = 20
@@ -34,14 +33,24 @@ function isActiveCat() {
         Infinity : headerLinkList[i+1].offsetTop - offsetHeight
 
     if (scrollTop >= currentTopCat && scrollTop < nextTopCat) {
+      // 目录跟随滚动
       catLinkList[i].className = "toc-link active"
+      tocElement.scrollTop = catLinkList[i].offsetTop - 32
     } else {
       catLinkList[i].className = "toc-link"
     }
   }
 }
 
-handleScoll();
+// 窗体高度变化时
+function handleResize() {
+  let windowHeight = document.documentElement.clientHeight
+  tocElement.setAttribute('style', `height: ${windowHeight - 90}px`);
+}
+
+changePos();
 isActiveCat();
+handleResize();
 document.addEventListener("scroll", changePos, false);
 document.addEventListener("scroll", isActiveCat, false);
+window.addEventListener("resize", handleResize, false);
