@@ -1,7 +1,7 @@
 // catalog js
 let catalog = document.getElementById("catalog");
 let catalogTopHeight = catalog.offsetTop;
-let tocElement = document.getElementsByClassName("toc")[0]
+let tocElement = document.getElementsByClassName("catalog-content")[0]
 
 // 是否固定目录
 function changePos() {
