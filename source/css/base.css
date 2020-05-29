@@ -62,9 +62,12 @@ a:hover {
 .friend-index .friend-list,
 .archives .post-list,
 .tag-index .tag-list,
-.category-index .category-list,
 .about-index .markdown-body {
-  padding: 0 50px;
+  padding: 0 90px;
+}
+
+.category-index .category-list {
+  padding: 0 110px;
 }
 
 @media (max-width: 888px) {
@@ -75,15 +78,27 @@ a:hover {
   .friend-index .friend-list,
   .archives .post-list,
   .tag-index .tag-list,
-  .category-index .category-list,
   .about-index .markdown-body {
     padding: 0;
+  }
+  .category-index .category-list {
+    padding: 0 40px;
   }
   .post-catalog {
     display: none;
   }
   .back-to-top {
     display: none;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 887px) {
+  .index .post-list,
+  .friend-index .friend-list,
+  .archives .post-list,
+  .tag-index .tag-list,
+  .about-index .markdown-body {
+    padding: 0 20px;
   }
 }
 
@@ -178,7 +193,7 @@ a:hover {
 
 .post-navigation {
   font-size: 1.5rem;
-  padding: 20px 0;
+  padding: 20px 90px;
   text-align: right;
   color: #666;
 }
@@ -190,6 +205,18 @@ a:hover {
 
 .post-navigation .page-num {
   padding: 0 10px;
+}
+
+@media (max-width: 888px) {
+  .post-navigation {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 887px) {
+  .post-navigation {
+    padding: 20px 20px;
+  }
 }
 
 .footer {
