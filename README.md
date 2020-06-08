@@ -13,7 +13,7 @@ git clone https://github.com/zchengsite/hexo-theme-oranges.git themes/oranges
 
 在hexo博客项目根目录下找到`_config.yml`文件，修改其中`theme`字段为主题名`oranges`
 
-```
+```yml _config.yml
 theme: oranges
 ```
 

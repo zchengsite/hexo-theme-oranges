@@ -750,3 +750,8 @@
 .markdown-body hr {
   border-bottom-color: #eee;
 }
+
+details summary {
+  outline: none;
+  cursor: pointer;
+}
