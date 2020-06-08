@@ -755,3 +755,10 @@ details summary {
   outline: none;
   cursor: pointer;
 }
+
+figure figcaption {
+  padding-left: 1rem;
+  background-color: #1b1b1b;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
