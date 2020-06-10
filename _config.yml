@@ -17,12 +17,12 @@
 # 网站图标
 favicon:
   enable: true
-  icon: /images/favicon.ico
-  touch_icon: /images/favicon.ico
+  icon: /images/favicon.png
+  touch_icon: /images/favicon.png
 
 # 用户头像与昵称
 avatar:
-  author_photo: /images/34339465.jpg
+  author_photo: /images/avatar.png
   author_nickname: Oranges
 
 # Google 分析
