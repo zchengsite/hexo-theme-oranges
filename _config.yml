@@ -90,7 +90,7 @@ navbar:
     enable: true
     path: /friends/
   -
-    name: 关于我
+    name: 关于
     enable: true
     path: /about/
 
