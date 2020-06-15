@@ -1,119 +1,144 @@
 <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
 <!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<% if (page.type === "tags"){ %>
-<!-- 标签页 url形式：https://yoursite/tags/ -->
-<div class="container tag-index">
-  <div>
-    <%- list_tags({ class: "tag" }) %>
+<% if (page.type === "tags") { %>
+  <!-- 标签页 url形式：https://yoursite/tags/ -->
+  <div class="container tag-index">
+    <div>
+      <%- list_tags({ class: "tag" }) %>
+    </div>
   </div>
-</div>
-<% } %>
-
-<% if (page.type === "categories"){ %>
-<!-- 分类页 url形式：https://yoursite/categories/ -->
-<div class="container category-index">
-  <div>
-    <%- list_categories({orderby: "length", order: -1}) %>
+  <% } %>
+  
+  <% if (page.type === "categories") { %>
+  <!-- 分类页 url形式：https://yoursite/categories/ -->
+  <div class="container category-index">
+    <div>
+      <%- list_categories({orderby: "length", order: -1}) %>
+    </div>
   </div>
-</div>
-<% } %>
-
-<% if (page.type === "friends"){ %>
-<!-- 朋友页 url形式：https://yoursite/friends/ -->
-<div class="container friend-index">
-  <div class="friend-list">
-    <% for(let friend of theme.friends){ %>
-      <div class="friend-list-item">
-        <span class="nickname">@ <%- friend.nickname %></span>
-        <a href="<%- friend.site %>" target="_blank">
-          <span class="site-path"><%- friend.site %></span>
-        </a>
-        <p class="card-meta">
-          <%- friend.meta %>
-        </p>
-      </div>
-    <% } %>
-  </div>
-  <div class="markdown-body">
-    <%- page.content %>
-  </div>
-</div>
-<% } %>
-
-<% if(page.type === "about"){ %>
-<!-- 关于页 url形式：https://yoursite/about/ -->
-  <div class="container about-index">
+  <% } %>
+  
+  <% if (page.type === "friends") { %>
+  <!-- 朋友页 url形式：https://yoursite/friends/ -->
+  <div class="container friend-index">
+    <div class="friend-list">
+      <% for(let friend of theme.friends) { %>
+        <div class="friend-list-item">
+          <span class="nickname">@ <%- friend.nickname %></span>
+          <a href="<%- friend.site %>" target="_blank">
+            <span class="site-path"><%- friend.site %></span>
+          </a>
+          <p class="card-meta">
+            <%- friend.meta %>
+          </p>
+        </div>
+      <% } %>
+    </div>
     <div class="markdown-body">
       <%- page.content %>
     </div>
   </div>
-<% } %>
-
-<% if (!page.type) { %>
-<!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
-<div class="container post-details" id="post-details">
-  <div class="post-content">
-    <div class="post-title"><%- page.title %></div>
-    <div class="post-attach">
-      <span class="post-pubtime"><%- page.date.format("YYYY-MM-DD") %></span>
-      <span class="post-tags">
-        <% if(page.tags && page.tags.length > 0){ %>
-          <i class="iconfont icon-tags"></i>
-          <% for(let item of page.tags.data){ %>
-          <span class="span--tag">
-            <a href="<%= url_for(item.path)%>">
-              #<%- item.name %>
-            </a>
-          </span>
-          <% } %>
-        <% } %>
-      </span>
+  <% } %>
+  
+  <% if(page.type === "about") { %>
+  <!-- 关于页 url形式：https://yoursite/about/ -->
+    <div class="container about-index">
+      <div class="markdown-body">
+        <%- page.content %>
+      </div>
     </div>
-    <div class="markdown-body">
-      <%- page.more %>
-    </div>
-    <% if(theme.prevnext.enable) { %>
-      <div class="prev-or-next">
-        <div class="post-foot-next">
-          <% if(page.next) { %>
-            <a href="<%- url_for(page.next.path) %>" target="_self">
-              <i class="iconfont icon-chevronleft"></i>
-              <span>PREV</span>
-            </a>
-          <% } %>
-        </div>
-        <div class="post-attach">
-          <span class="post-pubtime"><%- page.date.format("YYYY-MM-DD") %></span>
+  <% } %>
+  
+  <% if (!page.type) { %>
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title"><%- page.title %></div>
+      <div class="post-attach">
+        <span class="post-pubtime"><%- page.date.format("YYYY-MM-DD") %></span>
+        <% if(page.tags && page.tags.length > 0) { %>
           <span class="post-tags">
-            <% if(page.tags && page.tags.length > 0){ %>
-              <i class="iconfont icon-tags"></i>
-              <% for(let item of page.tags.data){ %>
-              <span class="span--tag">
-                <a href="<%= url_for(item.path)%>">
-                  #<%- item.name %>
-                </a>
-              </span>
-              <% } %>
+            <i class="iconfont icon-tags" title="标签 | tags"></i>
+            <% for(let item of page.tags.data) { %>
+            <span class="span--tag">
+              <a href="<%= url_for(item.path)%>" title="查看 <%- item.name %> 标签">
+                #<%- item.name %>
+              </a>
+            </span>
             <% } %>
           </span>
+        <% } %>
+        <% if(page.tags && page.categories.length > 0) { %>
+          <span class="post-categories">
+            <i class="iconfont icon-bookmark" title="类别 | categories"></i>
+            <% for(let item of page.categories.data){ %>
+            <span class="span--category">
+              <a href="<%= url_for(item.path)%>" title="查看 <%- item.name %> 分类">
+                #<%- item.name %>
+              </a>
+            </span>
+            <% } %>
+          </span>
+        <% } %>
+      </div>
+      <div class="markdown-body">
+        <%- page.more %>
+      </div>
+      <% if(theme.prevnext.enable) { %>
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            <% if(page.next) { %>
+              <a href="<%- url_for(page.next.path) %>" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>PREV</span>
+              </a>
+            <% } %>
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime"><%- page.date.format("YYYY-MM-DD") %></span>
+            <% if(page.tags && page.tags.length > 0) { %>
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="标签 | tags"></i>
+                <% for(let item of page.tags.data) { %>
+                <span class="span--tag">
+                  <a href="<%= url_for(item.path)%>" title="查看 <%- item.name %> 标签">
+                    #<%- item.name %>
+                  </a>
+                </span>
+                <% } %>
+              </span>
+            <% } %>
+            <% if(page.tags && page.categories.length > 0) { %>
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="类别 | categories"></i>
+                <% for(let item of page.categories.data) { %>
+                <span class="span--category">
+                  <a href="<%= url_for(item.path)%>" title="查看 <%- item.name %> 分类">
+                    #<%- item.name %>
+                  </a>
+                </span>
+                <% } %>
+              </span>
+            <% } %>
+          </div>
+          <div class="post-foot-prev">
+            <% if(page.prev) { %>
+              <a href="<%- url_for(page.prev.path) %>" target="_self">
+                <span>NEXT</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            <% } %>
+          </div>
         </div>
-        <div class="post-foot-prev">
-          <% if(page.prev) { %>
-            <a href="<%- url_for(page.prev.path) %>" target="_self">
-              <span>NEXT</span>
-              <i class="iconfont icon-chevronright"></i>
-            </a>
-          <% } %>
-        </div>
+      <% } %>
+    </div>
+    <%- partial("_partial/catalog") %>
+    <% if(theme.comments.enable) { %>
+      <div class="comments-container">
+        <%- partial("_partial/comments") %>
       </div>
     <% } %>
   </div>
-  <%- partial("_partial/catalog") %>
-  <% if(theme.comments.enable) { %>
-    <div class="comments-container">
-      <%- partial("_partial/comments") %>
-    </div>
-  <% } %>
-</div>
 <% } %>
+  

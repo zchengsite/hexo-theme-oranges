@@ -332,13 +332,17 @@ a:hover {
   border-top: 1px solid rgba(88,88,88,0.1);
 }
 
-.prev-or-next .post-attach {
-  padding-bottom: 0;
-  opacity: 0.9;
-  font-size: 1.2rem;
+.prev-or-next .post-foot-next, .prev-or-next .post-foot-prev {
+  white-space: nowrap;
 }
 
-.post-attach .post-pubtime, .post-attach .post-tags {
+.prev-or-next .post-attach {
+  opacity: 0.9;
+  font-size: 1.2rem;
+  padding: 0 30px;
+}
+
+.post-attach .post-pubtime, .post-attach .post-tags, .post-attach .post-categories {
   padding: 0 10px;
 }
 
