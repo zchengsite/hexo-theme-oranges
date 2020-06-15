@@ -125,7 +125,7 @@ a:hover {
   text-overflow: ellipsis;
 }
 
-.tag-details .time-m-d, .archives .time-m-d {
+.tag-details .time-m-d, .archives .time-m-d, .category-details .time-m-d {
   margin: 0 30px;
 }
 
