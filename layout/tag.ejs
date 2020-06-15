@@ -6,7 +6,7 @@
       <span><%- page.tag %></span>
     </h2>
   </div>
-  <% page.posts.sort('date', -1).each(function(item){ %>
+  <% page.posts.sort('date', -1).each(function(item) { %>
     <div class="post-list">
       <div class="post-item" title="<%- item.title %>">
         <span class="time-m-d"><%- item.date.format("YYYY-MM-DD") %></span>
@@ -16,4 +16,13 @@
       </div>
     </div>
   <% }) %>
+  <nav class="post-navigation">
+    <% if(page.prev !== 0){ %>
+      <a href="<%- url_for(page.prev_link)%>"><i class="iconfont icon-angleleft"></i></a>
+    <% } %>
+    <span class="page-num"><%- page.current %> / <%- page.total -%></span>
+    <% if(page.next !== 0){ %>
+      <a href="<%- url_for(page.next_link)%>"><i class="iconfont icon-angleright"></i></a>
+    <% } %>
+  </nav>
 </div>

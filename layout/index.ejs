@@ -19,7 +19,7 @@
     <% if(page.prev !== 0){ %>
       <a href="<%- url_for(page.prev_link)%>"><i class="iconfont icon-angleleft"></i></a>
     <% } %>
-    <span class="page-num"><%- page.current%> / <%- page.total -%></span>
+    <span class="page-num"><%- page.current %> / <%- page.total -%></span>
     <% if(page.next !== 0){ %>
       <a href="<%- url_for(page.next_link)%>"><i class="iconfont icon-angleright"></i></a>
     <% } %>
