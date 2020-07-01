@@ -57,30 +57,36 @@
       <div class="post-title"><%- page.title %></div>
       <div class="post-attach">
         <span class="post-pubtime"><%- page.date.format("YYYY-MM-DD") %></span>
-        <% if(page.tags && page.tags.length > 0) { %>
-          <span class="post-tags">
-            <i class="iconfont icon-tags" title="标签 | tags"></i>
-            <% for(let item of page.tags.data) { %>
-            <span class="span--tag">
-              <a href="<%= url_for(item.path)%>" title="查看 <%- item.name %> 标签">
-                #<%- item.name %>
-              </a>
-            </span>
-            <% } %>
-          </span>
-        <% } %>
-        <% if(page.tags && page.categories.length > 0) { %>
-          <span class="post-categories">
-            <i class="iconfont icon-bookmark" title="类别 | categories"></i>
-            <% for(let item of page.categories.data){ %>
-            <span class="span--category">
-              <a href="<%= url_for(item.path)%>" title="查看 <%- item.name %> 分类">
-                #<%- item.name %>
-              </a>
-            </span>
-            <% } %>
-          </span>
-        <% } %>
+        <% for(item of theme.navbar) {
+          if (item.key === 'tags' && item.enable) {
+            if(page.tags && page.tags.length > 0) { %>
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="标签 | tags"></i>
+                <% for(let item of page.tags.data) { %>
+                <span class="span--tag">
+                  <a href="<%= url_for(item.path)%>" title="查看 <%- item.name %> 标签">
+                    <b>#</b> <%- item.name %>
+                  </a>
+                </span>
+                <% } %>
+              </span>
+          <% }
+          }
+          if (item.key === 'categories' && item.enable) {
+            if(page.tags && page.categories.length > 0) { %>
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="类别 | categories"></i>
+                <% for(let item of page.categories.data){ %>
+                <span class="span--category">
+                  <a href="<%= url_for(item.path)%>" title="查看 <%- item.name %> 分类">
+                    <b>#</b> <%- item.name %>
+                  </a>
+                </span>
+                <% } %>
+              </span>
+          <% }
+          }
+        } %>
       </div>
       <div class="markdown-body">
         <%- page.more %>
@@ -97,30 +103,36 @@
           </div>
           <div class="post-attach">
             <span class="post-pubtime"><%- page.date.format("YYYY-MM-DD") %></span>
-            <% if(page.tags && page.tags.length > 0) { %>
-              <span class="post-tags">
-                <i class="iconfont icon-tags" title="标签 | tags"></i>
-                <% for(let item of page.tags.data) { %>
-                <span class="span--tag">
-                  <a href="<%= url_for(item.path)%>" title="查看 <%- item.name %> 标签">
-                    #<%- item.name %>
-                  </a>
-                </span>
-                <% } %>
-              </span>
-            <% } %>
-            <% if(page.tags && page.categories.length > 0) { %>
-              <span class="post-categories">
-                <i class="iconfont icon-bookmark" title="类别 | categories"></i>
-                <% for(let item of page.categories.data) { %>
-                <span class="span--category">
-                  <a href="<%= url_for(item.path)%>" title="查看 <%- item.name %> 分类">
-                    #<%- item.name %>
-                  </a>
-                </span>
-                <% } %>
-              </span>
-            <% } %>
+            <% for(item of theme.navbar) {
+              if (item.key === 'tags' && item.enable) {
+                if(page.tags && page.tags.length > 0) { %>
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="标签 | tags"></i>
+                    <% for(let item of page.tags.data) { %>
+                    <span class="span--tag">
+                      <a href="<%= url_for(item.path)%>" title="查看 <%- item.name %> 标签">
+                        <b>#</b> <%- item.name %>
+                      </a>
+                    </span>
+                    <% } %>
+                  </span>
+              <% }
+              }
+              if (item.key === 'categories' && item.enable) {
+                if(page.tags && page.categories.length > 0) { %>
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="类别 | categories"></i>
+                    <% for(let item of page.categories.data){ %>
+                    <span class="span--category">
+                      <a href="<%= url_for(item.path)%>" title="查看 <%- item.name %> 分类">
+                        <b>#</b> <%- item.name %>
+                      </a>
+                    </span>
+                    <% } %>
+                  </span>
+              <% }
+              }
+            } %>
           </div>
           <div class="post-foot-prev">
             <% if(page.prev) { %>

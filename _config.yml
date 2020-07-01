@@ -73,26 +73,32 @@ navbar:
     name: 主页
     enable: true
     path: /
+    key: home
   -
     name: 归档
     enable: true
     path: /archives/
+    key: archives
   -
     name: 分类
     enable: true
     path: /categories/
+    key: categories
   -
     name: 标签
     enable: true
     path: /tags/
+    key: tags
   -
     name: 朋友
     enable: true
     path: /friends/
+    key: friends
   -
     name: 关于
     enable: true
     path: /about/
+    key: about
 
 # 文章目录
 catalog:
