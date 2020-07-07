@@ -47,6 +47,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: calc(100vw - 100%);
 }
 
 .header {
@@ -132,6 +133,7 @@ a:hover {
 .avatar {
   text-align: center;
   padding-bottom: 30px;
+  margin-left: calc(100vw - 100%);
 }
 
 .avatar img {
@@ -160,6 +162,7 @@ a:hover {
 }
 
 .navbar {
+  margin-left: calc(100vw - 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -188,6 +191,12 @@ a:hover {
 @media (max-width: 888px) {
   .navbar ul li {
     margin: 0 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .navbar ul li {
+    margin: 0 8px;
   }
 }
 
