@@ -24,6 +24,7 @@ favicon:
 avatar:
   author_photo: /images/avatar.png
   author_nickname: Oranges
+  path: /
 
 # Google 分析
 # https://analytics.google.com
