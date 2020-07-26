@@ -169,23 +169,44 @@ a:hover {
 }
 
 .navbar ul li {
+  position: relative;
   display: inline;
   margin: 0 15px;
   font-size: 1.6rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .navbar ul li a {
   padding-bottom: 2px;
 }
 
-.navbar ul li a:hover {
-  border-bottom: 2px solid black;
+.navbar ul li a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 8px;
+  opacity: 0.3;
+  background-color: gray;
+  width: 100%;
+  border-radius: 3px;
 }
 
 .navbar ul li.active a {
   color: black;
-  border-bottom: 2px solid black;
+}
+
+.navbar ul li.active a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 8px;
+  opacity: 0.5;
+  background-color: gray;
+  width: 100%;
+  border-radius: 3px;
 }
 
 @media (max-width: 888px) {
@@ -277,10 +298,12 @@ a:hover {
   left: -2px;
   right: -2px;
   transition: transform 0.1s linear;
-  background: #24292e;
+  background: gray;
+  opacity: 0.8;
   transform: scaleX(0);
   transform-origin: right;
   z-index: -1;
+  border-radius: 2px;
 }
 
 .tag-list li .tag-list-link:hover::after {
@@ -397,16 +420,39 @@ a:hover {
 }
 
 .toc-link {
-  padding: 3px 0 3px 5px;
+  position: relative;
+  padding: 3px 5px;
   opacity: 0.8;
   border-left: 2px solid transparent;
-  transition: border 0.3s, opacity 0.3s;
 }
 
 .toc-link.active {
   color: black;
   opacity: 1;
-  border-left: 2px solid black;
+}
+
+.toc-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  bottom: 0;
+  width: 8px;
+  height: 90%;
+  background-color: gray;
+  opacity: 0.3;
+  border-radius: 3px;
+}
+
+.toc-link.active::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  bottom: 0;
+  width: 8px;
+  height: 90%;
+  background-color: gray;
+  opacity: 0.5;
+  border-radius: 3px;
 }
 
 .back-to-top {
