@@ -257,6 +257,29 @@ prevnext:
 
 </details>
 
+<details>
+  <summary><b>文章图片懒加载</b> (click to show)</summary>
+
+安装插件[hexo-lazyload-image](https://github.com/Troy-Yang/hexo-lazyload-image)
+
+```bash
+npm install hexo-lazyload-image --save
+```
+
+项目配置文件`_config.yml`（非主题配置文件）下添加：
+
+```
+lazyload:
+  enable: true
+  onlypost: false # optional
+  loadingImg: # optional eg ./images/loading.gif
+  isSPA: false # optional
+```
+
+详情可见[hexo-lazyload-image](https://github.com/Troy-Yang/hexo-lazyload-image)
+
+</details>
+
 ## To Do List
 主题目前功能并不多，后续根据需求考虑更新迭代。
 - [x] 自定义导航，可灵活配置自己想要的导航✔
