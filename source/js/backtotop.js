@@ -28,5 +28,6 @@ const backToTop = () => {
   }, delay);
 }
 
+isHidden()
 document.addEventListener("scroll", isHidden, false);
 document.querySelector(".back-to-top").addEventListener("click", backToTop, false);

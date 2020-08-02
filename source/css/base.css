@@ -86,10 +86,10 @@ a:hover {
     padding: 0 40px;
   }
   .post-catalog {
-    display: none;
+    opacity: 0;
   }
   .back-to-top {
-    display: none;
+    opacity: 0;
   }
 }
 
@@ -404,7 +404,7 @@ a:hover {
 }
 
 .catalog-content {
-  overflow: scroll;
+  overflow: auto;
 }
 
 .post-catalog .toc-child {
