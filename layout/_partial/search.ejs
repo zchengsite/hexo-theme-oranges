@@ -1,0 +1,47 @@
+<% if (theme.search.enable) { %>
+  <div class="search-icon" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        <input type="text" class="search-input" id="search-input" placeholder="<%- theme.search.placeholder %>">
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    let inputArea = document.querySelector("#search-input");
+    inputArea.onclick = function(){ getSearchFile(); this.onclick = null }
+    inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+  
+    function openOrHideSearchContent() {
+      let searchContent = document.querySelector(".search-overlay")
+      let isHidden = searchContent.classList.contains('hidden')
+      if (isHidden) {
+        searchContent.classList.remove('hidden')
+      } else {
+        searchContent.classList.add('hidden')
+      }
+    }
+  
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false);
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false);
+  </script>
+  
+  <%- js(['/js/search.js']) %>
+<% } %>

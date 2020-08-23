@@ -6,6 +6,20 @@
   "description": "oranges 主题icon",
   "glyphs": [
     {
+      "icon_id": "544480",
+      "name": "close",
+      "font_class": "-close",
+      "unicode": "e720",
+      "unicode_decimal": 59168
+    },
+    {
+      "icon_id": "459012",
+      "name": "search",
+      "font_class": "-search",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
       "icon_id": "433871",
       "name": "chevron-left",
       "font_class": "-chevronleft",
