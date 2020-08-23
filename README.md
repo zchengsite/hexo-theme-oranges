@@ -258,7 +258,7 @@ prevnext:
 </details>
 
 <details>
-  <summary><b>文章图片懒加载</b> (click to show)</summary>
+  <summary><b>文章图片懒加载(Lazy image loading)</b> (click to show)</summary>
 
 安装插件[hexo-lazyload-image](https://github.com/Troy-Yang/hexo-lazyload-image)
 
@@ -280,6 +280,37 @@ lazyload:
 
 </details>
 
+<details>
+  <summary><b>全文搜索(search)</b> (click to show)</summary>
+
+  1.安装插件[hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
+
+  ```bash
+  npm install hexo-generator-search --save
+  ```
+
+  2.项目配置文件`_config.yml`（非主题配置文件）下添加：
+
+  ```
+  search:
+    path: search.xml
+    field: post
+    content: true
+  ```
+
+  详情可见[hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
+
+  3.主题配置文件`_config.yml`下找到`search`，修改`enable`为`true`:
+
+  ```yml
+    # 文章搜索
+    search:
+      enable: true
+      placeholder: 搜索...
+  ```
+
+</details>
+
 ## To Do List
 主题目前功能并不多，后续根据需求考虑更新迭代。
 - [x] 自定义导航，可灵活配置自己想要的导航✔
@@ -297,7 +328,7 @@ lazyload:
 - [x] Google分析`[2020.5.8]`✔
 - [ ] 文章加密
 - [ ] 文章置顶
-- [ ] 全文搜索功能
+- [x] 全文搜索功能`[2020.8.23]`✔
 - [ ] 主题配色切换
 - [x] 页面平滑滚动`[2020.5.4]`✔
 - [x] 目录激活&跟随`[2020.5.4]`✔
