@@ -6,7 +6,7 @@
   </div>
 
   <div class="search-overlay hidden">
-    <div class="search-content">
+    <div class="search-content" tabindex="0">
       <div class="search-title">
         <span class="search-icon-input">
           <a href="javascript: void(0)">
@@ -25,23 +25,41 @@
   </div>
 
   <script type="text/javascript">
-    let inputArea = document.querySelector("#search-input");
-    inputArea.onclick = function(){ getSearchFile(); this.onclick = null }
-    inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
-  
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile();
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
     function openOrHideSearchContent() {
-      let searchContent = document.querySelector(".search-overlay")
-      let isHidden = searchContent.classList.contains('hidden')
+      let isHidden = searchOverlayArea.classList.contains('hidden')
       if (isHidden) {
-        searchContent.classList.remove('hidden')
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        inputArea.focus()
       } else {
-        searchContent.classList.add('hidden')
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
       }
     }
-  
-    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false);
-    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false);
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
   </script>
-  
+
   <%- js(['/js/search.js']) %>
 <% } %>

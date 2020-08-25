@@ -7,6 +7,11 @@ html, body {
   font-size: 10px;
 }
 
+body.hidden {
+  overflow: hidden;
+  padding-right: 6px;
+}
+
 #app {
   position: relative;
   margin: 0 auto;
@@ -48,6 +53,7 @@ a:hover {
   flex-direction: column;
   justify-content: space-between;
   margin-left: calc(100vw - 100%);
+  transition: all 0.3s ease;
 }
 
 .header {
@@ -481,32 +487,51 @@ a:hover {
   bottom: 0;
   right: 0;
   background-color: rgba(0,0,0,0.3);
+  transition: background-color 0.2s ease;
+  visibility: visible;
+  padding-right: 6px;
 }
 
 .search-overlay.hidden {
-  display: none;
+  background-color: transparent;
+  visibility: hidden;
+  transition: visibility 0s linear 0.2s, background-color 0.2s;
+  padding-right: 0;
+}
+
+.search-overlay.hidden .search-content {
+  position: relative;
+  top: 15%;
+  opacity: 0;
 }
 
 .search-content {
   position: relative;
-  top: 10%;
-  left: 50%;
-  height: 60%;
-  width: 500px;
-  background-color: #fff;
+  top: 18%;
+  opacity: 1;
+  background-color: transparent;
   z-index: 999;
-  transform: translateX(-50%);
   border-radius: 10px;
+  margin: 0 2rem;
+  transition: top 0.2s ease, opacity 0.2s ease;
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .search-content {
+    width: 520px;
+    margin: 0 auto;
+  }
 }
 
 .search-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  background-color: #eee;
+  border-radius: 10px;
+  background-color: #fff;
   padding: 0 8px;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
 }
 
 .search-input {
@@ -521,19 +546,30 @@ a:hover {
 }
 
 .search-result {
-  height: calc(100% - 58px);
+  max-height: 350px;
   overflow: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+.search-result ul {
   padding: 10px;
 }
 
 .search-result-list li {
   list-style-type: none;
-  padding: 5px 0;
+  padding: 10px;
   font-size: 1.6rem;
+  border-bottom: 1px dashed #eee;
+}
+
+.search-result-list li:nth-last-of-type(1) {
+  border-bottom: none;
 }
 
 .search-result-abstract {
-  padding: 10px;
+  padding: 10px 10px 0 10px;
   font-size: 1.2rem;
   color: #666;
 }
