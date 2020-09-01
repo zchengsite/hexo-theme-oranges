@@ -134,6 +134,13 @@ a:hover {
   text-overflow: ellipsis;
 }
 
+.post-item .title .post-top {
+  font-weight: 600;
+  font-size: 1.7rem;
+  padding-right: 8px;
+  color: #535353;
+}
+
 .tag-details .time-m-d, .archives .time-m-d, .category-details .time-m-d {
   margin: 0 30px;
 }
