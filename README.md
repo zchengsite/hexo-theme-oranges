@@ -151,7 +151,7 @@ navbar:
 </details>
 
 <details>
-  <summary><b>Catalog(目录)</b> (click to show)</summary>
+  <summary><b>文章目录(Catalog)</b> (click to show)</summary>
 
 主题配置文件`_config.yml`下`catalog`修改`enable`为`true`，如不想展示，设置为`false`即可
 
@@ -203,7 +203,7 @@ footer:
 </details>
 
 <details>
-  <summary><b>Comment(评论系统)</b> (click to show)</summary>
+  <summary><b>评论系统(Comment)</b> (click to show)</summary>
 
 1.确保主题配置文件`_config.yml`下`comments`->`enable: true`
 
@@ -311,6 +311,44 @@ lazyload:
 
 </details>
 
+<details>
+  <summary><b>文章置顶(put posts at the top)</b> (click to show)</summary>
+
+  1.安装插件[hexo-generator-index-pin-top](https://github.com/netcan/hexo-generator-index-pin-top)。
+
+  ```bash
+  npm uninstall hexo-generator-index --save
+  npm install hexo-generator-index-pin-top --save
+  ```
+
+  2.项目配置文件`_config.yml`（非主题配置文件）下添加（如已有请忽略）：
+
+  ```yml
+  index_generator:
+    path: ''
+    per_page: 10
+    order_by: -date
+  ```
+
+  详情可见[hexo-generator-index-pin-top](https://github.com/netcan/hexo-generator-index-pin-top)。
+
+  3.在所需置顶的文章front-matter头中添加`top: true`即可：
+
+  ```markdown
+    ---
+    title: Hello World
+    date: 2020-03-11 14:19:04
+    top: true
+    tags:
+    - Welcome
+    categories:
+    - [Welcome, 欢迎]
+    ---
+  ```
+  4.重启服务后，可在主页文章标题看到置顶图标。
+
+</details>
+
 ## To Do List
 主题目前功能并不多，后续根据需求考虑更新迭代。
 - [x] 自定义导航，可灵活配置自己想要的导航✔
@@ -327,7 +365,7 @@ lazyload:
 - [ ] 页面访问量统计
 - [x] Google分析`[2020.5.8]`✔
 - [ ] 文章加密
-- [ ] 文章置顶
+- [x] 文章置顶`[2020.9.1]`✔
 - [x] 全文搜索功能`[2020.8.23]`✔
 - [ ] 主题配色切换
 - [x] 页面平滑滚动`[2020.5.4]`✔
@@ -338,7 +376,9 @@ lazyload:
 
 有问题请提交Issue，欢迎Fork。
 
-如果觉得主题还不错，请点击Star支持下
+如果觉得主题还不错，请点击Star支持下。
+
+🍻
 
 ## License
 
