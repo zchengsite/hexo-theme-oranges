@@ -312,7 +312,7 @@ lazyload:
 </details>
 
 <details>
-  <summary><b>文章置顶(put posts at the top)</b> (click to show)</summary>
+  <summary><b>文章置顶(pinned posts)</b> (click to show)</summary>
 
   1.安装插件[hexo-generator-index-pin-top](https://github.com/netcan/hexo-generator-index-pin-top)。
 
