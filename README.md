@@ -43,7 +43,7 @@ theme: oranges
 
   Enable `tags` in the theme `_config.yml` file:
 
-  ```
+  ```yml
   navbar:
     -
       name: tags
@@ -74,7 +74,7 @@ theme: oranges
 
   Enable `categories` in the theme `_config.yml` file:
 
-  ```
+  ```yml
   navbar:
     -
       name: categories
@@ -105,7 +105,7 @@ theme: oranges
 
   Enable `friends` in the theme `_config.yml` file:
 
-  ```
+  ```yml
   navbar:
     -
       name: friends
@@ -136,7 +136,7 @@ theme: oranges
 
   Enable `about` in the theme `_config.yml` file:
 
-  ```
+  ```yml
   navbar:
     -
       name: about
@@ -151,7 +151,7 @@ theme: oranges
 
   Enable `catalog` in the theme `_config.yml` file:
 
-  ```
+  ```yml
   catalog:
     enable: true
   ```
@@ -217,7 +217,7 @@ theme: oranges
 
   View the official tutorial to get the `appId` & `appKey`:
 
-  ```
+  ```yml
   valine:
     enable: true
     appId: j73OlR7xxxxxPDrO-gzGzoHsz
@@ -234,7 +234,8 @@ theme: oranges
   First, view [Google Analytics](https://analytics.google.com) to get the `gtagkey`:
 
   Then, enable `gtag` in the theme `_config.yml` file:
-  ```
+
+  ```yml
   gtag:
     enable: true
     gtagkey: UA-xxxxxxx-x
@@ -247,7 +248,7 @@ theme: oranges
 
   enable `prevnext` in the theme `_config.yml` file:
 
-  ```
+  ```yml
   prevnext:
     enable: true
   ```
@@ -265,7 +266,7 @@ theme: oranges
 
   add or edit configuration in your root `_config.yml`:
 
-  ```
+  ```yml
   lazyload:
     enable: true
     onlypost: false # optional
@@ -288,7 +289,7 @@ theme: oranges
 
   add or edit configuration in your root `_config.yml`:
 
-  ```
+  ```yml
   search:
     path: search.xml
     field: post
@@ -313,8 +314,8 @@ theme: oranges
   Remove default `hexo-generator-index` and Install the [hexo-generator-index-pin-top](https://github.com/netcan/hexo-generator-index-pin-top) plugin:
 
   ```bash
-  npm uninstall hexo-generator-index --save
-  npm install hexo-generator-index-pin-top --save
+  $ npm uninstall hexo-generator-index --save
+  $ npm install hexo-generator-index-pin-top --save
   ```
 
   add or edit configuration in your root `_config.yml`:

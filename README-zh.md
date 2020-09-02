@@ -1,19 +1,24 @@
+[English](https://github.com/zchengsite/hexo-theme-oranges/blob/master/README.md) | 简体中文
+
 # hexo-theme-oranges
-> A simple hexo-theme of minimalism
+
+> 一个简单的hexo主题
+
+[demo](https://hexo.theme.oranges.zcheng.site/)
 
 ## 安装
 
 在hexo博客项目根目录下执行，会将`oranges`主题clone至`themes`文件夹下
 
 ```bash
-git clone https://github.com/zchengsite/hexo-theme-oranges.git themes/oranges
+$ git clone https://github.com/zchengsite/hexo-theme-oranges.git themes/oranges
 ```
 
 ## 使用
 
 在hexo博客项目根目录下找到`_config.yml`文件，修改其中`theme`字段为主题名`oranges`
 
-```yml _config.yml
+```yml
 theme: oranges
 ```
 
@@ -25,12 +30,12 @@ theme: oranges
 在hexo博客项目根目录下执行，在`source`文件夹下生成`tags`文件夹
 
 ```bash
-hexo new page tags
+$ hexo new page tags
 ```
 
 接着修改`tags`文件夹下`index`为以下内容
 
-```
+```markdown
 ---
 title: tags
 date: 2019-05-03 12:03:35
@@ -42,7 +47,7 @@ tags:
 
 并在主题配置文件`_config.yml`修改对应`enable`为`true`，如不想展示，设置为`false`即可
 
-```
+```yml
 navbar:
   -
     name: 标签
@@ -58,12 +63,12 @@ navbar:
 在hexo博客项目根目录下执行，在`source`文件夹下生成`friends`文件夹
 
 ```bash
-hexo new page friends
+$ hexo new page friends
 ```
 
 接着修改`friends`文件夹下`index`为以下内容
 
-```
+```markdown
 ---
 title: tags
 date: 2019-05-03 12:03:35
@@ -75,7 +80,7 @@ tags:
 
 并在主题配置文件`_config.yml`修改对应`enable`为`true`，如不想展示，设置为`false`即可
 
-```
+```yml
 navbar:
   -
     name: 朋友
@@ -90,12 +95,12 @@ navbar:
 在hexo博客项目根目录下执行，在`source`文件夹下生成`about`文件夹
 
 ```bash
-hexo new page about
+$ hexo new page about
 ```
 
 接着修改`about`文件夹下`index`为以下内容
 
-```
+```markdown
 ---
 title: tags
 date: 2019-05-03 12:03:35
@@ -107,7 +112,7 @@ tags:
 
 并在主题配置文件`_config.yml`修改对应`enable`为`true`，如不想展示，设置为`false`即可
 
-```
+```yml
 navbar:
   -
     name: 关于我
@@ -123,12 +128,12 @@ navbar:
 在hexo博客项目根目录下执行，在`source`文件夹下生成`categories`文件夹
 
 ```bash
-hexo new page categories
+$ hexo new page categories
 ```
 
 接着修改`categories`文件夹下`index`为以下内容
 
-```
+```markdown
 ---
 title: tags
 date: 2019-05-03 12:03:35
@@ -140,7 +145,7 @@ tags:
 
 并在主题配置文件`_config.yml`修改对应`enable`为`true`，如不想展示，设置为`false`即可
 
-```
+```yml
 navbar:
   -
     name: 分类
@@ -155,7 +160,7 @@ navbar:
 
 主题配置文件`_config.yml`下`catalog`修改`enable`为`true`，如不想展示，设置为`false`即可
 
-```
+```yml
 catalog:
   enable: true
 ```
@@ -168,12 +173,12 @@ catalog:
 1.安装`hexo-generator-feed`[官方插件](https://github.com/hexojs/hexo-generator-feed)
 
 ```shell
-npm install hexo-generator-feed --save
+$ npm install hexo-generator-feed --save
 ```
 
 2.在博客项目配置文件`_config.yml`(非主题配置文件)增加:
 
-```
+```yml
 feed:
   type: atom
   path: atom.xml
@@ -191,7 +196,7 @@ feed:
 3.开启rss按钮
 在主题配置文件`_config.yml`增加页脚项:
 
-```
+```yml
 footer:
   social:
     -
@@ -217,7 +222,8 @@ footer:
 4.查看评论插件官方教程获取相应的字段填入即可使用
 
 以`valine`为例，注册`valine`并获取`appId`&`appKey`填入即可使用
-```
+
+```yml
 comments:
   enable: true
   valine:
@@ -238,7 +244,7 @@ comments:
 注册Google分析账号，在管理/创建媒体资源/选择网站/填写相关信息后得到跟踪Id，一般格式为UA-xxxxxxx-x
 如之前已有注册账号，在管理/跟踪信息/跟踪代码/找到跟踪ID，一般格式为UA-xxxxxxx-x
 
-```
+```yml
 gtag:
   enable: true
   gtagkey: UA-xxxxxxx-x
@@ -250,7 +256,8 @@ gtag:
   <summary><b>PREV & NEXT</b> (click to show)</summary>
 
 文章末尾的上一篇与下一篇功能。
-```
+
+```yml
 prevnext:
   enable: true
 ```
@@ -263,12 +270,12 @@ prevnext:
 安装插件[hexo-lazyload-image](https://github.com/Troy-Yang/hexo-lazyload-image)
 
 ```bash
-npm install hexo-lazyload-image --save
+$ npm install hexo-lazyload-image --save
 ```
 
 项目配置文件`_config.yml`（非主题配置文件）下添加：
 
-```
+```yml
 lazyload:
   enable: true
   onlypost: false # optional
@@ -286,12 +293,12 @@ lazyload:
   1.安装插件[hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
 
   ```bash
-  npm install hexo-generator-search --save
+  $ npm install hexo-generator-search --save
   ```
 
   2.项目配置文件`_config.yml`（非主题配置文件）下添加：
 
-  ```
+  ```yml
   search:
     path: search.xml
     field: post
@@ -317,8 +324,8 @@ lazyload:
   1.安装插件[hexo-generator-index-pin-top](https://github.com/netcan/hexo-generator-index-pin-top)。
 
   ```bash
-  npm uninstall hexo-generator-index --save
-  npm install hexo-generator-index-pin-top --save
+  $ npm uninstall hexo-generator-index --save
+  $ npm install hexo-generator-index-pin-top --save
   ```
 
   2.项目配置文件`_config.yml`（非主题配置文件）下添加（如已有请忽略）：
@@ -335,15 +342,15 @@ lazyload:
   3.在所需置顶的文章front-matter头中添加`top: true`即可：
 
   ```markdown
-    ---
-    title: Hello World
-    date: 2020-03-11 14:19:04
-    top: true
-    tags:
-    - Welcome
-    categories:
-    - [Welcome, 欢迎]
-    ---
+  ---
+  title: Hello World
+  date: 2020-03-11 14:19:04
+  top: true
+  tags:
+  - Welcome
+  categories:
+  - [Welcome, 欢迎]
+---
   ```
   4.重启服务后，可在主页文章标题看到置顶图标。
 
@@ -369,7 +376,6 @@ lazyload:
 - [x] 全文搜索功能`[2020.8.23]`✔
 - [ ] 主题配色切换
 - [x] 页面平滑滚动`[2020.5.4]`✔
-- [x] 目录激活&跟随`[2020.5.4]`✔
 - [ ] 主题样式可自定义配置
 
 ## End
