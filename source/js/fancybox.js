@@ -11,7 +11,12 @@ let fancyTimer = setInterval(function(){
       // $(this).attr("data-fancybox", "gallery"); // if you add 'data-fancybox', img will display after showed
       var element = document.createElement("a");
       $(element).attr("data-fancybox", "gallery");
-      $(element).attr("href", $(this).attr("src"));
+      // 判断是否启用了lazyload图片懒加载
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      } else {
+        $(element).attr("href", $(this).attr("src"));
+      }
       $(this).wrap(element);
     });
 
