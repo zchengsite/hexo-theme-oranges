@@ -2,7 +2,7 @@
   <div class="avatar">
     <a href="<%- theme.avatar.path %>">
       <!-- 头像取消懒加载，添加no-lazy -->
-      <% if (config.lazyload.enable) { %>
+      <% if (config.lazyload && config.lazyload.enable) { %>
         <img no-lazy src="<%- theme.avatar.author_photo %>" alt="">
       <% } else { %>
         <img src="<%- theme.avatar.author_photo %>" alt="">
