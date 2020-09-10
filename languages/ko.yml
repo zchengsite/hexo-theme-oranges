@@ -1,5 +1,7 @@
 categories: 카테고리
 search: 검색
+searchFirst: 첫 번째 검색, 인덱스 파일을 불러오고 있습니다. 잠시 후 …
+searchNoResult: 검색어를 찾을 수 없습니다. 검색어를 바꿔 보세요
 tags: 태그
 tagcloud: 태그 클라우드
 tweets: 트윗
@@ -17,3 +19,6 @@ powered_by: Powered by
 rss_feed: RSS Feed
 category: 카테고리
 tag: 태그
+catalog: 목록
+pinned: 도와주
+updateTime: 업데이트 시간

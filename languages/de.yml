@@ -1,5 +1,7 @@
 categories: Kategorien
 search: Suche
+searchFirst: First search, index file loading, please wait...
+searchNoResult: No result
 tags: Tags
 tagcloud: Tag Cloud
 tweets: Tweets
@@ -17,3 +19,6 @@ powered_by: Powered by
 rss_feed: RSS Feed
 category: Kategorie
 tag: Tag
+catalog: Content
+pinned: Pinned
+updateTime: Update time

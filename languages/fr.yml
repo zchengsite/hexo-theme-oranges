@@ -1,5 +1,7 @@
 categories: Catégories
 search: Rechercher
+searchFirst: Première recherche, en cours de chargement du fichier index, plus tard …
+searchNoResult: Aucun contenu n’a été trouvé, essayez de remplacer le terme de recherche.
 tags: Mot-clés
 tagcloud: Nuage de mot-clés
 tweets: Tweets
@@ -17,3 +19,6 @@ powered_by: Propulsé par
 rss_feed: Flux RSS
 category: Catégorie
 tag: Mot-clé
+catalog: catalogue
+pinned: fixes
+updateTime: Heure de mise à jour

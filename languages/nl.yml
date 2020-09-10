@@ -1,6 +1,7 @@
-
 categories: Categorieën
 search: Zoeken
+searchFirst: Eerste zoekopdracht, laden indexbestand, gelieve later …
+searchNoResult: De inhoud is niet gevonden, probeer het zoekwoord te vervangen.
 tags: Labels
 tagcloud: Tag Cloud
 tweets: Tweets
@@ -18,3 +19,6 @@ powered_by: Powered by
 rss_feed: RSS Feed
 category: Categorie
 tag: Label
+catalog: inhoudsopgave
+pinned: Vastgemaakt met een naald
+updateTime: Tijd om bij te werken

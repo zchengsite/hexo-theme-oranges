@@ -1,5 +1,7 @@
 categories: Categorías
 search: Buscar
+searchFirst: Primera búsqueda, se está cargando el archivo índice, por favor espere...
+searchNoResult: Sin resultados
 tags: Tags
 tagcloud: Nube de Tags
 tweets: Tweets
@@ -17,3 +19,6 @@ powered_by: Construido por
 rss_feed: RSS
 category: Categoría
 tag: Tag
+catalog: El directorio
+pinned: fija
+updateTime: Hora de actualización

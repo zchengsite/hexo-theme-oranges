@@ -355,6 +355,19 @@ lazyload:
   4.重启服务后，可在主页文章标题看到置顶图标。
 
 </details>
+  <summary><b>国际化(i18n)</b> (click to show)</summary>
+
+  现在页面部分元素支持以不同语言显示，通过修改项目配置文件`_config.yml`（非主题配置文件）中的`language`:
+
+  ```yml
+  language: en
+  ```
+
+  默认值为`en`，可选项在主题下`languages`语言文件中查看，修改为对应文件名即可。
+
+<details>
+
+</details>
 
 ## To Do List
 
@@ -377,6 +390,7 @@ lazyload:
 - [ ] 主题配色切换
 - [x] 页面平滑滚动`[2020.5.4]`✔
 - [ ] 主题样式可自定义配置
+- [x] 国际化（i18n），支持多语言`[2020.9.10]`✔
 
 ## End
 

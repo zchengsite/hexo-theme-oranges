@@ -345,6 +345,19 @@ theme: oranges
 
 </details>
 
+</details>
+  <summary><b>internationalization (i18n)</b> (click to show)</summary>
+
+  You can use internationalization to present your site in different languages, add or edit configuration in your root `_config.yml`:
+
+  ```yml
+  language: en
+  ```
+
+  The default value is `en`，Optional in the 'languages' file under the theme。
+
+<details>
+
 ## To Do List
 
 - [x] Custom navigation✔
@@ -366,6 +379,7 @@ theme: oranges
 - [ ] dark mode
 - [x] smooth scrolling`[2020.5.4]`✔
 - [ ] theme styles are customizable
+- [x] Internationalization (i18n), multilanguage support`[2020.9.10]`✔
 
 ## End
 

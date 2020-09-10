@@ -1,5 +1,7 @@
 categories: カテゴリ
 search: 検索
+searchFirst: 最初に検索して、索引ファイルをロードしています。後で…
+searchNoResult: 内容が見つからないので、検索語を変えてみてください
 tags: タグ
 tagcloud: タグクラウド
 tweets: ツイート
@@ -17,3 +19,6 @@ powered_by: Powered by
 rss_feed: RSSフィード
 category: カテゴリ
 tag: タグ
+catalog: リスト
+pinned: 置顶
+updateTime: 更新时间

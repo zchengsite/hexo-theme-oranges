@@ -32,8 +32,8 @@ avatar:
 # 注册Google分析账号，在管理/创建媒体资源/选择网站/填写相关信息后得到跟踪Id，一般格式为UA-xxxxxxx-x
 # 如之前已有注册账号，在管理/跟踪信息/跟踪代码/找到跟踪ID，一般格式为UA-xxxxxxx-x
 gtag:
-  enable: false
-  gtagkey: UA-xxxxxxx-x
+  enable: true
+  gtagkey: UA-126364107-2
 
 # 文章评论系统
 comments:
@@ -54,9 +54,9 @@ comments:
   valine:
     # https://valine.js.org/quickstart.html#%E8%8E%B7%E5%8F%96APP-ID-%E5%92%8C-APP-Key
     # 进入以上网址查看官方教程
-    enable: false
-    appId:
-    appKey:
+    enable: true
+    appId: f4sa0UVdHN3leGJSNqAhQGgK-gzGzoHsz
+    appKey: FN7RGB3rASx8D9rSnkOc6gIT
     placeholder: Welcome!
     avatar: retro
     vempty_display: false
@@ -67,37 +67,37 @@ comments:
     # 注册账号，获取shortname.disqus.com，shortname为你定义的唯一name
     # 例：我注册配置完毕后的网址为zxcxxxx.disqus.com，zxcxxxx即为shortname
     enable: false
-    shortname: zxcxxxx
+    shortname: username-github-io
 
 # 主题页面导航栏
 navbar:
   -
-    name: 主页
+    name: Home
     enable: true
     path: /
     key: home
   -
-    name: 归档
+    name: Archives
     enable: true
     path: /archives/
     key: archives
   -
-    name: 分类
-    enable: true
+    name: Categories
+    enable: false
     path: /categories/
     key: categories
   -
-    name: 标签
+    name: Tags
     enable: true
     path: /tags/
     key: tags
   -
-    name: 朋友
+    name: Friends
     enable: true
     path: /friends/
     key: friends
   -
-    name: 关于
+    name: About
     enable: true
     path: /about/
     key: about
@@ -139,7 +139,7 @@ footer:
     -
       name: email
       icon: envelope
-      path: mscsdfsaw***@163.com
+      path: 
     -
       name: facebook
       icon: facebooksquare
@@ -149,11 +149,11 @@ footer:
       icon: twitter
       path:
     -
-      name: 微信
+      name: wechat
       icon: wechat
       path:
     -
-      name: 微博
+      name: weibo
       icon: weibo
       path:
     -
@@ -174,4 +174,4 @@ footer:
 # 文章搜索
 search:
   enable: true
-  placeholder: 搜索...
+  placeholder: 

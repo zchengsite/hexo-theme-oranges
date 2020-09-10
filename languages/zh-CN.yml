@@ -1,5 +1,7 @@
 categories: 分类
-search: 搜索
+search: 搜索...
+searchFirst: 首次搜索，正在载入索引文件，请稍后……
+searchNoResult: 没有找到内容，请尝试更换检索词。
 tags: 标签
 tagcloud: 标签云
 tweets: 推文
@@ -17,3 +19,6 @@ powered_by: Powered by
 rss_feed: RSS Feed
 category: Category
 tag: Tag
+catalog: 目录
+pinned: 置顶
+updateTime: 更新时间

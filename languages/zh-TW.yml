@@ -1,5 +1,7 @@
 categories: 分類
 search: 搜尋
+searchFirst: 首次搜尋，正在載入索引文件，請稍後...
+searchNoResult: 沒有找到内容，請嘗試更換檢索詞。
 tags: 標籤
 tagcloud: 標籤雲
 tweets: 推文
@@ -17,3 +19,6 @@ powered_by: Powered by
 rss_feed: RSS Feed
 category: Category
 tag: Tag
+catalog: 目錄
+pinned: 置頂
+updateTime: 更新時間

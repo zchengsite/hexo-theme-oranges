@@ -1,6 +1,6 @@
 <% if (theme.catalog.enable && toc(page.content)) { %>
   <div class="post-catalog" id="catalog">
-    <div class="title">目录</div>
+    <div class="title"><%= __('catalog') %></div>
     <div class="catalog-content">
       <%- toc(page.content, { "list_number": false }) %>
     </div>
