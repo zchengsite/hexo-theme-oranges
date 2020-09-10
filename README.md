@@ -345,18 +345,29 @@ theme: oranges
 
 </details>
 
-</details>
+<details>
   <summary><b>internationalization (i18n)</b> (click to show)</summary>
 
   You can use internationalization to present your site in different languages, add or edit configuration in your root `_config.yml`:
 
+  Some examples:
+
+  English:
   ```yml
   language: en
+  ```
+  Simplified Chinese:
+  ```yml
+  language: zh-CN
+  ```
+  Japanese:
+  ```yml
+  language: ja
   ```
 
   The default value is `en`，Optional in the 'languages' file under the theme。
 
-<details>
+</details>
 
 ## To Do List
 
