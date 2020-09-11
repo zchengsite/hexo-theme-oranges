@@ -2,6 +2,8 @@ categories: Categorieën
 search: Zoeken
 searchFirst: Eerste zoekopdracht, laden indexbestand, gelieve later …
 searchNoResult: De inhoud is niet gevonden, probeer het zoekwoord te vervangen.
+searchFilesNotfound: The search.xml file was not found, please refer to：
+searchServiceErrors: The request failed, Try to refresh the page or try again later.
 tags: Labels
 tagcloud: Tag Cloud
 tweets: Tweets

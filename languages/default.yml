@@ -2,6 +2,8 @@ categories: Categories
 search: Search...
 searchFirst: First search, index file loading, please wait...
 searchNoResult: No result
+searchFilesNotfound: The search.xml file was not found, please refer to：
+searchServiceErrors: The request failed, Try to refresh the page or try again later.
 tags: Tags
 tagcloud: Tag Cloud
 tweets: Tweets

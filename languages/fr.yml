@@ -2,6 +2,8 @@ categories: Catégories
 search: Rechercher
 searchFirst: Première recherche, en cours de chargement du fichier index, plus tard …
 searchNoResult: Aucun contenu n’a été trouvé, essayez de remplacer le terme de recherche.
+searchFilesNotfound: The search.xml file was not found, please refer to：
+searchServiceErrors: The request failed, Try to refresh the page or try again later.
 tags: Mot-clés
 tagcloud: Nuage de mot-clés
 tweets: Tweets

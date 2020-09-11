@@ -2,6 +2,8 @@ categories: Категории
 search: Поиск
 searchFirst: Первый поиск, загружается в индексный файл, пожалуйста, позже...
 searchNoResult: Содержание не найдено, пожалуйста, попробуйте заменить слово.
+searchFilesNotfound: The search.xml file was not found, please refer to：
+searchServiceErrors: The request failed, Try to refresh the page or try again later.
 tags: Метки
 tagcloud: Облако меток
 tweets: Твиты

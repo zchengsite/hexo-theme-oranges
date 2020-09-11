@@ -168,6 +168,14 @@
             }
             $resultContent.innerHTML = str;
           });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'><%= __('searchFilesNotfound') %><a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'><%= __('searchServiceErrors') %><span></ul>";
+          }
         }
       });
       $(document).on('click', '#search-close-icon', function() {

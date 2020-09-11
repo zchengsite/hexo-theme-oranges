@@ -2,6 +2,8 @@ categories: カテゴリ
 search: 検索
 searchFirst: 最初に検索して、索引ファイルをロードしています。後で…
 searchNoResult: 内容が見つからないので、検索語を変えてみてください
+searchFilesNotfound: The search.xml file was not found, please refer to：
+searchServiceErrors: The request failed, Try to refresh the page or try again later.
 tags: タグ
 tagcloud: タグクラウド
 tweets: ツイート
