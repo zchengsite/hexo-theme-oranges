@@ -5,6 +5,8 @@
 
 html, body {
   font-size: 10px;
+  letter-spacing: 0.01rem;
+  font-family: Consolas, "Liberation Mono", Menlo, Monaco, "Source Han Sans CN", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif
 }
 
 body.hidden {
@@ -53,7 +55,7 @@ a:hover {
   flex-direction: column;
   justify-content: space-between;
   margin-left: calc(100vw - 100%);
-  transition: all 0.3s ease;
+  /*transition: all 0.3s ease;*/
 }
 
 .header {
@@ -70,7 +72,7 @@ a:hover {
 .archives .post-list,
 .tag-index .tag-list,
 .about-index .markdown-body {
-  padding: 0 90px;
+  padding: 0 40px;
 }
 
 .category-index .category-list {
@@ -122,7 +124,8 @@ a:hover {
   flex-shrink: 0;
   margin-right: 30px;
   color: #666;
-  font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
+  font-size: 1.5rem;
+  /*font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;*/
 }
 
 .post-item .title {
@@ -173,7 +176,7 @@ a:hover {
   font-size: 1.6rem;
   color: #666;
   margin-bottom: 20px;
-  font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
+  /*font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;*/
 }
 
 .navbar {
@@ -185,9 +188,9 @@ a:hover {
 
 .navbar ul li {
   position: relative;
-  display: inline;
+  display: inline-block;
   margin: 0 15px;
-  font-size: 1.6rem;
+  font-size: 1.65rem;
   font-weight: bold;
   text-align: center;
 }
@@ -199,7 +202,7 @@ a:hover {
 .navbar ul li a:hover::after {
   content: "";
   position: absolute;
-  bottom: -3px;
+  bottom: -1px;
   left: 0;
   height: 8px;
   opacity: 0.3;
@@ -215,7 +218,7 @@ a:hover {
 .navbar ul li.active a::after {
   content: "";
   position: absolute;
-  bottom: -3px;
+  bottom: -1px;
   left: 0;
   height: 8px;
   opacity: 0.5;
@@ -230,9 +233,9 @@ a:hover {
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 390px) {
   .navbar ul li {
-    margin: 0 8px;
+    margin: 0 3px;
   }
 }
 
@@ -300,11 +303,11 @@ a:hover {
   border-radius: 2px;
 }
 
-.tag-list li .tag-list-link:hover {
+/*.tag-list li .tag-list-link:hover {
   color: #fff;
-}
+}*/
 
-.tag-list li .tag-list-link::after {
+/*.tag-list li .tag-list-link::after {
   content: "";
   position: absolute;
   top: 0;
@@ -323,7 +326,7 @@ a:hover {
 .tag-list li .tag-list-link:hover::after {
   transform: scaleX(1);
   transform-origin: left;
-}
+}*/
 
 .tag-list-count, .category-list-count {
   padding: 0 5px;
@@ -411,8 +414,8 @@ a:hover {
 }
 
 .post-catalog .title {
-  opacity: 0.8;
-  font-size: 1.6rem;
+  color: #666;
+  font-size: 1.65rem;
   font-weight: bold;
   padding: 5px 0;
 }

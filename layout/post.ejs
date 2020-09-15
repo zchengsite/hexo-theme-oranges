@@ -100,7 +100,7 @@
             <% if(page.next) { %>
               <a href="<%- url_for(page.next.path) %>" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
-                <span>PREV</span>
+                <span><%= __('prev') %></span>
               </a>
             <% } %>
           </div>
@@ -143,7 +143,7 @@
           <div class="post-foot-prev">
             <% if(page.prev) { %>
               <a href="<%- url_for(page.prev.path) %>" target="_self">
-                <span>NEXT</span>
+                <span><%= __('next') %></span>
                 <i class="iconfont icon-chevronright"></i>
               </a>
             <% } %>
