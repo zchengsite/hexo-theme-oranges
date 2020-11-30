@@ -6,31 +6,31 @@
     <meta name="robots" content="noindex" />
   <% } %>
   <%
-  var title = page.title;
+    var title = page.title;
 
-  if (is_archive()){
-    title = '归档';
+    if (is_archive()){
+      title = 'archive_a';
 
-    if (is_month()){
-      title += ': ' + page.year + '/' + page.month;
-    } else if (is_year()){
-      title += ': ' + page.year;
+      if (is_month()){
+        title += ': ' + page.year + '/' + page.month;
+      } else if (is_year()){
+        title += ': ' + page.year;
+      }
+    } else if (is_category()){
+      title = "category"
+    } else if (is_tag()){
+      title = "tag"
+    } else if (title === "about") {
+      title = "about"
+    } else if (title === "tags") {
+      title = "tag"
+    } else if (title === "categories") {
+      title = "category"
+    } else if (title === "friends") {
+      title = "friend"
     }
-  } else if (is_category()){
-    title = '分类: ' + page.category;
-  } else if (is_tag()){
-    title = '标签: ' + page.tag;
-  } else if (title === "about") {
-    title = "关于"
-  } else if (title === "tags") {
-    title = "标签"
-  } else if (title === "categories") {
-    title = "分类"
-  } else if (title === "friends") {
-    title = "朋友"
-  }
   %>
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <title><% if (title) { %><%= __(title) %> <% if (page.tag) { %> : <%= page.tag %><% } %> <% if (page.category) { %> : <%= page.category %><% } %> | <% } %><%= config.title %></title>
 
   <% if (theme.favicon.enable){ %>
     <link rel="apple-touch-icon" href="<%- theme.favicon.touch_icon %>">
