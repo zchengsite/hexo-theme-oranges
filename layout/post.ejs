@@ -4,6 +4,9 @@
 <% if (page.type === "tags") { %>
   <!-- 标签页 url形式：https://yoursite/tags/ -->
   <div class="container tag-index">
+    <div class="content-title">
+      <span class="icon iconfont">&#xecdd; Tags in All Posts </span>
+    </div>
     <div>
       <%- list_tags({ class: "tag" }) %>
     </div>
