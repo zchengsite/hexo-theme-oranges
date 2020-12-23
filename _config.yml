@@ -65,9 +65,9 @@ comments:
   disqus:
     # https://disqus.com/
     # 注册账号，获取shortname.disqus.com，shortname为你定义的唯一name
-    # 例：我注册配置完毕后的网址为zxcxxxx.disqus.com，zxcxxxx即为shortname
+    # 例：我注册配置完毕后的网址为zxcxxxx.disqus.com，https-zxcxxxx-github-io即为shortname
     enable: false
-    shortname: zxcxxxx
+    shortname: https-zxcxxxx-github-io
 
 # 主题页面导航栏
 navbar:
