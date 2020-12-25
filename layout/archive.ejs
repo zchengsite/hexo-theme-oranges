@@ -6,32 +6,18 @@
 <div class="container archives">
   <div class="post-list">
     <%
-      var last = null;
-      var now = null;
-    %>
-    <%
+      var prev = -10086;// prev year
+      var curr;// curr year, ever step be updated
+
       site.posts.sort('date', -1).each(function(item, index) {
-    %>
-      <%
-        if (index === 0) {
-          last = item.date.year();
-      %>
-        <!-- 第一篇文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span><%- last %></span>
-          </h2>
-        </div>
-      <%
-        }
-        now = item.date.year();
-        if (now !== last) {
-          last = now;
+        curr = item.date.year()
+        if (curr !== prev) {
+          prev = curr;
       %>
         <!-- 后续文章的发布年份呈现 -->
         <div class="content-title">
           <h2>
-            <span><%- now %></span>
+            <span><%- curr %></span>
           </h2>
         </div>
       <%
