@@ -1,7 +1,9 @@
 <head>
   <meta charset="utf-8">
-  <meta name="author" content="zchengsite, 1451426471@qq.com" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="<%= config.keywords %>" />
+  <meta name="author" content="<%= config.author %>" />
+  <meta name="description" content="<%= config.description %>" />
   <% if(is_home() && page.current > 1){ %>
     <meta name="robots" content="noindex" />
   <% } %>
@@ -16,21 +18,25 @@
       } else if (is_year()){
         title += ': ' + page.year;
       }
-    } else if (is_category()){
+    } else if (is_category() || title === "categories"){
       title = "category"
-    } else if (is_tag()){
+    } else if (is_tag() || title === "tags"){
       title = "tag"
-    } else if (title === "about") {
-      title = "about"
-    } else if (title === "tags") {
-      title = "tag"
-    } else if (title === "categories") {
-      title = "category"
     } else if (title === "friends") {
       title = "friend"
+    } else if (title === "about") {
+      title = "about"
     }
   %>
-  <title><% if (title) { %><%= __(title) %> <% if (page.tag) { %> : <%= page.tag %><% } %> <% if (page.category) { %> : <%= page.category %><% } %> | <% } %><%= config.title %></title>
+  <title>
+    <% if (title) { %>
+      <%= __(title) %> 
+      <% if (page.tag) { %> : <%= page.tag %><% } %>
+      <% if (page.category) { %> : <%= page.category %><% } %>
+      |
+    <% } %>
+     <%= config.title %>
+  </title>
 
   <% if (theme.favicon.enable){ %>
     <link rel="apple-touch-icon" href="<%- theme.favicon.touch_icon %>">

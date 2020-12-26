@@ -58,7 +58,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime" title="<%= __('updateTime') %>"></i>
-          <%- page.date.format("YYYY-MM-DD") %>
+          <%- page.date.format("YYYY-MM-DD HH:mm:ss") %>
         </span>
         <% for(item of theme.navbar) {
           if (item.key === 'tags' && item.enable) {
@@ -107,7 +107,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime" title="<%= __('updateTime') %>"></i>
-              <%- page.date.format("YYYY-MM-DD") %>
+              <%- page.date.format("YYYY-MM-DD HH:mm:ss") %>
             </span>
             <% for(item of theme.navbar) {
               if (item.key === 'tags' && item.enable) {
