@@ -118,6 +118,7 @@ a:hover {
   font-size: 1.6rem;
   margin-bottom: 20px;
   align-items: center;
+  line-height: 21px;
 }
 
 .post-item .time-m-d {
@@ -125,6 +126,7 @@ a:hover {
   margin-right: 30px;
   color: #666;
   font-size: 1.5rem;
+  line-height: 21px;
   /*font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;*/
 }
 
