@@ -116,7 +116,10 @@ a:hover {
     padding: 10px!important;
     background-color: #fff;
     box-shadow: 1px 0px 7px 1px grey;
-    opacity: 1;
+    opacity: .9;
+    z-index: 9;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
     transition: top 0.2s ease, opacity 0.2s ease;
   }
   .post-catalog.hidden {
