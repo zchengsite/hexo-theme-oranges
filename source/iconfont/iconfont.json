@@ -6,6 +6,13 @@
   "description": "oranges 主题icon",
   "glyphs": [
     {
+      "icon_id": "20869468",
+      "name": "分类目录@2x",
+      "font_class": "-catalog",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
       "icon_id": "11249795",
       "name": "pin-2",
       "font_class": "-pin-top",

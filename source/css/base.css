@@ -93,9 +93,41 @@ a:hover {
   .category-index .category-list {
     padding: 0 40px;
   }
+  .btn-catalog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 24px;
+    width: 24px;
+    padding: 10px;
+    z-index: 999;
+    color: #666;
+  }
+  .btn-catalog i {
+    font-size: 24px;
+  }
   .post-catalog {
-    opacity: 0;
-    z-index: -1;
+    top: 44px!important;
+    bottom: unset!important;
+    right: 0!important;
+    width: unset!important;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px!important;
+    background-color: #fff;
+    box-shadow: 1px 0px 7px 1px grey;
+    opacity: 1;
+    transition: top 0.2s ease, opacity 0.2s ease;
+  }
+  .post-catalog.hidden {
+    opacity: 0!important;
+    top: 0!important;
+  }
+  .post-catalog .title {
+    display: none;
+  }
+  .post-catalog .catalog-content {
+    height: unset!important;
   }
   .back-to-top {
     opacity: 0;

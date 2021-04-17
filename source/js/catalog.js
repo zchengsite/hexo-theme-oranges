@@ -48,9 +48,20 @@ function handleResize() {
   tocElement.setAttribute('style', `height: ${windowHeight - 90}px`);
 }
 
+// 小屏下（屏宽小于888px）是否展开目录
+function openOrHiddenCatalog() {
+  let isHidden = catalog.classList.contains('hidden')
+  if (isHidden) {
+    catalog.classList.remove('hidden')
+  } else {
+    catalog.classList.add('hidden')
+  }
+}
+
 changePos();
 isActiveCat();
 handleResize();
 document.addEventListener("scroll", changePos, false);
 document.addEventListener("scroll", isActiveCat, false);
 window.addEventListener("resize", handleResize, false);
+document.querySelector("#btn-catalog").addEventListener("click", openOrHiddenCatalog, false);
