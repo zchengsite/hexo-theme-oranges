@@ -115,7 +115,7 @@ a:hover {
     justify-content: flex-end;
     padding: 10px!important;
     background-color: #fff;
-    box-shadow: 1px 0px 7px 1px grey;
+    box-shadow: -1px 2px 5px 0px #999;
     opacity: .9;
     z-index: 9;
     border-top-left-radius: 4px;
