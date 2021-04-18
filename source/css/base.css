@@ -79,6 +79,10 @@ a:hover {
   padding: 0 110px;
 }
 
+.btn-catalog {
+  display: none;
+}
+
 @media (max-width: 888px) {
   .container {
     width: 90%;
@@ -94,6 +98,7 @@ a:hover {
     padding: 0 40px;
   }
   .btn-catalog {
+    display: block;
     position: fixed;
     top: 0;
     right: 0;
