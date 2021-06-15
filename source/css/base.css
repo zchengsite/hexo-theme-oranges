@@ -107,6 +107,7 @@ a:hover {
     padding: 10px;
     z-index: 999;
     color: #666;
+    background-color: rgb(255 255 255 / 50%);
   }
   .btn-catalog i {
     font-size: 24px;
@@ -130,6 +131,7 @@ a:hover {
   .post-catalog.hidden {
     opacity: 0!important;
     top: 0!important;
+    z-index: -1!important;
   }
   .post-catalog .title {
     display: none;
@@ -517,7 +519,7 @@ a:hover {
 .back-to-top {
   position: fixed;
   right: 2.2rem;
-  bottom: 5.2rem;
+  bottom: 8.2rem;
   font-weight: bold;
 }
 
@@ -567,6 +569,13 @@ a:hover {
   margin: 0 2rem;
   transition: top 0.2s ease, opacity 0.2s ease;
   outline: 0;
+}
+
+.switch-color-scheme {
+  position: fixed;
+  right: 2.2rem;
+  bottom: 5.2rem;
+  font-weight: bold;
 }
 
 @media (min-width: 768px) {
