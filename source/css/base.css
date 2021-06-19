@@ -6,6 +6,8 @@
 html, body {
   font-size: 10px;
   letter-spacing: 0.01rem;
+  background-color: var(--bg-body);
+  transition: color 400ms ease-in-out 0s, background-color 400ms ease-in-out 0s;
   font-family: Consolas, "Liberation Mono", Menlo, Monaco, "Source Han Sans CN", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif
 }
 
@@ -39,14 +41,14 @@ body.hidden {
 }
 
 a {
-  color: #666;
+  color: var(--color-text-a);
   text-decoration: none;
   background-color: transparent;
   transition: color 0.3s;
 }
 
 a:hover {
-  color: black;
+  color: var(--color-text-a-hover);
 }
 
 .flex-container {
@@ -166,7 +168,7 @@ a:hover {
 .post-item .time-m-d {
   flex-shrink: 0;
   margin-right: 30px;
-  color: #666;
+  color: var(--color-text-base);
   font-size: 1.5rem;
   line-height: 21px;
   /*font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;*/
@@ -256,7 +258,7 @@ a:hover {
 }
 
 .navbar ul li.active a {
-  color: black;
+  color: var(--color-text-a-active);
 }
 
 .navbar ul li.active a::after {
@@ -287,7 +289,7 @@ a:hover {
   font-size: 1.5rem;
   padding: 20px 90px;
   text-align: right;
-  color: #666;
+  color: var(--color-text-base);
 }
 
 .post-navigation i {
@@ -458,7 +460,7 @@ a:hover {
 }
 
 .post-catalog .title {
-  color: #666;
+  color: var(--color-text-base);
   font-size: 1.65rem;
   font-weight: bold;
   padding: 5px 0;
@@ -488,7 +490,7 @@ a:hover {
 }
 
 .toc-link.active {
-  color: black;
+  color: var(--color-text-a-active);
   opacity: 1;
 }
 
