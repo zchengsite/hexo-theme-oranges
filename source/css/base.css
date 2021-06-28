@@ -518,24 +518,6 @@ a:hover {
   border-radius: 3px;
 }
 
-.back-to-top {
-  position: fixed;
-  right: 2.2rem;
-  bottom: 8.2rem;
-  font-weight: bold;
-}
-
-.back-to-top.hidden {
-  display: none;
-}
-
-.search-icon {
-  position: fixed;
-  right: 2.2rem;
-  bottom: 2.2rem;
-  font-weight: bold;
-}
-
 .search-overlay {
   position: fixed;
   top: 0;
@@ -571,13 +553,6 @@ a:hover {
   margin: 0 2rem;
   transition: top 0.2s ease, opacity 0.2s ease;
   outline: 0;
-}
-
-.switch-color-scheme {
-  position: fixed;
-  right: 2.2rem;
-  bottom: 5.2rem;
-  font-weight: bold;
 }
 
 @media (min-width: 768px) {
@@ -643,4 +618,19 @@ a:hover {
 
 .local-search-empty {
   font-size: 1.6rem;
+}
+
+.tools-bar {
+  position: fixed;
+  right: 2.2rem;
+  bottom: 2.2rem;
+}
+
+.tools-bar .tools-bar-item {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.tools-bar .back-to-top.hidden {
+  display: none;
 }

@@ -175,3 +175,7 @@ footer:
 search:
   enable: true
   placeholder: 
+
+# 深/浅配色切换
+colorSwitch:
+  enable: true
