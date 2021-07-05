@@ -8,6 +8,7 @@
     --color-text-md-title: #24292e;
     --color-text-md-content: #24292e;
     --color-text-md-code: #e96900;
+    --bg-text-md-code: #f8f8f8;
 }
 
 /* dark scheme */
@@ -17,7 +18,8 @@
     --color-text-a: #C1C2C5;
     --color-text-a-hover: #FFFFFF;
     --color-text-a-active: #FFFFFF;
-    --color-text-md-title: #FFFFFF;
-    --color-text-md-content: #FFFFFF;
+    --color-text-md-title: #eceff4;
+    --color-text-md-content: #eceff4;
     --color-text-md-code: #e96900;
+    --bg-text-md-code: #3b4252;
 }

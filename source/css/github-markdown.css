@@ -14,6 +14,7 @@
   font-size: 1.6rem;
   line-height: 2;
   word-wrap: break-word;
+  color: var(--color-text-md-content)
 }
 
 @media (max-width: 768px) {
@@ -216,17 +217,17 @@
 }
 
 .markdown-body a {
-  color: #666;
+  color: var(--color-text-a);
   text-decoration: none;
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid var(--color-text-a);
   font-size: 1em;
   transition: color 0.3s;
 }
 
 .markdown-body a:hover {
   text-decoration: none;
-  color: black;
-  border-bottom: 1px solid black;
+  color: var(--color-text-a-hover);
+  border-bottom: 1px solid var(--color-text-a-hover);
 }
 
 .markdown-body strong {
@@ -659,7 +660,7 @@
   font-size: 85%;
   font-weight: 600;
   border-radius: 3px;
-  background-color: #f8f8f8;
+  background-color: var(--bg-text-md-code);
   color: #e96900;
 }
 

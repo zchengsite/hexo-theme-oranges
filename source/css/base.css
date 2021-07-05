@@ -108,7 +108,7 @@ a:hover {
     width: 24px;
     padding: 10px;
     z-index: 999;
-    color: #666;
+    color: var(--color-text-a);
     background-color: rgb(255 255 255 / 50%);
   }
   .btn-catalog i {
@@ -209,7 +209,7 @@ a:hover {
 .avatar .nickname {
   font-size: 2rem;
   font-weight: 600;
-  color: #666;
+  color: var(--color-text-a);
   padding-top: 10px;
 }
 
@@ -220,7 +220,7 @@ a:hover {
 
 .content-title {
   font-size: 1.6rem;
-  color: #666;
+  color: var(--color-text-a);
   margin-bottom: 20px;
   /*font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;*/
 }
@@ -397,13 +397,14 @@ a:hover {
 
 .friend-list-item .nickname {
   padding-right: 10px;
+  color: var(--color-text-a)
 }
 
 .post-details .post-title {
   text-align: center;
   font-size: 2.2rem;
   font-weight: 600;
-  color: #666;
+  color: var(--color-text-a);
   padding-bottom: 10px;
 }
 
@@ -411,7 +412,7 @@ a:hover {
   font-size: 1.4rem;
   text-align: center;
   padding-bottom: 30px;
-  color: #666;
+  color: var(--color-text-a);
 }
 
 .post-content {
@@ -609,7 +610,7 @@ a:hover {
 .search-result-abstract {
   padding: 10px 10px 0 10px;
   font-size: 1.2rem;
-  color: #666;
+  color: var(--color-text-a);
 }
 
 .search-keyword {
