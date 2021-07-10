@@ -6,6 +6,20 @@
   "description": "oranges 主题icon",
   "glyphs": [
     {
+      "icon_id": "9785760",
+      "name": "sun",
+      "font_class": "-sun",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "11968793",
+      "name": "moon",
+      "font_class": "-moon",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
       "icon_id": "20869468",
       "name": "分类目录@2x",
       "font_class": "-catalog",

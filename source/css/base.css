@@ -6,6 +6,8 @@
 html, body {
   font-size: 10px;
   letter-spacing: 0.01rem;
+  background-color: var(--bg-body);
+  transition: color 400ms ease-in-out 0s, background-color 400ms ease-in-out 0s;
   font-family: Consolas, "Liberation Mono", Menlo, Monaco, "Source Han Sans CN", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif
 }
 
@@ -39,14 +41,14 @@ body.hidden {
 }
 
 a {
-  color: #666;
+  color: var(--color-text-a);
   text-decoration: none;
   background-color: transparent;
   transition: color 0.3s;
 }
 
 a:hover {
-  color: black;
+  color: var(--color-text-a-hover);
 }
 
 .flex-container {
@@ -106,7 +108,8 @@ a:hover {
     width: 24px;
     padding: 10px;
     z-index: 999;
-    color: #666;
+    color: var(--color-text-a);
+    background-color: rgb(255 255 255 / 50%);
   }
   .btn-catalog i {
     font-size: 24px;
@@ -130,6 +133,7 @@ a:hover {
   .post-catalog.hidden {
     opacity: 0!important;
     top: 0!important;
+    z-index: -1!important;
   }
   .post-catalog .title {
     display: none;
@@ -164,7 +168,7 @@ a:hover {
 .post-item .time-m-d {
   flex-shrink: 0;
   margin-right: 30px;
-  color: #666;
+  color: var(--color-text-base);
   font-size: 1.5rem;
   line-height: 21px;
   /*font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;*/
@@ -205,7 +209,7 @@ a:hover {
 .avatar .nickname {
   font-size: 2rem;
   font-weight: 600;
-  color: #666;
+  color: var(--color-text-a);
   padding-top: 10px;
 }
 
@@ -216,7 +220,7 @@ a:hover {
 
 .content-title {
   font-size: 1.6rem;
-  color: #666;
+  color: var(--color-text-a);
   margin-bottom: 20px;
   /*font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;*/
 }
@@ -254,7 +258,7 @@ a:hover {
 }
 
 .navbar ul li.active a {
-  color: black;
+  color: var(--color-text-a-active);
 }
 
 .navbar ul li.active a::after {
@@ -285,7 +289,7 @@ a:hover {
   font-size: 1.5rem;
   padding: 20px 90px;
   text-align: right;
-  color: #666;
+  color: var(--color-text-base);
 }
 
 .post-navigation i {
@@ -382,6 +386,11 @@ a:hover {
   padding: 5px 0;
 }
 
+.category-list .category-list-item::marker {
+  content: "• ";
+  color: var(--color-text-base)
+}
+
 .category-list .category-list-item .category-list-child {
   padding-left: 30px;
 }
@@ -393,13 +402,14 @@ a:hover {
 
 .friend-list-item .nickname {
   padding-right: 10px;
+  color: var(--color-text-a)
 }
 
 .post-details .post-title {
   text-align: center;
   font-size: 2.2rem;
   font-weight: 600;
-  color: #666;
+  color: var(--color-text-a);
   padding-bottom: 10px;
 }
 
@@ -407,7 +417,7 @@ a:hover {
   font-size: 1.4rem;
   text-align: center;
   padding-bottom: 30px;
-  color: #666;
+  color: var(--color-text-a);
 }
 
 .post-content {
@@ -420,7 +430,7 @@ a:hover {
   justify-content: space-between;
   padding: 1rem 0;
   margin: 3rem 0;
-  border-top: 1px solid rgba(88,88,88,0.1);
+  border-top: 1px solid var(--color-divider-md-border);
 }
 
 .prev-or-next .post-foot-next, .prev-or-next .post-foot-prev {
@@ -456,7 +466,7 @@ a:hover {
 }
 
 .post-catalog .title {
-  color: #666;
+  color: var(--color-text-base);
   font-size: 1.65rem;
   font-weight: bold;
   padding: 5px 0;
@@ -486,7 +496,7 @@ a:hover {
 }
 
 .toc-link.active {
-  color: black;
+  color: var(--color-text-a-active);
   opacity: 1;
 }
 
@@ -514,24 +524,6 @@ a:hover {
   border-radius: 3px;
 }
 
-.back-to-top {
-  position: fixed;
-  right: 2.2rem;
-  bottom: 5.2rem;
-  font-weight: bold;
-}
-
-.back-to-top.hidden {
-  display: none;
-}
-
-.search-icon {
-  position: fixed;
-  right: 2.2rem;
-  bottom: 2.2rem;
-  font-weight: bold;
-}
-
 .search-overlay {
   position: fixed;
   top: 0;
@@ -542,6 +534,7 @@ a:hover {
   transition: background-color 0.2s ease;
   visibility: visible;
   padding-right: 6px;
+  backdrop-filter: blur(8px);
 }
 
 .search-overlay.hidden {
@@ -581,7 +574,7 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: var(--bg-content-search);
   padding: 0 8px;
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
 }
@@ -595,12 +588,13 @@ a:hover {
   font-size: 1.6rem;
   height: 38px;
   line-height: 38px;
+  color: var(--color-text-a);
 }
 
 .search-result {
   max-height: 350px;
   overflow: auto;
-  background-color: #fff;
+  background-color: var(--bg-content-search);
   border-radius: 10px;
   margin-top: 8px;
 }
@@ -613,7 +607,7 @@ a:hover {
   list-style-type: none;
   padding: 10px;
   font-size: 1.6rem;
-  border-bottom: 1px dashed #eee;
+  border-bottom: 1px dashed var(--color-divider-md-border);
 }
 
 .search-result-list li:nth-last-of-type(1) {
@@ -623,13 +617,30 @@ a:hover {
 .search-result-abstract {
   padding: 10px 10px 0 10px;
   font-size: 1.2rem;
-  color: #666;
+  color: var(--color-text-sub);
+  word-break: break-all;
 }
 
 .search-keyword {
-  color: #e96900;
+  color: var(--color-text-md-code);
 }
 
 .local-search-empty {
   font-size: 1.6rem;
+  color: var(--color-text-a);
+}
+
+.tools-bar {
+  position: fixed;
+  right: 2.2rem;
+  bottom: 2.2rem;
+}
+
+.tools-bar .tools-bar-item {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.tools-bar .back-to-top.hidden {
+  display: none;
 }

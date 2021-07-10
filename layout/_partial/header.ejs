@@ -47,7 +47,14 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
   <!-- hexo site css -->
-  <%- css(['/css/base.css', '/iconfont/iconfont.css', '/css/github-markdown.css', '/css/highlight.css']) %>
+  <%- css([
+    '/css/color-scheme.css',
+    '/css/base.css',
+    '/iconfont/iconfont.css',
+    '/css/github-markdown.css',
+    '/css/highlight.css',
+    '/css/comments.css'])
+  %>
 
   <!-- jquery3.3.1 -->
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
@@ -68,5 +75,13 @@
       gtag('config', '<%- theme.gtag.gtagkey %>');
     </script>
   <% } %>
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
 
 </head>
