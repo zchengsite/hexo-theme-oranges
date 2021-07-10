@@ -439,9 +439,9 @@
 .markdown-body blockquote {
   /*margin: 3rem 0;*/
   padding: 15px;
-  color: #555;
-  border-left: 0.25em solid #555;
-  background: #EEEEEE;
+  color: var(--color-block-md-quote);
+  border-left: 0.25em solid var(--color-block-md-quote);
+  background: var(--bg-block-md-quote);
   border-radius: 3px;
 }
 
@@ -661,7 +661,7 @@
   font-weight: 600;
   border-radius: 3px;
   background-color: var(--bg-text-md-code);
-  color: #e96900;
+  color: var(--color-text-md-code);
 }
 
 .markdown-body pre {

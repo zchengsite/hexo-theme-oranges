@@ -1,0 +1,29 @@
+/* valine comments style sheets */
+
+.comments-container {
+  color: var(--color-text-a);
+}
+
+.comments-container .vwrap {
+  color: var(--color-text-a);
+}
+
+.vheader input::-webkit-input-placeholder, .vheader input {
+  color: var(--color-text-a) !important;
+}
+
+.vedit textarea::-webkit-input-placeholder, .vedit textarea {
+  color: var(--color-text-a) !important;
+}
+
+.vicon {
+  fill: var(--color-text-a) !important;
+}
+
+.vbtn {
+  color: var(--color-text-a) !important;
+}
+
+.vcontent p {
+  color: var(--color-text-a) !important;
+}
