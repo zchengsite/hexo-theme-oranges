@@ -626,16 +626,16 @@
 .markdown-body table th,
 .markdown-body table td {
   padding: 6px 13px;
-  border: 1px solid #dfe2e5;
+  border: 2px solid var(--color-border-md-table);
 }
 
 .markdown-body table tr {
-  background-color: #fff;
-  border-top: 1px solid #c6cbd1;
+  background-color: var(--bg-block-md-table);
+  border-top: 2px solid var(--color-border-md-table);
 }
 
 .markdown-body table tr:nth-child(2n) {
-  background-color: #f6f8fa;
+  background-color: var(--bg-block-md-table-2);
 }
 
 .markdown-body img {
@@ -694,7 +694,7 @@
   overflow: auto;
   font-size: 90%;
   line-height: 1.8;
-  background-color: #fcfcfc;
+  background-color: var(--bg-block-md-pre);
   border-radius: 5px;
 }
 
@@ -708,6 +708,7 @@
   word-wrap: normal;
   background-color: transparent;
   border: 0;
+  color: var(--color-text-md-pre)
 }
 
 .markdown-body .full-commit .btn-outline:not(:disabled):hover {
