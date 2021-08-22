@@ -6,6 +6,13 @@
   "description": "oranges 主题icon",
   "glyphs": [
     {
+      "icon_id": "9785713",
+      "name": "share",
+      "font_class": "share",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
       "icon_id": "9785760",
       "name": "sun",
       "font_class": "-sun",

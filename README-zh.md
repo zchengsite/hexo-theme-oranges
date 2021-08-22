@@ -394,6 +394,23 @@ lazyload:
 
 </details>
 
+<details>
+  <summary><b>文章分享</b> (click to show)</summary>
+
+  拉取最新仓库，在主题配置文件`_config.yml`中添加或修改`postShare`字段，确保`enable`为`true`:
+
+  ```yml
+  postShare:
+    enable: true
+
+    twitter:
+      enable: true
+  ```
+
+重新运行项目，文章页面右下角会出现分享的按钮。
+
+</details>
+
 ## To Do List
 
 - [x] 自定义导航，可灵活配置自己想要的导航✔
@@ -405,7 +422,7 @@ lazyload:
 - [x] 文章页末增加NEXT & PREV`[2020.5.10]`✔
 - [x] 文章标题锚点`[2020.5.3]`✔
 - [x] 评论系统`[2020.5.7]`✔
-- [ ] 分享功能
+- [x] 分享功能`[2021.8.22]`✔
 - [ ] 文章字数统计
 - [ ] 页面访问量统计
 - [x] Google分析`[2020.5.8]`✔
