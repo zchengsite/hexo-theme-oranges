@@ -383,6 +383,23 @@ The toggle option appears in the bottom right corner of the page.
 
 </details>
 
+<details>
+  <summary><b>share</b> (click to show)</summary>
+
+  Pull up the latest repository, add or edit configuration in theme `_config.yml`:
+
+  ```yml
+  postShare:
+    enable: true
+
+    twitter:
+      enable: true
+  ```
+
+The toggle option appears in the bottom right corner of the post page.
+
+</details>
+
 ## To Do List
 
 - [x] Custom navigation✔
@@ -394,7 +411,7 @@ The toggle option appears in the bottom right corner of the page.
 - [x] NEXT & PREV`[2020.5.10]`✔
 - [x] H1 - h6 anchor`[2020.5.3]`✔
 - [x] comments`[2020.5.7]`✔
-- [ ] share
+- [x] share`[2021.8.22]`✔
 - [ ] word count
 - [ ] traffic statistics
 - [x] Google Analytics`[2020.5.8]`✔
