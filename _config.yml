@@ -180,3 +180,13 @@ search:
 # 深/浅配色切换
 colorSwitch:
   enable: true
+
+# 文章分享
+postShare:
+  enable: true
+
+  twitter:
+    enable: true
+
+  facebook:
+    enable: true
