@@ -70,6 +70,11 @@ comments:
     # 例：我注册配置完毕后的网址为zxcxxxx.disqus.com，https-zxcxxxx-github-io即为shortname
     enable: false
     shortname: https-zxcxxxx-github-io
+  
+  # waline https://waline.js.org
+  waline:
+    enable: false
+    serverUrl: 
 
 # 主题页面导航栏
 navbar:
