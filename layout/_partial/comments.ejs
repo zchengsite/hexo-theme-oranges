@@ -1,3 +1,17 @@
+<% if(theme.comments.enable && theme.comments.waline.enable) { %>
+  <script src='//unpkg.com/@waline/client/dist/Waline.min.js'></script>
+
+  <div id="waline-comments"></div>
+
+  <script>
+    new Waline({
+      el: '#waline-comments',
+      path: location.pathname,
+      serverURL: '<%- theme.comments.waline.serverURL %>'
+    })
+  </script>
+<% } %>
+
 <% if(theme.comments.enable && theme.comments.disqus.enable) { %>
   <div id="disqus_thread"></div>
   <script>
