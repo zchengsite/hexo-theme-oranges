@@ -202,7 +202,7 @@ footer:
     -
       name: rss
       icon: rss
-      path: atom.xml
+      path: /atom.xml
 ```
 
 </details>
