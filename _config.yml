@@ -74,7 +74,7 @@ comments:
   # waline https://waline.js.org
   waline:
     enable: false
-    serverUrl: 
+    serverURL:
 
 # 主题页面导航栏
 navbar:
