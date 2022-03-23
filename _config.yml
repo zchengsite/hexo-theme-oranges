@@ -171,8 +171,11 @@ footer:
       path: /atom.xml
 
   more:
+    # 支持变量显示，可自定义扩展，具体见主题/layout/_partial/footer.ejs
+    # 一般用来显示根据各种场景需要切换的文本，如时间年份
+    # 如：{thisYear} 会被替换为今年年份
     -
-      name: Copyright © Oranges 2021
+      name: Copyright © {thisYear} Oranges
       path: https://github.com/zchengsite/hexo-theme-oranges
     -
       name: Theme by Oranges | Powered by Hexo
