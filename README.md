@@ -400,6 +400,32 @@ The toggle option appears in the bottom right corner of the post page.
 
 </details>
 
+<details>
+  <summary><b>post encryption</b> (click to show)</summary>
+
+  install the [hexo-blog-encrypt](https://github.com/D0n9X1n/hexo-blog-encrypt) plugin:
+
+  ```bash
+  $ npm install --save hexo-blog-encrypt
+  ```
+
+  add or edit Front-matter in your post:
+
+  ```yml
+    ---
+    title: Hello World!
+    date: 2020-09-27 10:42:38
+    tags:
+      - World
+      - Hello
+    password: hello
+    ---
+  ```
+
+  more [hexo-blog-encrypt](https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md)
+
+</details>
+
 ## To Do List
 
 - [x] Custom navigation✔
@@ -415,7 +441,7 @@ The toggle option appears in the bottom right corner of the post page.
 - [ ] word count
 - [ ] traffic statistics
 - [x] Google Analytics`[2020.5.8]`✔
-- [ ] post encryption
+- [x] post encryption`[2022.3.23]`✔
 - [x] pinned posts`[2020.9.1]`✔
 - [x] search`[2020.8.23]`✔
 - [x] dark mode `[2021.7.10]`✔

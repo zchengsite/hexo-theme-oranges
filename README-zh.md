@@ -411,6 +411,32 @@ lazyload:
 
 </details>
 
+<details>
+  <summary><b>文章加密</b> (click to show)</summary>
+
+  拉取最新仓库代码, 安装[hexo-blog-encrypt](https://github.com/D0n9X1n/hexo-blog-encrypt) 插件：
+
+  ```bash
+  $ npm install --save hexo-blog-encrypt
+  ```
+
+  在你要加密文章头部 Front-matter中添加password：
+
+  ```yml
+    ---
+    title: Hello World!
+    date: 2020-09-27 10:42:38
+    tags:
+      - World
+      - Hello
+    password: hello
+    ---
+  ```
+
+  更多可查看[hexo-blog-encrypt](https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md)
+
+</details>
+
 ## To Do List
 
 - [x] 自定义导航，可灵活配置自己想要的导航✔
@@ -426,7 +452,7 @@ lazyload:
 - [ ] 文章字数统计
 - [ ] 页面访问量统计
 - [x] Google分析`[2020.5.8]`✔
-- [ ] 文章加密
+- [x] 文章加密`[2022.3.23]`✔
 - [x] 文章置顶`[2020.9.1]`✔
 - [x] 全文搜索功能`[2020.8.23]`✔
 - [x] 主题配色切换 `[2021.7.10]`✔
