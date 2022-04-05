@@ -9,16 +9,20 @@ English | [简体中文](https://github.com/zchengsite/hexo-theme-oranges/blob/m
 ## Installation
 
 ```bash
-$ git clone https://github.com/zchengsite/hexo-theme-oranges.git themes/oranges
+git submodule add https://github.com/zchengsite/hexo-theme-oranges.git themes/oranges
 ```
+
+To update the theme in the future, just execute the `git pull` command in the theme root directory.
 
 ## Usage
 
-Edit the `theme` field in the `_config.yml` file under the project root:
+In order to update the theme more conveniently, it is recommended to install it by adding a Git submodule.Edit the `theme` field in the `_config.yml` file under the project root:
 
 ```yml
 theme: oranges
 ```
+
+Copy the `_config.yml` file in the theme folder to the blog root directory and rename it to `_config.oranges.yml`. Subsequent theme modification operations are performed in `_config.oranges.yml`.
 
 ## configuration
 
@@ -28,7 +32,7 @@ theme: oranges
   To add `tags page`:
 
   ```bash
-  $ hexo new page tags
+  hexo new page tags
   ```
 
   Generate `tags` folder, edit the `index.md` file, make sure that `type` field is `tags`:
@@ -41,7 +45,7 @@ theme: oranges
   ---
   ```
 
-  Enable `tags` in the theme `_config.yml` file:
+  Enable `tags` in the `_config.oranges.yml` file:
 
   ```yml
   navbar:
@@ -59,7 +63,7 @@ theme: oranges
   To add `categories page`:
 
   ```bash
-  $ hexo new page categories
+  hexo new page categories
   ```
 
   Generate `categories` folder, edit the `index.md` file, make sure that `type` field is `categories`:
@@ -72,7 +76,7 @@ theme: oranges
   ---
   ```
 
-  Enable `categories` in the theme `_config.yml` file:
+  Enable `categories` in the `_config.oranges.yml` file:
 
   ```yml
   navbar:
@@ -90,7 +94,7 @@ theme: oranges
   To add `friends page`:
 
   ```bash
-  $ hexo new page friends
+  hexo new page friends
   ```
 
   Generate `friends` folder, edit the `index.md` file, make sure that `type` field is `friends`:
@@ -103,7 +107,7 @@ theme: oranges
   ---
   ```
 
-  Enable `friends` in the theme `_config.yml` file:
+  Enable `friends` in the `_config.oranges.yml` file:
 
   ```yml
   navbar:
@@ -121,7 +125,7 @@ theme: oranges
   To add `about page`:
 
   ```bash
-  $ hexo new page about
+  hexo new page about
   ```
 
   Generate `about` folder, edit the `index.md` file, make sure that `type` field is `about`:
@@ -134,7 +138,7 @@ theme: oranges
   ---
   ```
 
-  Enable `about` in the theme `_config.yml` file:
+  Enable `about` in the `_config.oranges.yml` file:
 
   ```yml
   navbar:
@@ -149,7 +153,7 @@ theme: oranges
 <details>
   <summary><b>catalog(contents)</b> (click to show)</summary>
 
-  Enable `catalog` in the theme `_config.yml` file:
+  Enable `catalog` in the `_config.oranges.yml` file:
 
   ```yml
   catalog:
@@ -164,7 +168,7 @@ theme: oranges
   Install the `hexo-generator-feed` [plugin](https://github.com/hexojs/hexo-generator-feed):
 
   ```bash
-  $ npm install hexo-generator-feed --save
+  npm install hexo-generator-feed --save
   ```
 
   add or edit configuration in your root `_config.yml`:
@@ -202,11 +206,11 @@ theme: oranges
 
   supported:
 
-  - [valine](https://valine.js.org/quickstart.html)
-  - [gitalk](https://github.com/gitalk/gitalk#usage)
-  - [disqus](https://disqus.com)
+- [valine](https://valine.js.org/quickstart.html)
+- [gitalk](https://github.com/gitalk/gitalk#usage)
+- [disqus](https://disqus.com)
 
-  First, Enable `Comments` in the theme `_config.yml` file:
+  First, Enable `Comments` in the `_config.oranges.yml` file:
 
   ```yml
   comments:
@@ -233,7 +237,7 @@ theme: oranges
 
   First, view [Google Analytics](https://analytics.google.com) to get the `gtagkey`:
 
-  Then, enable `gtag` in the theme `_config.yml` file:
+  Then, enable `gtag` in the `_config.oranges.yml` file:
 
   ```yml
   gtag:
@@ -246,7 +250,7 @@ theme: oranges
 <details>
   <summary><b>PREV & NEXT</b> (click to show)</summary>
 
-  enable `prevnext` in the theme `_config.yml` file:
+  enable `prevnext` in the `_config.oranges.yml` file:
 
   ```yml
   prevnext:
@@ -261,7 +265,7 @@ theme: oranges
   Install the [hexo-lazyload-image](https://github.com/Troy-Yang/hexo-lazyload-image) plugin:
 
   ```bash
-  $ npm install hexo-lazyload-image --save
+  npm install hexo-lazyload-image --save
   ```
 
   add or edit configuration in your root `_config.yml`:
@@ -284,7 +288,7 @@ theme: oranges
   Install [hexo-generator-search](https://github.com/wzpan/hexo-generator-search) plugin:
 
   ```bash
-  $ npm install hexo-generator-search --save
+  npm install hexo-generator-search --save
   ```
 
   add or edit configuration in your root `_config.yml`:
@@ -298,7 +302,7 @@ theme: oranges
 
   more [hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
 
-  edit configuration in the theme `_config.yml`
+  edit configuration in the `_config.oranges.yml`
 
   ```yml
     search:
@@ -314,8 +318,8 @@ theme: oranges
   Remove default `hexo-generator-index` and Install the [hexo-generator-index-pin-top](https://github.com/netcan/hexo-generator-index-pin-top) plugin:
 
   ```bash
-  $ npm uninstall hexo-generator-index --save
-  $ npm install hexo-generator-index-pin-top --save
+  npm uninstall hexo-generator-index --save
+  npm install hexo-generator-index-pin-top --save
   ```
 
   add or edit configuration in your root `_config.yml`:
@@ -353,14 +357,19 @@ theme: oranges
   Some examples:
 
   English:
+
   ```yml
   language: en
   ```
+
   Simplified Chinese:
+
   ```yml
   language: zh-CN
   ```
+
   Japanese:
+
   ```yml
   language: ja
   ```
@@ -372,7 +381,7 @@ theme: oranges
 <details>
   <summary><b>dark mode</b> (click to show)</summary>
 
-  Pull up the latest repository, add or edit configuration in theme `_config.yml`:
+  Pull up the latest repository, add or edit configuration in `_config.oranges.yml`:
 
   ```yml
   colorSwitch:
@@ -386,7 +395,7 @@ The toggle option appears in the bottom right corner of the page.
 <details>
   <summary><b>share</b> (click to show)</summary>
 
-  Pull up the latest repository, add or edit configuration in theme `_config.yml`:
+  Pull up the latest repository, add or edit configuration in `_config.oranges.yml`:
 
   ```yml
   postShare:
@@ -406,7 +415,7 @@ The toggle option appears in the bottom right corner of the post page.
   install the [hexo-blog-encrypt](https://github.com/D0n9X1n/hexo-blog-encrypt) plugin:
 
   ```bash
-  $ npm install --save hexo-blog-encrypt
+  npm install --save hexo-blog-encrypt
   ```
 
   add or edit Front-matter in your post:
