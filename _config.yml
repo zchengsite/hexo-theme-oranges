@@ -141,10 +141,10 @@ footer:
     # path: 地址
 
     # 按需取消注释以启用
-    # -
-    #   name: github
-    #   icon: github
-    #   path: https://github.com/zchengsite/hexo-theme-oranges
+    -
+      name: github
+      icon: github
+      path: https://github.com/zchengsite/hexo-theme-oranges
     # -
     #   name: email
     #   icon: envelope
