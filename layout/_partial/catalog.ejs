@@ -1,11 +1,15 @@
-<% if (theme.catalog.enable && toc(page.content)) { %>
+<% if (theme.catalog.enable && (toc(page.content) || toc(page.origin))) { %>
   <div id="btn-catalog" class="btn-catalog">
     <i class="iconfont icon-catalog"></i>
   </div>
   <div class="post-catalog hidden" id="catalog">
     <div class="title"><%= __('catalog') %></div>
     <div class="catalog-content">
-      <%- toc(page.content, { "list_number": false }) %>
+      <% if (page.encrypt == true) { %>
+        <%- toc(page.origin, { "list_number": false }) %>
+      <% } else { %>
+        <%- toc(page.content, { "list_number": false }) %>
+      <% } %>
     </div>
   </div>
 
