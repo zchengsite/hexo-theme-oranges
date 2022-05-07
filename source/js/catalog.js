@@ -24,6 +24,8 @@ function isActiveCat() {
   // 页面所有标题列表
   let headerLinkList = document.getElementsByClassName("headerlink")
 
+  if (!headerLinkList.length) return
+
   // 页面所有目录列表
   let catLinkList = document.getElementsByClassName("toc-link")
 
