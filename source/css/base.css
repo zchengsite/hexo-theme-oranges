@@ -16,6 +16,23 @@ body.hidden {
   padding-right: 6px;
 }
 
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 2;
+  color: #24292e;
+  font-size: 1.6rem;
+  line-height: 2;
+  word-wrap: break-word;
+  color: var(--color-text-md-content)
+}
+
+@media (max-width: 768px) {
+  .markdown-body {
+    font-size: 1.4rem;
+  }
+}
+
 #app {
   position: relative;
   margin: 0 auto;
@@ -417,6 +434,10 @@ a:hover {
   text-align: center;
   padding-bottom: 30px;
   color: var(--color-text-a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .post-content {
@@ -440,10 +461,16 @@ a:hover {
   opacity: 0.9;
   font-size: 1.2rem;
   padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .post-attach .post-pubtime, .post-attach .post-tags, .post-attach .post-categories {
   padding: 0 10px;
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -667,4 +694,35 @@ a:hover {
 
 .share-content .share-item {
   padding: 0 10px;
+}
+
+.pin-copy {
+  position: relative;
+}
+
+.pin-copy:hover::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -0.8rem;
+  transform: translateX(-50%);
+  border: 0.5rem solid rgba(0, 0, 0, 70%);
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.pin-copy:hover::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 50%;
+  top: -3rem;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 70%);
+  color: #ffffff;
+  border-radius: 3px;
+  padding: 6px;
+  font-size: 1rem;
+  line-height: 1rem;
+  white-space: nowrap;
 }

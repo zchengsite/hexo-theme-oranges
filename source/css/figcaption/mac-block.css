@@ -1,0 +1,41 @@
+.markdown-body .highlight .gutter pre {
+  background-color: #2d2d2d;
+}
+
+figure {
+  padding: 32px 2px 2px;
+}
+
+figure::after {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  box-shadow: 10px 11px #ff5e5c, 30px 11px #ffbb4e, 50px 11px #00c857;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+}
+
+figure table {
+  margin-bottom: 0 !important;
+}
+
+figure table .gutter {
+  user-select: none;
+}
+
+figure figcaption {
+  padding-left: 1rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: none;
+}
+
+figure table {
+  border-top: 1px solid #ffffff1f;
+}
