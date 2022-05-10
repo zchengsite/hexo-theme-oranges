@@ -50,11 +50,15 @@
   <%- css([
     '/css/color-scheme.css',
     '/css/base.css',
-    '/iconfont/iconfont.css',
+    '//at.alicdn.com/t/font_1886449_67xjft27j1l.css',
     '/css/github-markdown.css',
     '/css/highlight.css',
     '/css/comments.css'])
   %>
+  <!-- 代码块风格 -->
+  <% if (theme.codeBlock && theme.codeBlock.style && theme.codeBlock.style == 'mac-black'){ %>
+    <%- css(['/css/figcaption/mac-block.css'])%>
+  <% } %>
 
   <!-- jquery3.3.1 -->
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
@@ -83,5 +87,11 @@
       document.documentElement.setAttribute('color-mode', colorMode)
     }
   </script>
+
+  <!-- clipboard -->
+  <% if(theme.codeBlock && theme.codeBlock.copy && theme.codeBlock.copy.enable) { %>
+    <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+    <%- js(['/js/codeCopy.js']) %>
+  <% } %>
 
 </head>

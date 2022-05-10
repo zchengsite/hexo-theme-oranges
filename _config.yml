@@ -14,6 +14,7 @@
   # search: 文章搜索
   # colorSwitch: 深/浅配色切换
   # postShare: 文章分享
+  # codeBlock: 代码块配置
 
 # enable: 是否开启相应功能，可选true || false
 
@@ -200,4 +201,13 @@ postShare:
     enable: true
 
   facebook:
+    enable: true
+
+# 代码块配置
+codeBlock:
+  # 代码块风格，默认normal
+  # 可选：默认风格'normal'；mac黑色风格：'mac-black'
+  style: 'normal'
+  # 代码复制
+  copy:
     enable: true

@@ -4,25 +4,6 @@
     format("woff");
 }
 
-.markdown-body {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 2;
-  color: #24292e;
-/*  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
-  font-size: 1.6rem;
-  line-height: 2;
-  word-wrap: break-word;
-  color: var(--color-text-md-content)
-}
-
-@media (max-width: 768px) {
-  .markdown-body {
-    font-size: 1.4rem;
-  }
-}
-
 .markdown-body .pl-c {
   color: #6a737d;
 }
@@ -752,16 +733,4 @@
 
 .markdown-body hr {
   border-bottom-color: #eee;
-}
-
-details summary {
-  outline: none;
-  cursor: pointer;
-}
-
-figure figcaption {
-  padding-left: 1rem;
-  background-color: #1b1b1b;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
 }
