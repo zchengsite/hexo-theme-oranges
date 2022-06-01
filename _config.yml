@@ -211,3 +211,48 @@ codeBlock:
   # 代码复制
   copy:
     enable: true
+
+# MathJax Support
+# 数学公式支持
+mathjax:
+  enable: true
+
+# cdn配置，默认关闭，如需启动，先确保对应插件版本cdn资源可用后再开启
+# 如资源加载失败，可替换cdn提供商或设置enable:false默认走本地资源
+# 也可使用自己的cdn服务，资源在/theme/oranges/source/plugins下
+cdns:
+  jquery:
+    enable: false
+    url: https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js
+
+  fancybox:
+    enable: false
+    url:
+      css: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
+      js: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
+
+  # LaTeX 公式
+  mathjax:
+    enable: false
+    url: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+
+  # 代码块复制
+  clipboard:
+    enable: false
+    url: https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js
+
+  # 评论系统
+  comments:
+    gitalk:
+      enable: false
+      url:
+        css: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
+        js: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
+
+    valine:
+      enable: false
+      url: https://cdn.jsdelivr.net/npm/valine@1.4.18/dist/Valine.min.js
+
+    waline:
+      enable: false
+      url: https://cdn.jsdelivr.net/npm/@waline/client@2.5.1/dist/legacy.min.js

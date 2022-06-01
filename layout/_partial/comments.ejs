@@ -1,54 +1,65 @@
 <% if(theme.comments.enable && theme.comments.waline.enable) { %>
-  <script src='//unpkg.com/@waline/client/dist/Waline.min.js'></script>
+  <% if (theme.cdns && theme.cdns.comments.waline && theme.cdns.comments.waline.enable) { %>
+    <script async type="text/javascript" src='<%- theme.cdns.comments.waline.url %>' onload="loadWalineSuc(this)"></script>
+  <% } else { %>
+    <script async type="text/javascript" src="/plugins/waline.js" onload="loadWalineSuc(this)"></script>
+  <% } %>
 
   <div id="waline-comments"></div>
 
   <script>
-    new Waline({
-      el: '#waline-comments',
-      path: location.pathname,
-      serverURL: '<%- theme.comments.waline.serverURL %>'
-    })
+    function loadWalineSuc() {
+      new Waline({
+        el: '#waline-comments',
+        path: location.pathname,
+        serverURL: '<%- theme.comments.waline.serverURL %>'
+      })
+    }
   </script>
 <% } %>
 
 <% if(theme.comments.enable && theme.comments.disqus.enable) { %>
   <div id="disqus_thread"></div>
   <script>
-
-  /**
-  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-  /*
-  var disqus_config = function () {
-  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-  };
-  */
-  (function() { // DON'T EDIT BELOW THIS LINE
-  var d = document, s = d.createElement('script');
-  s.src = 'https://<%- theme.comments.disqus.shortname %>.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-  })();
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://<%- theme.comments.disqus.shortname %>.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <% } %>
 
 <% if (theme.comments.enable && theme.comments.valine.enable) { %>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <% if (theme.cdns && theme.cdns.comments.valine && theme.cdns.comments.valine.enable) { %>
+    <script async type="text/javascript" src='<%- theme.cdns.comments.valine.url %>' onload="loadValineSuc(this)"></script>
+  <% } else { %>
+    <script async type="text/javascript" src="/plugins/valine.min.js" onload="loadValineSuc(this)"></script>
+  <% } %>
 
   <div id="vcomments"></div>
 
   <script>
-    new Valine({
-      el: '#vcomments',
-      appId: '<%- theme.comments.valine.appId %>',
-      appKey: '<%- theme.comments.valine.appKey %>',
-      placeholder: '<%- theme.comments.valine.placeholder %>',
-      avatar: '<%- theme.comments.valine.avatar %>',
-      lang: '<%= config.language %>'
-    })
+    function loadValineSuc() {
+      new Valine({
+        el: '#vcomments',
+        appId: '<%- theme.comments.valine.appId %>',
+        appKey: '<%- theme.comments.valine.appKey %>',
+        placeholder: '<%- theme.comments.valine.placeholder %>',
+        avatar: '<%- theme.comments.valine.avatar %>',
+        lang: '<%= config.language %>'
+      })
+    }
   </script>
 <%
   if (!theme.comments.valine.vempty_display) { %>
@@ -61,22 +72,29 @@
   } %>
 
 <% if (theme.comments.enable && theme.comments.gitalk.enable) { %>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <% if (theme.cdns && theme.cdns.comments.gitalk && theme.cdns.comments.gitalk.enable) { %>
+    <link rel="stylesheet" href="<%- theme.cdns.comments.gitalk.url.css %>">
+    <script type="text/javascript" src="<%- theme.cdns.comments.gitalk.url.js %>" onload="loadGitalkSuc(this)"></script>
+  <% } else { %>
+    <link rel="stylesheet" href="/plugins/gitalk.css">
+    <script type="text/javascript" src="/plugins/gitalk.min.js" onload="loadGitalkSuc(this)"></script>
+  <% } %>
 
   <div id="gitalk-container"></div>
 
   <script>
-    const gitalk = new Gitalk({
-      clientID: '<%- theme.comments.gitalk.clientID %>',
-      clientSecret: '<%- theme.comments.gitalk.clientSecret %>',
-      repo: '<%- theme.comments.gitalk.repo %>',
-      owner: '<%- theme.comments.gitalk.owner %>',
-      admin: ['<%- theme.comments.gitalk.admin %>'],
-      id: location.pathname,
-      distractionFreeMode: false
-    })
+    function loadGitalkSuc() {
+      const gitalk = new Gitalk({
+        clientID: '<%- theme.comments.gitalk.clientID %>',
+        clientSecret: '<%- theme.comments.gitalk.clientSecret %>',
+        repo: '<%- theme.comments.gitalk.repo %>',
+        owner: '<%- theme.comments.gitalk.owner %>',
+        admin: ['<%- theme.comments.gitalk.admin %>'],
+        id: location.pathname,
+        distractionFreeMode: false
+      })
 
-    gitalk.render('gitalk-container')
+      gitalk.render('gitalk-container')
+    }
   </script>
 <% } %>

@@ -1,0 +1,15 @@
+<!-- LaTex Display -->
+<% if (theme.mathjax && theme.mathjax.enable) { %>
+  <% if (theme.cdns && theme.cdns.mathjax && theme.cdns.mathjax.enable) { %>
+    <script async type="text/javascript" src="<%- theme.cdns.mathjax.url %>"></script>
+  <% } else { %>
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  <% } %>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+<% } %>
