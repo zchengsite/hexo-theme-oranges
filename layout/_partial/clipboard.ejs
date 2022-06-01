@@ -1,0 +1,9 @@
+<!-- clipboard -->
+<% if(theme.codeBlock && theme.codeBlock.copy && theme.codeBlock.copy.enable) { %>
+  <% if (theme.cdns && theme.cdns.clipboard && theme.cdns.clipboard.enable) { %>
+    <script async type="text/javascript" src="<%- theme.cdns.clipboard.url %>"></script>
+  <% } else { %>
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  <% } %>
+  <%- js(['/js/codeCopy.js']) %>
+<% } %>

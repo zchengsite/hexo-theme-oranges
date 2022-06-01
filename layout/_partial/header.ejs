@@ -61,11 +61,20 @@
   <% } %>
 
   <!-- jquery3.3.1 -->
-  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <% if (theme.cdns && theme.cdns.jquery && theme.cdns.jquery.enable) { %>
+    <script defer type="text/javascript" src="<%- theme.cdns.jquery.url %>"></script>
+  <% } else { %>
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  <% } %>
 
   <!-- fancybox -->
-  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
-  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  <% if (theme.cdns && theme.cdns.fancybox && theme.cdns.fancybox.enable) { %>
+    <link href="<%- theme.cdns.fancybox.url.css %>" rel="stylesheet">
+    <script defer type="text/javascript" src="<%- theme.cdns.fancybox.url.js %>"></script>
+  <% } else { %>
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  <% } %>
   <%- js(['/js/fancybox.js']) %>
 
   <% if(theme.gtag.enable) { %>
@@ -87,11 +96,4 @@
       document.documentElement.setAttribute('color-mode', colorMode)
     }
   </script>
-
-  <!-- clipboard -->
-  <% if(theme.codeBlock && theme.codeBlock.copy && theme.codeBlock.copy.enable) { %>
-    <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
-    <%- js(['/js/codeCopy.js']) %>
-  <% } %>
-
 </head>
