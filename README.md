@@ -457,6 +457,7 @@ The toggle option appears in the bottom right corner of the post page.
 - [x] smooth scrolling`[2020.5.4]`✔
 - [ ] theme styles are customizable
 - [x] Internationalization (i18n), multilanguage support`[2020.9.10]`✔
+- [x] code copy `[2022.5.10]`✔
 
 ## End
 
