@@ -1,0 +1,68 @@
+@import 'highlight.css'
+@import 'github-markdown.css'
+@import 'comments.css'
+@import 'color-scheme.css'
+@import 'base.css'
+@import '_common/layout'
+@import '_common/utils'
+@import '_common/comments'
+@import '_common/components'
+
+$theme-color = convert(hexo-config('themeColor'))
+
+.markdown-body {
+  code {
+    color: $theme-color;
+  }
+  a {
+    &:hover {
+      border-bottom: 2px solid $theme-color;
+    }
+  }
+  blockquote {
+    border-color: $theme-color;
+  }
+}
+
+.toc-link {
+  &:hover {
+    &::after {
+      background-color: $theme-color;
+    }
+  }
+  &.active {
+    &::after {
+      background-color: $theme-color;
+    }
+  }
+}
+
+.navbar {
+  ul {
+    li {
+      a {
+        &:hover {
+          &::after {
+            background-color: $theme-color;
+          }
+        }
+      }
+      &.active {
+        a {
+          &::after {
+            background-color: $theme-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.markdown-body h1 .headerlink::before,
+.markdown-body h2 .headerlink::before,
+.markdown-body h3 .headerlink::before,
+.markdown-body h4 .headerlink::before,
+.markdown-body h5 .headerlink::before,
+.markdown-body h6 .headerlink::before {
+  color: $theme-color;
+}

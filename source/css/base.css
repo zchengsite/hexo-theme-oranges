@@ -49,7 +49,7 @@ body.hidden {
 /*滚动条中滑块部分*/
 ::-webkit-scrollbar-thumb {
   background-color: rgba(144,147,153,.5);
-  border-radius: 5px;
+  /* border-radius: 5px; */
   transition: background-color 0.3s ease;
 }
 
@@ -264,13 +264,12 @@ a:hover {
 .navbar ul li a:hover::after {
   content: "";
   position: absolute;
-  bottom: -1px;
-  left: 0;
-  height: 8px;
-  opacity: 0.3;
+  bottom: 3px;
+  left: 5px;
+  height: 6px;
+  opacity: 0.45;
   background-color: gray;
-  width: 100%;
-  border-radius: 3px;
+  width: 89%;
 }
 
 .navbar ul li.active a {
@@ -280,13 +279,12 @@ a:hover {
 .navbar ul li.active a::after {
   content: "";
   position: absolute;
-  bottom: -1px;
-  left: 0;
-  height: 8px;
-  opacity: 0.5;
+  bottom: 3px;
+  left: 5px;
+  height: 6px;
+  opacity: 0.55;
   background-color: gray;
-  width: 100%;
-  border-radius: 3px;
+  width: 89%;
 }
 
 @media (max-width: 888px) {
@@ -327,31 +325,6 @@ a:hover {
     padding: 20px 20px;
   }
 }
-
-.footer {
-  padding-top: 30px;
-  font-size: 1.2rem;
-  color: #aaa;
-}
-
-.social {
-  padding-bottom: 5px;
-}
-
-.social ul {
-  text-align: center;
-}
-
-.social ul li {
-  display: inline-block;
-  padding: 0 5px;
-}
-
-.footer-more {
-  padding-bottom: 5px;
-  text-align: center;
-}
-
 
 .tag-list li {
   font-size: 1.6rem;
@@ -529,25 +502,23 @@ a:hover {
 .toc-link:hover::after {
   content: "";
   position: absolute;
-  left: 3px;
-  bottom: 0;
-  width: 8px;
-  height: 90%;
+  left: 5px;
+  bottom: 2px;
+  width: 6px;
+  height: 69%;
   background-color: gray;
-  opacity: 0.3;
-  border-radius: 3px;
+  opacity: 0.45;
 }
 
 .toc-link.active::after {
   content: "";
   position: absolute;
-  left: 3px;
-  bottom: 0;
-  width: 8px;
-  height: 90%;
+  left: 5px;
+  bottom: 2px;
+  width: 6px;
+  height: 69%;
   background-color: gray;
-  opacity: 0.5;
-  border-radius: 3px;
+  opacity: 0.55;
 }
 
 .search-overlay {

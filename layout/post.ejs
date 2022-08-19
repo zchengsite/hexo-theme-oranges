@@ -65,18 +65,18 @@
       <div class="post-title"><%- page.title %></div>
       <div class="post-attach">
         <span class="post-pubtime">
-          <i class="iconfont icon-updatetime" title="<%= __('updateTime') %>"></i>
+          <i class="iconfont icon-updatetime mr-10" title="<%= __('updateTime') %>"></i>
           <%- page.date.format("YYYY-MM-DD HH:mm:ss") %>
         </span>
         <% for(item of theme.navbar) {
           if (item.key === 'tags' && item.enable) {
             if(page.tags && page.tags.length > 0) { %>
               <span class="post-tags">
-                <i class="iconfont icon-tags" title="<%= __('tags') %>"></i>
+                <i class="iconfont icon-tags mr-10" title="<%= __('tags') %>"></i>
                 <% for(let item of page.tags.data) { %>
-                <span class="span--tag">
+                <span class="span--tag mr-8">
                   <a href="<%= url_for(item.path)%>" title="<%- item.name %>">
-                    <b>#</b> <%- item.name %>
+                    #<%- item.name %>
                   </a>
                 </span>
                 <% } %>
@@ -114,18 +114,18 @@
           </div>
           <div class="post-attach">
             <span class="post-pubtime">
-              <i class="iconfont icon-updatetime" title="<%= __('updateTime') %>"></i>
+              <i class="iconfont icon-updatetime mr-10" title="<%= __('updateTime') %>"></i>
               <%- page.date.format("YYYY-MM-DD HH:mm:ss") %>
             </span>
             <% for(item of theme.navbar) {
               if (item.key === 'tags' && item.enable) {
                 if(page.tags && page.tags.length > 0) { %>
                   <span class="post-tags">
-                    <i class="iconfont icon-tags" title="<%= __('tags') %>"></i>
+                    <i class="iconfont icon-tags mr-10" title="<%= __('tags') %>"></i>
                     <% for(let item of page.tags.data) { %>
-                    <span class="span--tag">
+                    <span class="span--tag mr-8">
                       <a href="<%= url_for(item.path)%>" title="<%- item.name %>">
-                        <b>#</b> <%- item.name %>
+                        #<%- item.name %>
                       </a>
                     </span>
                     <% } %>

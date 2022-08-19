@@ -47,14 +47,8 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
   <!-- hexo site css -->
-  <%- css([
-    '/css/color-scheme.css',
-    '/css/base.css',
-    '//at.alicdn.com/t/font_1886449_67xjft27j1l.css',
-    '/css/github-markdown.css',
-    '/css/highlight.css',
-    '/css/comments.css'])
-  %>
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
   <!-- 代码块风格 -->
   <% if (theme.codeBlock && theme.codeBlock.style && theme.codeBlock.style == 'mac-black'){ %>
     <%- css(['/css/figcaption/mac-block.css'])%>
@@ -87,6 +81,10 @@
 
       gtag('config', '<%- theme.gtag.gtagkey %>');
     </script>
+  <% } %>
+
+  <% if (theme.footer.views && theme.footer.views.enable) { %>
+    <script async src="<%- theme.footer.views.provider %>"></script>
   <% } %>
 
   <script>
