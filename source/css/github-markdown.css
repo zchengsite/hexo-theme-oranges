@@ -20,7 +20,7 @@
 
 .markdown-body .pl-smi,
 .markdown-body .pl-s .pl-s1 {
-  color: #24292e;
+  color: #24292E;
 }
 
 .markdown-body .pl-ent {
@@ -82,12 +82,12 @@
 
 .markdown-body .pl-mi {
   font-style: italic;
-  color: #24292e;
+  color: #24292E;
 }
 
 .markdown-body .pl-mb {
   font-weight: bold;
-  color: #24292e;
+  color: #24292E;
 }
 
 .markdown-body .pl-md {
@@ -209,6 +209,7 @@
   text-decoration: none;
   color: var(--color-text-a-hover);
   border-bottom: 1px solid var(--color-text-a-hover);
+  
 }
 
 .markdown-body strong {
@@ -253,6 +254,7 @@
 .markdown-body h6 {
   margin-top: 0;
   margin-bottom: 0;
+  color: var(--color-text-md-content)
 }
 
 .markdown-body h1 {
@@ -288,6 +290,7 @@
 .markdown-body p {
   margin-top: 0;
   margin-bottom: 10px;
+  color: var(--color-text-md-content)
 }
 
 .markdown-body blockquote {
@@ -299,6 +302,7 @@
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
+  color: var(--color-text-md-content)
 }
 
 .markdown-body ol ol,
@@ -315,6 +319,12 @@
 
 .markdown-body dd {
   margin-left: 0;
+  color: var(--color-text-md-content)
+}
+
+.markdown-body dt {
+  margin-left: 0;
+  color: var(--color-text-md-content)
 }
 
 .markdown-body code {
@@ -407,6 +417,7 @@
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 16px;
+  
 }
 
 .markdown-body hr {
@@ -611,8 +622,8 @@
 }
 
 .markdown-body table tr {
-  background-color: var(--bg-block-md-table);
   border-top: 2px solid var(--color-border-md-table);
+  background-color: var(--bg-block-md-table);
 }
 
 .markdown-body table tr:nth-child(2n) {
