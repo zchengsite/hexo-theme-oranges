@@ -72,14 +72,6 @@
   } %>
 
 <% if (theme.comments.enable && theme.comments.gitalk.enable) { %>
-  <% if (theme.cdns && theme.cdns.comments.gitalk && theme.cdns.comments.gitalk.enable) { %>
-    <link rel="stylesheet" href="<%- theme.cdns.comments.gitalk.url.css %>">
-    <script type="text/javascript" src="<%- theme.cdns.comments.gitalk.url.js %>" onload="loadGitalkSuc(this)"></script>
-  <% } else { %>
-    <link rel="stylesheet" href="/plugins/gitalk.css">
-    <script type="text/javascript" src="/plugins/gitalk.min.js" onload="loadGitalkSuc(this)"></script>
-  <% } %>
-
   <div id="gitalk-container"></div>
 
   <script>
@@ -97,4 +89,12 @@
       gitalk.render('gitalk-container')
     }
   </script>
+  <% if (theme.cdns && theme.cdns.comments.gitalk && theme.cdns.comments.gitalk.enable) { %>
+    <link rel="stylesheet" href="<%- theme.cdns.comments.gitalk.url.css %>">
+    <script type="text/javascript" src="<%- theme.cdns.comments.gitalk.url.js %>" onload="loadGitalkSuc(this)"></script>
+  <% } else { %>
+    <link rel="stylesheet" href="/plugins/gitalk.css">
+    <script type="text/javascript" src="/plugins/gitalk.min.js" onload="loadGitalkSuc(this)"></script>
+  <% } %>
+
 <% } %>
