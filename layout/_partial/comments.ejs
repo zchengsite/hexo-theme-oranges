@@ -1,21 +1,49 @@
 <% if(theme.comments.enable && theme.comments.waline.enable) { %>
-  <% if (theme.cdns && theme.cdns.comments.waline && theme.cdns.comments.waline.enable) { %>
-    <script async type="text/javascript" src='<%- theme.cdns.comments.waline.url %>' onload="loadWalineSuc(this)"></script>
-  <% } else { %>
-    <script async type="text/javascript" src="/plugins/waline.js" onload="loadWalineSuc(this)"></script>
-  <% } %>
-
   <div id="waline-comments"></div>
 
   <script>
-    function loadWalineSuc() {
-      new Waline({
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+           if ($(window.location.hash).length) {
+              $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+              clearInterval(checkExist);
+           }
+        }, 100);
+    }
+  </script>
+
+  <script>
+    function loadWalineSuc(func) {
+      func({
         el: '#waline-comments',
         path: location.pathname,
-        serverURL: '<%- theme.comments.waline.serverURL %>'
+        serverURL: '<%- theme.comments.waline.serverURL %>',
+        emoji: false,
+        dark: 'auto',
+        requiredMeta: ['nick', 'mail'],
+        wordLimit: 150,
+        imageUploader: false,
+        search: false,
+        reaction: false,
+        pageSize: 30
       })
     }
   </script>
+
+  <% if (theme.cdns && theme.cdns.comments.waline && theme.cdns.comments.waline.enable) { %>
+    <link rel="stylesheet" href="<%- theme.cdns.comments.waline.url.css %>">
+    <script type="module">
+      import { init } from '<%- theme.cdns.comments.waline.url.js %>'
+      loadWalineSuc(init)
+    </script>
+  <% } else { %>
+    <link rel="stylesheet" href="/plugins/waline.css">
+    <script type="module">
+      import { init } from '/plugins/waline.mjs'
+      loadWalineSuc(init)
+    </script>
+  <% } %>
+
 <% } %>
 
 <% if(theme.comments.enable && theme.comments.disqus.enable) { %>
