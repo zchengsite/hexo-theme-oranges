@@ -12,13 +12,19 @@
 <div class="footer">
   <div class="social">
     <ul>
-      <% for(let item of theme.footer.social){ %>
+      <% for (let item of theme.footer.social) { %>
         <li>
-          <a title="<%- item.name %>" href="<%- item.path %>">
-            <i class="iconfont icon-<%- item.icon %>"></i>
-          </a>
+          <% if (item.name==='email' ) { %>
+            <a title="<%- item.name %>" href="mailto:<%- item.path %>">
+              <i class="iconfont icon-<%- item.icon %>"></i>
+            </a>
+            <% } else { %>
+              <a title="<%- item.name %>" href="<%- item.path %>">
+                <i class="iconfont icon-<%- item.icon %>"></i>
+              </a>
+              <% } %>
         </li>
-      <% } %>
+        <% } %>
     </ul>
   </div>
   <% for(let item of theme.footer.more){ %>

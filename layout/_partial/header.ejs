@@ -1,7 +1,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="keywords" content="<%= config.keywords %>" />
+  <% if (page.keywords){ %>
+  <meta name="keywords" content="<%= page.keywords %>,<%= config.keywords %>">
+  <% } else if (config.keywords){ %>
+  <meta name="keywords" content="<%= config.keywords %>">
+  <%} %>
   <meta name="author" content="<%= config.author %>" />
   <meta name="description" content="<%= config.description %>" />
   <% if(is_home() && page.current > 1){ %>
