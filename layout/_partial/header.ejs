@@ -1,13 +1,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <% if (page.keywords){ %>
-  <meta name="keywords" content="<%= page.keywords %>,<%= config.keywords %>">
-  <% } else if (config.keywords){ %>
-  <meta name="keywords" content="<%= config.keywords %>">
-  <%} %>
   <meta name="author" content="<%= config.author %>" />
-  <meta name="description" content="<%= config.description %>" />
+  <% if (page.description){ %>
+    <!-- 文章页 -->
+    <meta name="description" content="<%= page.description %>" />
+  <% } else if (config.description){ %>
+    <meta name="description" content="<%= config.description %>" />
+  <%} %>
   <% if(is_home() && page.current > 1){ %>
     <meta name="robots" content="noindex" />
   <% } %>
