@@ -39,13 +39,7 @@
     }
   %>
   <title>
-    <% if (title) { %>
-      <%= __(title) %> 
-      <% if (page.tag) { %> : <%= page.tag %><% } %>
-      <% if (page.category) { %> : <%= page.category %><% } %>
-      |
-    <% } %>
-     <%= config.title %>
+    <% if (title) { %><%= __(title) %><% if (page.tag) { %>: <%= page.tag %><% } %><% if (page.category) { %>: <%= page.category %><% } %> | <% } %><%= config.title %>
   </title>
 
   <% if (theme.favicon.enable){ %>
