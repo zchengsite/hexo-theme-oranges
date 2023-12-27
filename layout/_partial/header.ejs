@@ -13,9 +13,9 @@
   <meta name="description" content="<%= page.description %>" />
   <% } else if (config.description){ %>
   <meta name="description" content="<%= config.description %>" />
-  <%} %>
+  <% } %>
   <% if(is_home() && page.current > 1){ %>
-    <meta name="robots" content="noindex" />
+  <meta name="robots" content="noindex" />
   <% } %>
   <%
     var title = page.title;
@@ -38,15 +38,7 @@
       title = "about"
     }
   %>
-  <title>
-    <% if (title) { %>
-      <%= __(title) %> 
-      <% if (page.tag) { %> : <%= page.tag %><% } %>
-      <% if (page.category) { %> : <%= page.category %><% } %>
-      |
-    <% } %>
-     <%= config.title %>
-  </title>
+  <title><% if (title) { %><%= __(title) %><% if (page.tag) { %>: <%= page.tag %><% } %><% if (page.category) { %>: <%= page.category %><% } %> | <% } %><%= config.title %></title>
 
   <% if (theme.favicon.enable){ %>
     <link rel="apple-touch-icon" href="<%- theme.favicon.touch_icon %>">
