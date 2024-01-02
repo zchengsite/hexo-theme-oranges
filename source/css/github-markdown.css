@@ -299,6 +299,7 @@
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
+  color: var(--color-text-md-content)
 }
 
 .markdown-body ol ol,
@@ -315,6 +316,12 @@
 
 .markdown-body dd {
   margin-left: 0;
+  color: var(--color-text-md-content)
+}
+
+.markdown-body dt {
+  margin-left: 0;
+  color: var(--color-text-md-content)
 }
 
 .markdown-body code {
