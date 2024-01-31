@@ -74,7 +74,7 @@ hexo new page friends
 
 ```markdown
 ---
-title: tags
+title: friends
 date: 2019-05-03 12:03:35
 type: "friends"
 categories:
@@ -107,7 +107,7 @@ hexo new page about
 
 ```markdown
 ---
-title: tags
+title: about
 date: 2019-05-03 12:03:35
 type: "about"
 categories:
@@ -140,7 +140,7 @@ hexo new page categories
 
 ```markdown
 ---
-title: tags
+title: categories
 date: 2019-05-03 12:03:35
 type: "categories"
 categories:
