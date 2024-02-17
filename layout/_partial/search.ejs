@@ -47,7 +47,8 @@
       if (isHidden) {
         searchOverlayArea.classList.remove('hidden')
         document.body.classList.add('hidden')
-        // inputArea.focus()
+        inputArea.focus()
+        getSearchFile()
       } else {
         searchOverlayArea.classList.add('hidden')
         document.body.classList.remove('hidden')
