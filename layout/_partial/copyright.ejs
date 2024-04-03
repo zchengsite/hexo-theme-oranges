@@ -1,0 +1,20 @@
+<div>
+    <ul class="post-copyright">
+        <li class="post-copyright-author">
+            <strong><%= __('文章作者：') %> </strong><a><%- theme.copyright.author %></a>
+        </li>
+        <li class="post-copyright-link">
+            <strong><%= __('文章地址：') %> </strong>
+            <a href="<%- config.root %><%- page.path %>" target="_blank" title="<%= page.title %>"><%- config.url %>
+                /<%- page.path %></a>
+        </li>
+        <li class="post-copyright-license">
+            <strong><%= __('版权声明：') %>  </strong>
+            <%= __('本文采用') %><a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
+                                    target="_blank"
+                                    title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC
+                BY-NC-ND 4.0</a>
+            <%= __('许可协议。转载请注明出处。') %>
+        </li>
+    </ul>
+</div>

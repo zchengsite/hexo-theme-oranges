@@ -19,6 +19,8 @@
   --bg-block-md-table: #ffffff;
   --bg-block-md-table-2: #f6f8fa;
   --color-border-md-table: #dfe2e5;
+  --color-copyright: #808080;
+  --bg-color-copyright: #F9F9F9;
 }
 
 /* dark scheme */
@@ -42,4 +44,6 @@
   --bg-block-md-table: #2E3440;
   --bg-block-md-table-2: #313744;
   --color-border-md-table: #4c566a;
+  --color-copyright: #808080;
+  --bg-color-copyright: transparent;
 }

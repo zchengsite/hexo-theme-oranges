@@ -40,10 +40,10 @@ body.hidden {
 
 /*控制整个滚动条*/
 ::-webkit-scrollbar {
-    background-color: transparent;
-    width: 6px;
-    height: 6px;
-    background-clip: padding-box;
+  background-color: transparent;
+  width: 6px;
+  height: 6px;
+  background-clip: padding-box;
 }
 
 /*滚动条中滑块部分*/
@@ -415,6 +415,20 @@ a:hover {
 
 .post-content {
   padding-bottom: 1rem;
+}
+
+.post-copyright {
+  margin: 3em 0 0;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+  border: 3px solid var(--color-copyright);
+  color: var(--color-text-base);
+  background-color: var(--bg-color-copyright);
+  list-style: none;
+}
+
+.post-copyright li {
+  line-height: 30px;
 }
 
 .prev-or-next {
