@@ -27,3 +27,8 @@
 .vcontent p {
   color: var(--color-text-a) !important;
 }
+
+
+#waline-comments {
+  --waline-font-size: 16px;
+}
